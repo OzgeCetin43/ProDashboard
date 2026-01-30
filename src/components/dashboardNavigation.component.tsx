@@ -1,7 +1,8 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
-import { Link, useLocation } from "react-router-dom";
+
 import { dashboardLinks } from "../assets/data/dashboardLink.data";
 
 type DashboardNavigationProps = {

@@ -3,8 +3,10 @@ import { motion, useAnimationControls } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { IoPaw } from "react-icons/io5";
 import { MdOutlineStackedBarChart } from "react-icons/md";
+import { FaAppStoreIos } from "react-icons/fa6";
 
 import DashboardNavigation from "./dashboardNavigation.component";
+import AppNavigation from "./appNavigation.component";
 
 type SidebarProps = {
   isOpen: boolean;
@@ -52,6 +54,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
     setIsOpen((prev) => !prev);
   };
 
+  const handleNavigationClick = (name: string) => {
+    setSelectedNavigation((prev) => {
+      if (prev === name) {
+        return null;
+      }
+      return name;
+    });
+  };
+
   return (
     <motion.aside
       variants={containerVariants}
@@ -70,14 +81,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
       <div className="flex flex-col gap-6">
         <div
           className="flex items-center gap-2 text-xs cursor-pointer"
-          onClick={() =>
-            setSelectedNavigation((prev) => {
-              if (prev === "dashboards") {
-                return null;
-              }
-              return "dashboards";
-            })
-          }
+          onClick={() => handleNavigationClick("dashboards")}
         >
           <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
             <MdOutlineStackedBarChart size={18} />
@@ -86,10 +90,27 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
             Dashboards
           </span>
         </div>
+        <div
+          className="flex items-center gap-2 text-xs cursor-pointer"
+          onClick={() => handleNavigationClick("apps")}
+        >
+          <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
+            <FaAppStoreIos size={18} />
+          </div>
+          <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+            Apps
+          </span>
+        </div>
       </div>
       <div>
         {selectedNavigation === "dashboards" && (
           <DashboardNavigation
+            isOpen={isOpen}
+            setSelectedNavigation={setSelectedNavigation}
+          />
+        )}
+        {selectedNavigation === "apps" && (
+          <AppNavigation
             isOpen={isOpen}
             setSelectedNavigation={setSelectedNavigation}
           />

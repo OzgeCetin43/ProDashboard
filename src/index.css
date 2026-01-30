@@ -9,3 +9,19 @@
 body {
   @apply bg-stone-950 text-white;
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00a6f4;
+  border-radius: 10px;
+  border: 2px solid #00a6f4; /* boşluk efekti */
+}
