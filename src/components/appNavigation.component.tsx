@@ -57,7 +57,7 @@ const AppNavigation: React.FC<AppNavigationProps> = ({
           className="absolute top-4 right-2 cursor-pointer"
           onClick={() => setSelectedNavigation(null)}
         />
-        <div className="w-full">
+        <div className="w-full mt-6">
           {appLinks.map((link) =>
             link.subMenu ? (
               <div className="flex flex-col justify-center gap-2">

@@ -42,10 +42,10 @@ const DashboardNavigation: React.FC<DashboardNavigationProps> = ({
       >
         <IoClose
           size={18}
-          className="relative left-[95%] cursor-pointer"
+          className="absolute top-4 right-2 cursor-pointer"
           onClick={() => setSelectedNavigation(null)}
         />
-        <div className="w-full">
+        <div className="w-full mt-6">
           {dashboardLinks.map((link) => (
             <Link
               key={link.id}
