@@ -97,37 +97,194 @@ export const appLinks: AppLinkType[] = [
   {
     id: nanoid(),
     name: "Projects",
-    path: "/projects-app",
+    subMenu: [
+      {
+        id: nanoid(),
+        name: "List",
+        path: "/project-list-app",
+      },
+      {
+        id: nanoid(),
+        name: "Overview",
+        path: "/project-overview-app",
+      },
+      {
+        id: nanoid(),
+        name: "Create Project",
+        path: "/create-project-app",
+      },
+    ],
   },
   {
     id: nanoid(),
     name: "Tasks",
-    path: "/tasks-app",
+    subMenu: [
+      {
+        id: nanoid(),
+        name: "Kanban Board",
+        path: "/kanban-board-app",
+      },
+      {
+        id: nanoid(),
+        name: "List View",
+        path: "/task-list-view-app",
+      },
+      {
+        id: nanoid(),
+        name: "Task Details",
+        path: "/task-details-app",
+      },
+    ],
   },
   {
     id: nanoid(),
     name: "CRM",
-    path: "/crm-app",
+    subMenu: [
+      {
+        id: nanoid(),
+        name: "Contacts",
+        path: "/crm-contacts-app",
+      },
+      {
+        id: nanoid(),
+        name: "Companies",
+        path: "/crm-companies-app",
+      },
+      {
+        id: nanoid(),
+        name: "Deals",
+        path: "/crm-deals-app",
+      },
+      {
+        id: nanoid(),
+        name: "Leads",
+        path: "/crm-leads-app",
+      },
+    ],
   },
   {
     id: nanoid(),
     name: "Crypto",
-    path: "/crypyo-app",
+    subMenu: [
+      {
+        id: nanoid(),
+        name: "Transactions",
+        path: "/crypto-transactions-app",
+      },
+      {
+        id: nanoid(),
+        name: "Buy & Sell",
+        path: "/crypto-buy-and-sell-app",
+      },
+      {
+        id: nanoid(),
+        name: "Orders",
+        path: "/crypto-orders-app",
+      },
+      {
+        id: nanoid(),
+        name: "My Wallet",
+        path: "/crypto-my-wallet-app",
+      },
+      {
+        id: nanoid(),
+        name: "ICO List",
+        path: "/crypto-ico-list-app",
+      },
+      {
+        id: nanoid(),
+        name: "KYC Application",
+        path: "/crypto-kyc-application-app",
+      },
+    ],
   },
   {
     id: nanoid(),
     name: "Invoices",
-    path: "/invoices-app",
+    subMenu: [
+      {
+        id: nanoid(),
+        name: "List View",
+        path: "/invoice-list-view-app",
+      },
+      {
+        id: nanoid(),
+        name: "Details",
+        path: "/invoice-details-app",
+      },
+      {
+        id: nanoid(),
+        name: "Create Invoice",
+        path: "/create-invoice-app",
+      },
+    ],
   },
   {
     id: nanoid(),
     name: "Support Tickets",
-    path: "/support-tickets-app",
+    subMenu: [
+      {
+        id: nanoid(),
+        name: "List View",
+        path: "/support-ticket-list-view-app",
+      },
+      {
+        id: nanoid(),
+        name: "Ticket Details",
+        path: "/support-ticket-details-app",
+      },
+    ],
   },
   {
     id: nanoid(),
     name: "NFT Marketplace",
-    path: "/nft-marketplace-app",
+    subMenu: [
+      {
+        id: nanoid(),
+        name: "Marketplace",
+        path: "/nft-marketplace-app",
+      },
+      {
+        id: nanoid(),
+        name: "Explore Now",
+        path: "/nft-explore-now-app",
+      },
+      {
+        id: nanoid(),
+        name: "Live Auction",
+        path: "/nft-live-auction-app",
+      },
+      {
+        id: nanoid(),
+        name: "Item Details",
+        path: "/nft-item-details-app",
+      },
+      {
+        id: nanoid(),
+        name: "Collections",
+        path: "/nft-collections-app",
+      },
+      {
+        id: nanoid(),
+        name: "Creators",
+        path: "/nft-creators-app",
+      },
+      {
+        id: nanoid(),
+        name: "Ranking",
+        path: "/nft-ranking-app",
+      },
+      {
+        id: nanoid(),
+        name: "Wallet Connect",
+        path: "/nft-wallet-connect-app",
+      },
+      {
+        id: nanoid(),
+        name: "Create NFT",
+        path: "/create-nft-app",
+      },
+    ],
   },
   {
     id: nanoid(),
@@ -142,7 +299,58 @@ export const appLinks: AppLinkType[] = [
   {
     id: nanoid(),
     name: "Jobs",
-    path: "/jobs-app",
+    subMenu: [
+      {
+        id: nanoid(),
+        name: "Statistics",
+        path: "/jobs-statistics-app",
+      },
+      {
+        id: nanoid(),
+        name: "Job Lists",
+        path: "/job-lists-app",
+      },
+      {
+        id: nanoid(),
+        name: "Job Grid",
+        path: "/job-grid-app",
+      },
+      {
+        id: nanoid(),
+        name: "Job Overview",
+        path: "/job-overview-app",
+      },
+      {
+        id: nanoid(),
+        name: "Candidate List View",
+        path: "/candidate-list-view-app",
+      },
+      {
+        id: nanoid(),
+        name: "Candidate Grid View",
+        path: "/candidate-grid-view-app",
+      },
+      {
+        id: nanoid(),
+        name: "Application",
+        path: "/job-application-app",
+      },
+      {
+        id: nanoid(),
+        name: "New Job",
+        path: "/new-job-app",
+      },
+      {
+        id: nanoid(),
+        name: "Companies List",
+        path: "/job-companies-list-app",
+      },
+      {
+        id: nanoid(),
+        name: "Job Categories",
+        path: "/job-categories-app",
+      },
+    ],
   },
   {
     id: nanoid(),
