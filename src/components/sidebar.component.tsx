@@ -48,6 +48,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
       containerControls.start("close");
       svgControls.start("close");
     }
+    setSelectedNavigation(null);
   }, [isOpen]);
 
   const handleSidebarOpenClose = () => {
