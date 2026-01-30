@@ -60,7 +60,7 @@ const AppNavigation: React.FC<AppNavigationProps> = ({
         <div className="w-full mt-6">
           {appLinks.map((link) =>
             link.subMenu ? (
-              <div className="flex flex-col justify-center gap-2">
+              <div key={link.id} className="flex flex-col justify-center gap-2">
                 <div
                   onClick={() => handleSubMenuClick(link.name)}
                   className="flex items-center justify-between hover:bg-stone-600 p-2 rounded-xs"
