@@ -63,7 +63,7 @@ const AppNavigation: React.FC<AppNavigationProps> = ({
               <div key={link.id} className="flex flex-col justify-center gap-2">
                 <div
                   onClick={() => handleSubMenuClick(link.name)}
-                  className="flex items-center justify-between hover:bg-stone-600 p-2 rounded-xs"
+                  className="flex items-center justify-between hover:bg-stone-600 p-2 rounded-xs cursor-pointer"
                 >
                   <span>{link.name}</span>
                   {isSubMenuOpen === link.name ? (

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { IoPaw } from "react-icons/io5";
 import { MdOutlineStackedBarChart } from "react-icons/md";
 import { FaAppStoreIos } from "react-icons/fa6";
 
 import DashboardNavigation from "./dashboardNavigation.component";
 import AppNavigation from "./appNavigation.component";
+
+import logo from "../assets/images/logo.png";
 
 type SidebarProps = {
   isOpen: boolean;
@@ -76,7 +77,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
           className="w-10 h-10 flex items-center justify-center bg-stone-950  border border-neutral-700 rounded-full cursor-pointer"
           onClick={handleSidebarOpenClose}
         >
-          <IoPaw size={18} />
+          <img src={logo} alt="logo" />
         </div>
       </div>
       <div className="flex flex-col gap-6">
