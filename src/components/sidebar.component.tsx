@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, useAnimationControls } from "framer-motion";
 import { MdOutlineStackedBarChart } from "react-icons/md";
 import { FaAppStoreIos } from "react-icons/fa6";
@@ -13,6 +14,7 @@ import PageNavigation from "./pageNavigation.component";
 import LandingNavigation from "./landingNavigation.component";
 
 import logo from "../assets/images/logo.png";
+import grabIcon from "../assets/images/dashboard-footer-icon.webp";
 
 import { containerVariants } from "../assets/animations/containerVariants.animation";
 
@@ -68,61 +70,75 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
           <img src={logo} alt="logo" />
         </div>
       </div>
-      <div className="flex flex-col gap-6">
-        <div
-          className="flex items-center gap-2 text-xs cursor-pointer"
-          onClick={() => handleNavigationClick("dashboards")}
-        >
-          <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
-            <MdOutlineStackedBarChart size={18} />
+      <div className="h-full flex flex-col justify-between">
+        <div className="flex flex-col gap-6">
+          <div
+            className="flex items-center gap-2 text-xs cursor-pointer"
+            onClick={() => handleNavigationClick("dashboards")}
+          >
+            <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
+              <MdOutlineStackedBarChart size={18} />
+            </div>
+            <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+              Dashboards
+            </span>
           </div>
-          <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
-            Dashboards
-          </span>
+          <div
+            className="flex items-center gap-2 text-xs cursor-pointer"
+            onClick={() => handleNavigationClick("apps")}
+          >
+            <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
+              <FaAppStoreIos size={18} />
+            </div>
+            <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+              Apps
+            </span>
+          </div>
+          <div
+            className="flex items-center gap-2 text-xs cursor-pointer"
+            onClick={() => handleNavigationClick("authentication")}
+          >
+            <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
+              <FaLock size={18} />
+            </div>
+            <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+              Authentication
+            </span>
+          </div>
+          <div
+            className="flex items-center gap-2 text-xs cursor-pointer"
+            onClick={() => handleNavigationClick("pages")}
+          >
+            <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
+              <ImPagebreak size={18} />
+            </div>
+            <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+              Pages
+            </span>
+          </div>
+          <div
+            className="flex items-center gap-2 text-xs cursor-pointer"
+            onClick={() => handleNavigationClick("landing")}
+          >
+            <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
+              <BsRocketTakeoffFill size={18} />
+            </div>
+            <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+              Landing
+            </span>
+          </div>
         </div>
         <div
-          className="flex items-center gap-2 text-xs cursor-pointer"
-          onClick={() => handleNavigationClick("apps")}
+          className={`text-xs ${isOpen ? "flex flex-col items-center gap-2" : "hidden"}`}
         >
-          <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
-            <FaAppStoreIos size={18} />
-          </div>
-          <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
-            Apps
-          </span>
-        </div>
-        <div
-          className="flex items-center gap-2 text-xs cursor-pointer"
-          onClick={() => handleNavigationClick("authentication")}
-        >
-          <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
-            <FaLock size={18} />
-          </div>
-          <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
-            Authentication
-          </span>
-        </div>
-        <div
-          className="flex items-center gap-2 text-xs cursor-pointer"
-          onClick={() => handleNavigationClick("pages")}
-        >
-          <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
-            <ImPagebreak size={18} />
-          </div>
-          <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
-            Pages
-          </span>
-        </div>
-        <div
-          className="flex items-center gap-2 text-xs cursor-pointer"
-          onClick={() => handleNavigationClick("landing")}
-        >
-          <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
-            <BsRocketTakeoffFill size={18} />
-          </div>
-          <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
-            Landing
-          </span>
+          <img src={grabIcon} />
+          <h2 className="font-bold text-sm">Grab Nice ProDashboard</h2>
+          <p className="text-center">
+            Customize your dashboard and learn about our features
+          </p>
+          <Link to="/" className="p-2 bg-orange-600 rounded-xs font-bold">
+            Get Started
+          </Link>
         </div>
       </div>
       <div>
