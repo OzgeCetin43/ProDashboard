@@ -3,10 +3,14 @@ import { motion, useAnimationControls } from "framer-motion";
 import { MdOutlineStackedBarChart } from "react-icons/md";
 import { FaAppStoreIos } from "react-icons/fa6";
 import { FaLock } from "react-icons/fa";
+import { ImPagebreak } from "react-icons/im";
+import { BsRocketTakeoffFill } from "react-icons/bs";
 
 import DashboardNavigation from "./dashboardNavigation.component";
 import AppNavigation from "./appNavigation.component";
 import AuthenticationNavigation from "./authenticationNavigation.component";
+import PageNavigation from "./pageNavigation.component";
+import LandingNavigation from "./landingNavigation.component";
 
 import logo from "../assets/images/logo.png";
 
@@ -95,7 +99,29 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
             <FaLock size={18} />
           </div>
           <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
-            Authetication
+            Authentication
+          </span>
+        </div>
+        <div
+          className="flex items-center gap-2 text-xs cursor-pointer"
+          onClick={() => handleNavigationClick("pages")}
+        >
+          <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
+            <ImPagebreak size={18} />
+          </div>
+          <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+            Pages
+          </span>
+        </div>
+        <div
+          className="flex items-center gap-2 text-xs cursor-pointer"
+          onClick={() => handleNavigationClick("landing")}
+        >
+          <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
+            <BsRocketTakeoffFill size={18} />
+          </div>
+          <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+            Landing
           </span>
         </div>
       </div>
@@ -114,6 +140,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
         )}
         {selectedNavigation === "authentication" && (
           <AuthenticationNavigation
+            isOpen={isOpen}
+            setSelectedNavigation={setSelectedNavigation}
+          />
+        )}
+        {selectedNavigation === "pages" && (
+          <PageNavigation
+            isOpen={isOpen}
+            setSelectedNavigation={setSelectedNavigation}
+          />
+        )}
+        {selectedNavigation === "landing" && (
+          <LandingNavigation
             isOpen={isOpen}
             setSelectedNavigation={setSelectedNavigation}
           />
