@@ -5,20 +5,11 @@ import { IoClose } from "react-icons/io5";
 
 import { dashboardLinks } from "../assets/data/dashboardLink.data";
 
+import { navigationVariants } from "../assets/animations/navigationVariants.animation";
+
 type DashboardNavigationProps = {
   isOpen: boolean;
   setSelectedNavigation: React.Dispatch<React.SetStateAction<string | null>>;
-};
-
-const navigationVariants = {
-  close: {
-    x: -300,
-    opacity: 0,
-  },
-  open: {
-    x: 0,
-    opacity: 100,
-  },
 };
 
 const DashboardNavigation: React.FC<DashboardNavigationProps> = ({

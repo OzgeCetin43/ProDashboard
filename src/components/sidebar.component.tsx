@@ -1,36 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
-import type { Variants } from "framer-motion";
 import { MdOutlineStackedBarChart } from "react-icons/md";
 import { FaAppStoreIos } from "react-icons/fa6";
+import { FaLock } from "react-icons/fa";
 
 import DashboardNavigation from "./dashboardNavigation.component";
 import AppNavigation from "./appNavigation.component";
+import AuthenticationNavigation from "./authenticationNavigation.component";
 
 import logo from "../assets/images/logo.png";
+
+import { containerVariants } from "../assets/animations/containerVariants.animation";
 
 type SidebarProps = {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-const containerVariants: Variants = {
-  close: {
-    width: "5rem",
-    transition: {
-      type: "spring" as const,
-      damping: 15,
-      duration: 0.5,
-    },
-  },
-  open: {
-    width: "12rem",
-    transition: {
-      type: "spring" as const,
-      damping: 15,
-      duration: 0.5,
-    },
-  },
 };
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
@@ -103,6 +87,17 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
             Apps
           </span>
         </div>
+        <div
+          className="flex items-center gap-2 text-xs cursor-pointer"
+          onClick={() => handleNavigationClick("authentication")}
+        >
+          <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
+            <FaLock size={18} />
+          </div>
+          <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+            Authetication
+          </span>
+        </div>
       </div>
       <div>
         {selectedNavigation === "dashboards" && (
@@ -113,6 +108,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
         )}
         {selectedNavigation === "apps" && (
           <AppNavigation
+            isOpen={isOpen}
+            setSelectedNavigation={setSelectedNavigation}
+          />
+        )}
+        {selectedNavigation === "authentication" && (
+          <AuthenticationNavigation
             isOpen={isOpen}
             setSelectedNavigation={setSelectedNavigation}
           />

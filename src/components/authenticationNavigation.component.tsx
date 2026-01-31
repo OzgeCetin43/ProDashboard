@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-import { appLinks } from "../assets/data/appLink.data";
+import { authenticationLinks } from "../assets/data/authenticationLink.data";
 
 import { navigationVariants } from "../assets/animations/navigationVariants.animation";
 
-type AppNavigationProps = {
+type AuthenticationNavigationProps = {
   isOpen: boolean;
   setSelectedNavigation: React.Dispatch<React.SetStateAction<string | null>>;
 };
 
-const AppNavigation: React.FC<AppNavigationProps> = ({
+const AuthenticationNavigation: React.FC<AuthenticationNavigationProps> = ({
   isOpen,
   setSelectedNavigation,
 }) => {
@@ -49,7 +49,7 @@ const AppNavigation: React.FC<AppNavigationProps> = ({
           onClick={() => setSelectedNavigation(null)}
         />
         <div className="w-full mt-6">
-          {appLinks.map((link) =>
+          {authenticationLinks.map((link) =>
             link.subMenu ? (
               <div key={link.id} className="flex flex-col justify-center gap-2">
                 <div
@@ -92,4 +92,4 @@ const AppNavigation: React.FC<AppNavigationProps> = ({
   );
 };
 
-export default AppNavigation;
+export default AuthenticationNavigation;
