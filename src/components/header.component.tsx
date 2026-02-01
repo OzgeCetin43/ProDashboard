@@ -34,7 +34,7 @@ const Header: React.FC = () => {
               onClick={() => setIsNotificationOpen((prev) => !prev)}
             />
             {isNotificationOpen && (
-              <div className="absolute top-[130%] -left-18 md:right-0">
+              <div className="absolute top-[130%] -right-32 md:right-0">
                 <Notification setIsNotificationOpen={setIsNotificationOpen} />
               </div>
             )}
