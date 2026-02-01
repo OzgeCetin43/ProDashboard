@@ -18,6 +18,8 @@ import grabIcon from "../assets/images/dashboard-footer-icon.webp";
 
 import { containerVariants } from "../assets/animations/containerVariants.animation";
 
+import { useIsMdUp } from "../hooks/useIsMdUp";
+
 type SidebarProps = {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -27,6 +29,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
   const [selectedNavigation, setSelectedNavigation] = useState<string | null>(
     null
   );
+
+  const isMdUp = useIsMdUp();
 
   const containerControls = useAnimationControls();
   const svgControls = useAnimationControls();
@@ -43,7 +47,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
   }, [isOpen]);
 
   const handleSidebarOpenClose = () => {
-    setIsOpen((prev) => !prev);
+    if (isMdUp) {
+      setIsOpen((prev) => !prev);
+    } else {
+      setIsOpen(false);
+    }
   };
 
   const handleNavigationClick = (name: string) => {
