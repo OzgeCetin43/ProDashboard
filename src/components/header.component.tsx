@@ -5,12 +5,14 @@ import { GiHexagonalNut } from "react-icons/gi";
 
 import CartDrawer from "./cartDrawer.component";
 import Notification from "./notification.component";
+import Inbox from "./inbox.component";
 
 import avatar from "../assets/images/avatar.jpg";
 
 const Header: React.FC = () => {
   const [isCartDrawerOpen, setIsCartDrawerOpen] = useState<boolean>(false);
   const [isNotificationOpen, setIsNotificationOpen] = useState<boolean>(false);
+  const [isInboxOpen, setIsInboxOpen] = useState<boolean>(false);
 
   return (
     <>
@@ -40,7 +42,15 @@ const Header: React.FC = () => {
             )}
           </div>
           <div className="relative">
-            <GiHexagonalNut className="bg-neutral-700 hover:bg-orange-600 p-3 h-10 w-10 rounded-full cursor-pointer" />
+            <GiHexagonalNut
+              className="bg-neutral-700 hover:bg-orange-600 p-3 h-10 w-10 rounded-full cursor-pointer"
+              onClick={() => setIsInboxOpen((prev) => !prev)}
+            />
+            {isInboxOpen && (
+              <div className="absolute top-[130%] -right-20 md:right-0">
+                <Inbox setIsInboxOpen={setIsInboxOpen} />
+              </div>
+            )}
           </div>
           <div className="relative">
             <img

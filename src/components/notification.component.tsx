@@ -16,7 +16,7 @@ const Notification: React.FC<NotificationProps> = ({
         return (
           <div
             key={notification.id}
-            className="flex gap-2 p-2 hover:bg-neutral-600 rounded-xs mb-2"
+            className="flex gap-2 p-2 hover:bg-neutral-600 rounded-xs mb-2 cursor-pointer"
           >
             <Icon
               className={`mt-2 h-8 w-8 p-1 ${notification.iconClass} rounded-xs`}
