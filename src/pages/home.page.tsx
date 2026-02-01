@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { IoCalendarOutline } from "react-icons/io5";
 
 import anayticIcon from "../assets/images/analytic-icon.webp";
 import KeyInsightChart from "../components/keyInsightChart.component";
@@ -8,11 +9,36 @@ import WebsiteVisitChart from "../components/websiteVisitChart.component";
 import LegendItem from "../components/legendItem.component";
 import CurrentVisitChart from "../components/currentVisitChart.component";
 
+import upgradeIcon from "../assets/images/upgrade.png";
+
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col gap-2 p-2">
+      <div className="flex flex-col items-center">
+        <div className="w-full flex items-center justify-between p-2 bg-yellow-300 text-stone-950 text-xs font-bold rounded-tr-xs rounded-tl-xs">
+          <div className="flex items-center gap-2">
+            <IoCalendarOutline size={16} />
+            <span>You free trial expired in 17 days!</span>
+          </div>
+          <Link to="/" className="underline">
+            Upgrade
+          </Link>
+        </div>
+        <div className="w-full p-2 flex items-center justify-between bg-[#212121] rounded-br-xs rounded-bl-xs">
+          <div className="flex flex-col justify-center gap-2">
+            <h3>Upgrade your plan from a Free trial, to 'Premium Plan'</h3>
+            <Link
+              to="/"
+              className="p-2 bg-orange-600 hover:bg-sky-600 max-w-fit rounded-xs text-xs font-bold"
+            >
+              Upgrade Account
+            </Link>
+          </div>
+          <img src={upgradeIcon} alt="upgrade" className="w-28 h-28" />
+        </div>
+      </div>
       <div className="flex flex-col md:flex-row justify-between gap-2">
-        <div className="flex-2 flex items-center justify-between bg-[#212121] rounded-md border border-neutral-700 p-4">
+        <div className="flex-2 flex items-center justify-between bg-[#212121] rounded-xs border border-neutral-700 p-4">
           <div className="flex flex-col justify-center gap-2">
             <h3 className="font-bold text-orange-600">
               Good Afternoon Cameron
@@ -31,7 +57,7 @@ const Home: React.FC = () => {
           </div>
           <img src={anayticIcon} alt="analytics" className="w-28 h-28" />
         </div>
-        <div className="flex-1 flex flex-col justify-center gap-2 bg-[#212121] rounded-md border border-neutral-700 p-4">
+        <div className="flex-1 flex flex-col justify-center gap-2 bg-[#212121] rounded-xs border border-neutral-700 p-4">
           <h3 className="font-bold">Key Insights</h3>
           <p className="text-xs">All-Time Revenue</p>
           <p className="text-xl flex items-center gap-2">
@@ -44,7 +70,7 @@ const Home: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-between gap-2">
-        <div className="flex-2 flex flex-col justify-center gap-2 bg-[#212121] rounded-md border border-neutral-700 p-4">
+        <div className="flex-2 flex flex-col justify-center gap-2 bg-[#212121] rounded-xs border border-neutral-700 p-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
             <div className="flex flex-col justify-center gap-2">
               <h3 className="font-bold">Website Visits</h3>
@@ -63,7 +89,7 @@ const Home: React.FC = () => {
           </div>
           <WebsiteVisitChart />
         </div>
-        <div className="flex-1 flex flex-col justify-center gap-2 bg-[#212121] rounded-md border border-neutral-700 p-4">
+        <div className="flex-1 flex flex-col justify-center gap-2 bg-[#212121] rounded-xs border border-neutral-700 p-4">
           <div className="flex flex-col justify-center gap-2">
             <h3 className="font-bold">Current Visits</h3>
             <div className="w-full flex items-center justify-center">
