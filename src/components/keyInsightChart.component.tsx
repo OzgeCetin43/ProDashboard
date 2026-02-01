@@ -36,7 +36,7 @@ const KeyInsightChart: React.FC = () => {
           </BarChart>
         </ResponsiveContainer>
       </div>
-      <div className="mt-4 flex gap-4 text-xs text-gray-600">
+      <div className="mt-4 flex gap-4 text-xs">
         <LegendItem color="#F5440F" label="Asia" />
         <LegendItem color="#5EA500" label="USA" />
         <LegendItem color="#0084D1" label="Europe" />

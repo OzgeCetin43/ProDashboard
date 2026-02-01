@@ -36,7 +36,9 @@ const Home: React.FC = () => {
           <p className="text-xs">All-Time Revenue</p>
           <p className="text-xl flex items-center gap-2">
             <span>$395.7k</span>
-            <span className="text-xs bg-green-500 p-1 rounded-xs">+2.7%</span>
+            <span className="text-xs bg-green-500 py-1 px-2 rounded-xs">
+              +2.7%
+            </span>
           </p>
           <KeyInsightChart />
         </div>
@@ -54,7 +56,7 @@ const Home: React.FC = () => {
                 <span className="text-xs text-neutral-500">than last year</span>
               </p>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-xs">
               <LegendItem color="#F5440F" label="Site 1" />
               <LegendItem color="#0084D1" label="Site 2" />
             </div>
@@ -68,27 +70,27 @@ const Home: React.FC = () => {
               <CurrentVisitChart />
             </div>
             <div className="flex items-center justify-between">
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 text-xs">
                 <LegendItem color="#F5440F" label="America" />
                 <LegendItem color="#0084D1" label="Europe" />
                 <LegendItem color="#5EA500" label="Asia" />
               </div>
-              <div className="flex flex-col items-end gap-2">
+              <div className="flex flex-col items-end gap-2 text-xs">
                 <div className="flex items-center gap-2">
                   <span>1800</span>
-                  <span className="bg-green-500 p-1.5 rounded-xs font-bold text-xs">
-                    +4.7%
+                  <span className="bg-green-500 py-1 px-2 rounded-xs font-bold text-xs">
+                    +2.7%
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span>308</span>
-                  <span className="bg-green-500 p-1.5 rounded-xs font-bold text-xs">
+                  <span className="bg-green-500 py-1 px-2 rounded-xs font-bold text-xs">
                     +2.1%
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span>350</span>
-                  <span className="bg-red-500 p-1.5 rounded-xs font-bold text-xs">
+                  <span className="bg-red-500 py-1 px-2 rounded-xs font-bold text-xs">
                     -1.6%
                   </span>
                 </div>
