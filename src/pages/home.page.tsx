@@ -10,9 +10,9 @@ import CurrentVisitChart from "../components/currentVisitChart.component";
 
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 p-2">
       <div className="flex flex-col md:flex-row justify-between gap-2">
-        <div className="flex-2 flex items-center justify-between bg-[#212121] m-4 rounded-md border border-neutral-700 p-4">
+        <div className="flex-2 flex items-center justify-between bg-[#212121] rounded-md border border-neutral-700 p-4">
           <div className="flex flex-col justify-center gap-2">
             <h3 className="font-bold text-orange-600">
               Good Afternoon Cameron
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
           </div>
           <img src={anayticIcon} alt="analytics" className="w-28 h-28" />
         </div>
-        <div className="flex-1 flex flex-col justify-center gap-2 bg-[#212121] mx-4 md:m-4 rounded-md border border-neutral-700 p-4">
+        <div className="flex-1 flex flex-col justify-center gap-2 bg-[#212121] rounded-md border border-neutral-700 p-4">
           <h3 className="font-bold">Key Insights</h3>
           <p className="text-xs">All-Time Revenue</p>
           <p className="text-xl flex items-center gap-2">
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-between gap-2">
-        <div className="flex-2 flex flex-col justify-center gap-2 bg-[#212121] mx-4 rounded-md border border-neutral-700 p-4">
+        <div className="flex-2 flex flex-col justify-center gap-2 bg-[#212121] rounded-md border border-neutral-700 p-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
             <div className="flex flex-col justify-center gap-2">
               <h3 className="font-bold">Website Visits</h3>
@@ -61,7 +61,7 @@ const Home: React.FC = () => {
           </div>
           <WebsiteVisitChart />
         </div>
-        <div className="flex-1 flex flex-col justify-center gap-2 bg-[#212121] mx-4 rounded-md border border-neutral-700 p-4">
+        <div className="flex-1 flex flex-col justify-center gap-2 bg-[#212121] rounded-md border border-neutral-700 p-4">
           <div className="flex flex-col justify-center gap-2">
             <h3 className="font-bold">Current Visits</h3>
             <div className="w-full flex items-center justify-center">
