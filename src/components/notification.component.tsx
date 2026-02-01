@@ -10,7 +10,7 @@ const Notification: React.FC<NotificationProps> = ({
   setIsNotificationOpen,
 }) => {
   return (
-    <div className="bg-neutral-800 border border-neutral-700 p-2 w-60">
+    <div className="bg-neutral-800 border border-neutral-700 p-2 w-60 rounded-xs">
       {notifications.map((notification) => {
         const Icon = notification.icon;
         return (
