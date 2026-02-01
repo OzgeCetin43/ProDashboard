@@ -4,11 +4,13 @@ import { FaCartShopping } from "react-icons/fa6";
 import { GiHexagonalNut } from "react-icons/gi";
 
 import CartDrawer from "./cartDrawer.component";
+import Notification from "./notification.component";
 
 import avatar from "../assets/images/avatar.jpg";
 
 const Header: React.FC = () => {
   const [isCartDrawerOpen, setIsCartDrawerOpen] = useState<boolean>(false);
+  const [isNotificationOpen, setIsNotificationOpen] = useState<boolean>(false);
 
   return (
     <>
@@ -22,14 +24,20 @@ const Header: React.FC = () => {
           <FaSearch className="w-6 h-6 p-1 hover:bg-sky-600 rounded-full cursor-pointer" />
         </div>
         <div className="w-full flex-2 flex items-center justify-center md:justify-end gap-4">
+          <FaCartShopping
+            className="bg-neutral-700 hover:bg-orange-600 p-3 h-10 w-10 rounded-full cursor-pointer"
+            onClick={() => setIsCartDrawerOpen(true)}
+          />
           <div className="relative">
-            <FaCartShopping
+            <FaBell
               className="bg-neutral-700 hover:bg-orange-600 p-3 h-10 w-10 rounded-full cursor-pointer"
-              onClick={() => setIsCartDrawerOpen(true)}
+              onClick={() => setIsNotificationOpen((prev) => !prev)}
             />
-          </div>
-          <div className="relative">
-            <FaBell className="bg-neutral-700 hover:bg-orange-600 p-3 h-10 w-10 rounded-full cursor-pointer" />
+            {isNotificationOpen && (
+              <div className="absolute top-[130%] -left-18 md:right-0">
+                <Notification setIsNotificationOpen={setIsNotificationOpen} />
+              </div>
+            )}
           </div>
           <div className="relative">
             <GiHexagonalNut className="bg-neutral-700 hover:bg-orange-600 p-3 h-10 w-10 rounded-full cursor-pointer" />
