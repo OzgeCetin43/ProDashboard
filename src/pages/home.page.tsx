@@ -43,7 +43,7 @@ const Home: React.FC = () => {
       </div>
       <div className="flex flex-col md:flex-row justify-between gap-2">
         <div className="flex-2 flex flex-col justify-center gap-2 bg-[#212121] mx-4 rounded-md border border-neutral-700 p-4">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
             <div className="flex flex-col justify-center gap-2">
               <h3 className="font-bold">Website Visits</h3>
               <p className="text-xl flex items-center gap-2">
