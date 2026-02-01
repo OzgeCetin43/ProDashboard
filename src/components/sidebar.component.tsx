@@ -132,7 +132,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
           className={`text-xs ${isOpen ? "flex flex-col items-center gap-2" : "hidden"}`}
         >
           <img src={grabIcon} />
-          <h2 className="font-bold text-sm">Grab Nice ProDashboard</h2>
+          <h2 className="font-bold text-sm text-center">
+            Grab Nice ProDashboard
+          </h2>
           <p className="text-center">
             Customize your dashboard and learn about our features
           </p>
