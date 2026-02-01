@@ -36,7 +36,7 @@ const Header: React.FC = () => {
               onClick={() => setIsNotificationOpen((prev) => !prev)}
             />
             {isNotificationOpen && (
-              <div className="absolute top-[130%] -right-32 md:right-0">
+              <div className="absolute z-5 top-[130%] -right-32 md:right-0">
                 <Notification setIsNotificationOpen={setIsNotificationOpen} />
               </div>
             )}
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
               onClick={() => setIsInboxOpen((prev) => !prev)}
             />
             {isInboxOpen && (
-              <div className="absolute top-[130%] -right-20 md:right-0">
+              <div className="absolute z-5 top-[130%] -right-20 md:right-0">
                 <Inbox setIsInboxOpen={setIsInboxOpen} />
               </div>
             )}

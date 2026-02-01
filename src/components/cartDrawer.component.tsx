@@ -22,7 +22,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ setIsCartDrawerOpen }) => {
         duration: 0.25,
         ease: "easeInOut",
       }}
-      className="h-screen w-[80%] md:w-1/4 absolute top-0 right-0 bg-[#1a1a1a]"
+      className="h-screen w-[80%] md:w-1/4 absolute top-0 right-0 z-5 bg-[#1a1a1a]"
     >
       <div className="absolute w-full flex items-center justify-between p-4 bg-sky-600">
         <h1 className="font-bold">Shopping Cart</h1>
