@@ -1,20 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import {
+  FaLongArrowAltRight,
+  FaShoppingBag,
+  FaBoxOpen,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
 import { IoCalendarOutline } from "react-icons/io5";
+import { FaUsers } from "react-icons/fa6";
 
 import anayticIcon from "../assets/images/analytic-icon.webp";
 import KeyInsightChart from "../components/keyInsightChart.component";
 import WebsiteVisitChart from "../components/websiteVisitChart.component";
 import LegendItem from "../components/legendItem.component";
 import CurrentVisitChart from "../components/currentVisitChart.component";
+import LevelChart from "../components/levelChart.component";
 
 import upgradeIcon from "../assets/images/upgrade.png";
 
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col gap-2 p-2">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center border border-neutral-700 rounded-xs">
         <div className="w-full flex items-center justify-between p-2 bg-yellow-300 text-stone-950 text-xs font-bold rounded-tr-xs rounded-tl-xs">
           <div className="flex items-center gap-2">
             <IoCalendarOutline size={16} />
@@ -26,7 +33,9 @@ const Home: React.FC = () => {
         </div>
         <div className="w-full p-2 flex items-center justify-between bg-[#212121] rounded-br-xs rounded-bl-xs">
           <div className="flex flex-col justify-center gap-2">
-            <h3>Upgrade your plan from a Free trial, to 'Premium Plan'</h3>
+            <h3 className="text-xs">
+              Upgrade your plan from a Free trial, to 'Premium Plan'
+            </h3>
             <Link
               to="/"
               className="p-2 bg-orange-600 hover:bg-sky-600 max-w-fit rounded-xs text-xs font-bold"
@@ -67,6 +76,68 @@ const Home: React.FC = () => {
             </span>
           </p>
           <KeyInsightChart />
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row justify-between gap-2">
+        <div className="flex-2 flex items-center justify-between p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
+          <div className="w-full grid grid-cols-2 gap-2">
+            <div className="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-2 bg-[#1a1a1a] rounded-xs border border-neutral-700 p-4">
+              <div className="flex flex-col justify-center gap-2">
+                <h3>Visitor</h3>
+                <p className="text-xl font-bold flex items-center gap-2">
+                  126,418
+                  <span className="text-xs bg-green-500 py-1 px-2 rounded-xs">
+                    +1.2%
+                  </span>
+                </p>
+                <span className="text-xs text-neutral-400">vs last month</span>
+              </div>
+              <FaUsers className="w-12 h-12 bg-orange-600 p-2 rounded-xs" />
+            </div>
+            <div className="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-2 bg-[#1a1a1a] rounded-xs border border-neutral-700 p-4">
+              <div className="flex flex-col justify-center gap-2">
+                <h3>Conversion Rate</h3>
+                <p className="text-xl font-bold flex items-center gap-2">
+                  5.3%
+                  <span className="text-xs bg-red-500 py-1 px-2 rounded-xs">
+                    -1.8%
+                  </span>
+                </p>
+                <span className="text-xs text-neutral-400">vs last month</span>
+              </div>
+              <FaShoppingBag className="w-12 h-12 bg-green-600 p-2 rounded-xs" />
+            </div>
+            <div className="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-2 bg-[#1a1a1a] rounded-xs border border-neutral-700 p-4">
+              <div className="flex flex-col justify-center gap-2">
+                <h3>Ad Campaign Clicks</h3>
+                <p className="text-xl font-bold flex items-center gap-2">
+                  11,510
+                  <span className="text-xs bg-green-500 py-1 px-2 rounded-xs">
+                    +2.9%
+                  </span>
+                </p>
+                <span className="text-xs text-neutral-400">vs last month</span>
+              </div>
+              <FaBoxOpen className="w-12 h-12 bg-blue-600 p-2 rounded-xs" />
+            </div>
+            <div className="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-2 bg-[#1a1a1a] rounded-xs border border-neutral-700 p-4">
+              <div className="flex flex-col justify-center gap-2">
+                <h3>Bounce Rate</h3>
+                <p className="text-xl font-bold flex items-center gap-2">
+                  33.48%
+                  <span className="text-xs bg-green-500 py-1 px-2 rounded-xs">
+                    +7.5%
+                  </span>
+                </p>
+                <span className="text-xs text-neutral-400">vs last month</span>
+              </div>
+              <FaExternalLinkAlt className="w-12 h-12 bg-yellow-500 p-2 rounded-xs" />
+            </div>
+          </div>
+        </div>
+        <div className="flex-1 flex flex-col justify-center gap-2 bg-[#212121] rounded-xs border border-neutral-700 p-4">
+          <h3>Level</h3>
+          <LevelChart />
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-between gap-2">
