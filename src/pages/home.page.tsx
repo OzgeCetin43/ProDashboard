@@ -80,8 +80,8 @@ const Home: React.FC = () => {
       </div>
       <div className="flex flex-col md:flex-row justify-between gap-2">
         <div className="flex-2 flex items-center justify-between p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
-          <div className="w-full grid grid-cols-2 gap-2">
-            <div className="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-2 bg-[#1a1a1a] rounded-xs border border-neutral-700 p-4">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div className="flex-1 flex items-center justify-between gap-2 bg-[#1a1a1a] rounded-xs border border-neutral-700 p-4">
               <div className="flex flex-col justify-center gap-2">
                 <h3>Visitor</h3>
                 <p className="text-xl font-bold flex items-center gap-2">
@@ -94,7 +94,7 @@ const Home: React.FC = () => {
               </div>
               <FaUsers className="w-12 h-12 bg-orange-600 p-2 rounded-xs" />
             </div>
-            <div className="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-2 bg-[#1a1a1a] rounded-xs border border-neutral-700 p-4">
+            <div className="flex-1 flex items-center justify-between gap-2 bg-[#1a1a1a] rounded-xs border border-neutral-700 p-4">
               <div className="flex flex-col justify-center gap-2">
                 <h3>Conversion Rate</h3>
                 <p className="text-xl font-bold flex items-center gap-2">
@@ -107,7 +107,7 @@ const Home: React.FC = () => {
               </div>
               <FaShoppingBag className="w-12 h-12 bg-green-600 p-2 rounded-xs" />
             </div>
-            <div className="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-2 bg-[#1a1a1a] rounded-xs border border-neutral-700 p-4">
+            <div className="flex-1 flex items-center justify-between gap-2 bg-[#1a1a1a] rounded-xs border border-neutral-700 p-4">
               <div className="flex flex-col justify-center gap-2">
                 <h3>Ad Campaign Clicks</h3>
                 <p className="text-xl font-bold flex items-center gap-2">
@@ -120,7 +120,7 @@ const Home: React.FC = () => {
               </div>
               <FaBoxOpen className="w-12 h-12 bg-blue-600 p-2 rounded-xs" />
             </div>
-            <div className="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-2 bg-[#1a1a1a] rounded-xs border border-neutral-700 p-4">
+            <div className="flex-1 flex items-center justify-between gap-2 bg-[#1a1a1a] rounded-xs border border-neutral-700 p-4">
               <div className="flex flex-col justify-center gap-2">
                 <h3>Bounce Rate</h3>
                 <p className="text-xl font-bold flex items-center gap-2">
