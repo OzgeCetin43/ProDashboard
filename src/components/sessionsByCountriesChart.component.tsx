@@ -29,7 +29,7 @@ const SessionsByCountriesChart: React.FC = () => {
         <BarChart
           data={sessionsByCountriesChartData}
           layout="vertical"
-          margin={{ top: 10, right: 40, left: 80, bottom: 10 }}
+          margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
         >
           <XAxis
             type="number"
