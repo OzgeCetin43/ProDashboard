@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useIsMdUp } from "../hooks/useIsMdUp";
 
 type SquareProps = {
