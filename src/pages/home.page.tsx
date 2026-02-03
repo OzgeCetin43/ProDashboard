@@ -241,8 +241,8 @@ const Home: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between gap-2">
         <div className="flex-1 flex flex-col justify-center gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
           <h3 className="font-bold">Audiences Metrics</h3>
-          <div className="flex items-center justify-center gap-2 bg-neutral-950 rounded-xs p-4 mb-4">
-            <div className="flex-1 flex flex-col items-center justify-center gap-2 border-r border-neutral-700">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-2 bg-neutral-950 rounded-xs p-4 mb-4">
+            <div className="w-full flex-1 flex flex-col items-center justify-center gap-2 border-b md:border-r md:border-b-0 border-neutral-700">
               <div className="flex items-center gap-2 font-bold">
                 <h4 className="text-xl">854</h4>
                 <span className="text-green-500 text-xs">49%</span>
@@ -250,7 +250,7 @@ const Home: React.FC = () => {
               </div>
               <p className="text-neutral-400 text-xs">Avg. Session</p>
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center gap-2 border-r border-x-neutral-700">
+            <div className="w-full flex-1 flex flex-col items-center justify-center gap-2 border-b md:border-r md:border-b-0 border-neutral-700">
               <div className="flex items-center gap-2 font-bold">
                 <h4 className="text-xl">1,278</h4>
                 <span className="text-green-500 text-xs">60%</span>
@@ -258,7 +258,7 @@ const Home: React.FC = () => {
               </div>
               <p className="text-neutral-400 text-xs">Conversion Rate</p>
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center gap-2">
+            <div className="w-full flex-1 flex flex-col items-center justify-center gap-2">
               <div className="flex items-center gap-2 font-bold">
                 <h4 className="text-xl">3m 38sec</h4>
                 <span className="text-green-500 text-xs">37%</span>
@@ -276,8 +276,8 @@ const Home: React.FC = () => {
         <div className="flex-1 flex flex-col gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
           <h3 className="font-bold">Audiences Sessions by Country</h3>
           <div className="flex items-center justify-center gap-2">
-            <LegendItem color="#F5440F" label="0 - 50" />
-            <LegendItem color="#FFDF20" label="51 - 100" />
+            <LegendItem color="#FFDF20" label="0 - 50" />
+            <LegendItem color="#F5440F" label="51 - 100" />
           </div>
           <AudienceSessionsByCountryChart />
         </div>

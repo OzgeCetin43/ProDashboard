@@ -7,8 +7,8 @@ type SquareProps = {
 };
 
 const getColor = (value: number) => {
-  if (value <= 50) return "#F5440F";
-  return "#FFDF20";
+  if (value <= 50) return "#FFDF20";
+  return "#F5440F";
 };
 
 const Square: React.FC<SquareProps> = ({ cx = 0, cy = 0, payload }) => {
