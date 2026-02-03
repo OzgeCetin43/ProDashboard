@@ -7,9 +7,11 @@ import {
   FaExternalLinkAlt,
 } from "react-icons/fa";
 import { IoCalendarOutline } from "react-icons/io5";
-import { FaUsers } from "react-icons/fa6";
+import { FaUsers, FaArrowTrendUp } from "react-icons/fa6";
 
 import anayticIcon from "../assets/images/analytic-icon.webp";
+import upgradeIcon from "../assets/images/upgrade.png";
+
 import KeyInsightChart from "../components/keyInsightChart.component";
 import WebsiteVisitChart from "../components/websiteVisitChart.component";
 import LegendItem from "../components/legendItem.component";
@@ -17,8 +19,8 @@ import CurrentVisitChart from "../components/currentVisitChart.component";
 import LevelChart from "../components/levelChart.component";
 import LiveUsersByCountryGeoChart from "../components/liveUsersByCountryGeoChart.component";
 import SessionsByCountriesChart from "../components/sessionsByCountriesChart.component";
-
-import upgradeIcon from "../assets/images/upgrade.png";
+import AudienceMetricsChart from "../components/audienceMetricsChart.component";
+import AudienceSessionsByCountryChart from "../components/audienceSessionsByCountryChart.component";
 
 const Home: React.FC = () => {
   return (
@@ -234,6 +236,50 @@ const Home: React.FC = () => {
         <div className="flex-1 flex flex-col justify-center gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
           <h3 className="font-bold">Sessions by Countries</h3>
           <SessionsByCountriesChart />
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row justify-between gap-2">
+        <div className="flex-1 flex flex-col justify-center gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
+          <h3 className="font-bold">Audiences Metrics</h3>
+          <div className="flex items-center justify-center gap-2 bg-neutral-950 rounded-xs p-4 mb-4">
+            <div className="flex-1 flex flex-col items-center justify-center gap-2 border-r border-neutral-700">
+              <div className="flex items-center gap-2 font-bold">
+                <h4 className="text-xl">854</h4>
+                <span className="text-green-500 text-xs">49%</span>
+                <FaArrowTrendUp size={18} className="text-green-500" />
+              </div>
+              <p className="text-neutral-400 text-xs">Avg. Session</p>
+            </div>
+            <div className="flex-1 flex flex-col items-center justify-center gap-2 border-r border-x-neutral-700">
+              <div className="flex items-center gap-2 font-bold">
+                <h4 className="text-xl">1,278</h4>
+                <span className="text-green-500 text-xs">60%</span>
+                <FaArrowTrendUp size={18} className="text-green-500" />
+              </div>
+              <p className="text-neutral-400 text-xs">Conversion Rate</p>
+            </div>
+            <div className="flex-1 flex flex-col items-center justify-center gap-2">
+              <div className="flex items-center gap-2 font-bold">
+                <h4 className="text-xl">3m 38sec</h4>
+                <span className="text-green-500 text-xs">37%</span>
+                <FaArrowTrendUp size={18} className="text-green-500" />
+              </div>
+              <p className="text-neutral-400 text-xs">Avg. Session Duration</p>
+            </div>
+          </div>
+          <AudienceMetricsChart />
+          <div className="flex items-center justify-center gap-2">
+            <LegendItem color="#FFDF20" label="Last Year" />
+            <LegendItem color="#0084D1" label="Current Year" />
+          </div>
+        </div>
+        <div className="flex-1 flex flex-col gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
+          <h3 className="font-bold">Audiences Sessions by Country</h3>
+          <div className="flex items-center justify-center gap-2">
+            <LegendItem color="#F5440F" label="0 - 50" />
+            <LegendItem color="#FFDF20" label="51 - 100" />
+          </div>
+          <AudienceSessionsByCountryChart />
         </div>
       </div>
     </div>
