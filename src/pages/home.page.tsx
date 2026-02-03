@@ -268,7 +268,7 @@ const Home: React.FC = () => {
             </div>
           </div>
           <AudienceMetricsChart />
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex items-center justify-center gap-2 text-xs">
             <LegendItem color="#FFDF20" label="Last Year" />
             <LegendItem color="#0084D1" label="Current Year" />
           </div>
