@@ -15,6 +15,8 @@ import WebsiteVisitChart from "../components/websiteVisitChart.component";
 import LegendItem from "../components/legendItem.component";
 import CurrentVisitChart from "../components/currentVisitChart.component";
 import LevelChart from "../components/levelChart.component";
+import LiveUsersByCountryGeoChart from "../components/liveUsersByCountryGeoChart.component";
+import SessionsByCountriesChart from "../components/sessionsByCountriesChart.component";
 
 import upgradeIcon from "../assets/images/upgrade.png";
 
@@ -194,6 +196,44 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row justify-between gap-2">
+        <div className="flex-1 flex flex-col justify-center gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
+          <h3 className="font-bold">Live Users by Country</h3>
+          <div className="h-100 w-full rounded-xs">
+            <LiveUsersByCountryGeoChart />
+          </div>
+          <table className="text-xs mt-2 text-left bg-neutral-950 border border-neutral-700">
+            <thead className="bg-neutral-600">
+              <tr>
+                <th className="p-2">Duration (secs)</th>
+                <th className="p-2">Sessions</th>
+                <th className="p-2">Views</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="hover:bg-neutral-800 border border-neutral-700">
+                <td className="p-2">0-30</td>
+                <td className="p-2">2,250</td>
+                <td className="p-2">4,250</td>
+              </tr>
+              <tr className="hover:bg-neutral-800 border border-neutral-700">
+                <td className="p-2">31-60</td>
+                <td className="p-2">1,501</td>
+                <td className="p-2">2,050</td>
+              </tr>
+              <tr className="hover:bg-neutral-800 border border-neutral-700">
+                <td className="p-2">61-120</td>
+                <td className="p-2">750</td>
+                <td className="p-2">1,600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="flex-1 flex flex-col justify-center gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
+          <h3 className="font-bold">Sessions by Countries</h3>
+          <SessionsByCountriesChart />
         </div>
       </div>
     </div>
