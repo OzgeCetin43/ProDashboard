@@ -275,7 +275,7 @@ const Home: React.FC = () => {
         </div>
         <div className="flex-1 flex flex-col gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
           <h3 className="font-bold">Audiences Sessions by Country</h3>
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex items-center justify-center gap-2 text-xs">
             <LegendItem color="#FFDF20" label="0 - 50" />
             <LegendItem color="#F5440F" label="51 - 100" />
           </div>
