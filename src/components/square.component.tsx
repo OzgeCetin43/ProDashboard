@@ -1,4 +1,5 @@
 import React from "react";
+import { useIsMdUp } from "../hooks/useIsMdUp";
 
 type SquareProps = {
   cx?: number;
@@ -12,7 +13,9 @@ const getColor = (value: number) => {
 };
 
 const Square: React.FC<SquareProps> = ({ cx = 0, cy = 0, payload }) => {
-  const size = 26;
+  const isMdUp = useIsMdUp();
+
+  const size = isMdUp ? 26 : 8;
 
   return (
     <rect
