@@ -338,7 +338,7 @@ const Home: React.FC = () => {
             <div className="flex flex-col justify-center gap-2">
               <h4 className="font-bold">Total Referrals Page</h4>
               <p className="font-bold text-xl">725,800</p>
-              <p className="flex flex-col md:flex-row items-center gap-2">
+              <p className="flex items-center gap-2">
                 <span className="bg-green-500 py-1 px-2 rounded-xs font-bold">
                   15.68%
                 </span>
