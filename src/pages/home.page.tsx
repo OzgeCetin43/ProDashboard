@@ -5,12 +5,14 @@ import {
   FaShoppingBag,
   FaBoxOpen,
   FaExternalLinkAlt,
+  FaUser,
 } from "react-icons/fa";
 import { IoCalendarOutline } from "react-icons/io5";
-import { FaUsers, FaArrowTrendUp } from "react-icons/fa6";
+import { FaUsers, FaArrowTrendUp, FaArrowTrendDown } from "react-icons/fa6";
 
 import anayticIcon from "../assets/images/analytic-icon.webp";
 import upgradeIcon from "../assets/images/upgrade.png";
+import topReferralsPagesIcon from "../assets/images/top-referrals-pages-icon.png";
 
 import KeyInsightChart from "../components/keyInsightChart.component";
 import WebsiteVisitChart from "../components/websiteVisitChart.component";
@@ -21,6 +23,8 @@ import LiveUsersByCountryGeoChart from "../components/liveUsersByCountryGeoChart
 import SessionsByCountriesChart from "../components/sessionsByCountriesChart.component";
 import AudienceMetricsChart from "../components/audienceMetricsChart.component";
 import AudienceSessionsByCountryChart from "../components/audienceSessionsByCountryChart.component";
+import UsersByDeviceChart from "../components/usersByDeviceChart.component";
+import TopReferralsPagesChart from "../components/topReferralsPagesChart.component";
 
 const Home: React.FC = () => {
   return (
@@ -83,7 +87,7 @@ const Home: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-between gap-2">
-        <div className="flex-2 flex items-center justify-between p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
+        <div className="flex-2 flex items-center justify-between p-4 bg-[#212121] rounded-xs border border-neutral-700">
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
             <div className="flex-1 flex items-center justify-between gap-2 bg-[#1a1a1a] rounded-xs border border-neutral-700 p-4">
               <div className="flex flex-col justify-center gap-2">
@@ -201,7 +205,7 @@ const Home: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-between gap-2">
-        <div className="flex-1 flex flex-col justify-center gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
+        <div className="flex-1 flex flex-col justify-center gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700">
           <h3 className="font-bold">Live Users by Country</h3>
           <div className="h-100 w-full rounded-xs">
             <LiveUsersByCountryGeoChart />
@@ -233,13 +237,13 @@ const Home: React.FC = () => {
             </tbody>
           </table>
         </div>
-        <div className="flex-1 flex flex-col justify-center gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
+        <div className="flex-1 flex flex-col justify-center gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700">
           <h3 className="font-bold">Sessions by Countries</h3>
           <SessionsByCountriesChart />
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-between gap-2">
-        <div className="flex-1 flex flex-col justify-center gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
+        <div className="flex-1 flex flex-col justify-center gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700">
           <h3 className="font-bold">Audiences Metrics</h3>
           <div className="flex flex-col md:flex-row items-center justify-center gap-2 bg-neutral-950 rounded-xs p-4 mb-4">
             <div className="w-full flex-1 flex flex-col items-center justify-center gap-2 border-b md:border-r md:border-b-0 border-neutral-700">
@@ -273,13 +277,131 @@ const Home: React.FC = () => {
             <LegendItem color="#0084D1" label="Current Year" />
           </div>
         </div>
-        <div className="flex-1 flex flex-col gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700 ">
+        <div className="flex-1 flex flex-col gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700">
           <h3 className="font-bold">Audiences Sessions by Country</h3>
           <div className="flex items-center justify-center gap-2 text-xs">
             <LegendItem color="#FFDF20" label="0 - 50" />
             <LegendItem color="#F5440F" label="51 - 100" />
           </div>
           <AudienceSessionsByCountryChart />
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row justify-between gap-2">
+        <div className="flex-1 flex flex-col justify-center gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700">
+          <h3 className="font-bold">Users by Device</h3>
+          <div className="w-full flex items-center justify-center">
+            <UsersByDeviceChart />
+          </div>
+          <div className="flex items-center justify-between gap-2 text-xs mt-2 p-4 bg-neutral-950 border border-neutral-700 rounded-xs">
+            <div className="flex flex-col justify-center gap-2">
+              <LegendItem color="#F5440F" label="Desktop Users" />
+              <LegendItem color="#5EA500" label="Mobile Users" />
+              <LegendItem color="#0084D1" label="Tablet Users" />
+            </div>
+            <div className="flex flex-col justify-center gap-2 font-bold">
+              <div className="flex items-center gap-2">
+                <FaUser size={12} />
+                <p>79K</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaUser size={12} />
+                <p>105K</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaUser size={12} />
+                <p>43K</p>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center gap-2">
+              <div className="flex items-center justify-end gap-2 text-green-500">
+                <FaArrowTrendUp size={12} />
+                <p>10.22%</p>
+              </div>
+              <div className="flex items-center justify-end gap-2">
+                <div className="flex items-center justify-end gap-2 text-red-500">
+                  <FaArrowTrendDown size={12} />
+                  <p>8.53%</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-end gap-2">
+                <div className="flex items-center justify-end gap-2 text-red-500">
+                  <FaArrowTrendDown size={12} />
+                  <p>6.74%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex-1 flex flex-col gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700">
+          <h3 className="font-bold">Top Referrals Pages</h3>
+          <div className="flex items-center justify-between gap-2 text-xs">
+            <div className="flex flex-col justify-center gap-2">
+              <h4 className="font-bold">Total Referrals Page</h4>
+              <p className="font-bold text-xl">725,800</p>
+              <p className="flex items-center gap-2">
+                <span className="bg-green-500 py-1 px-2">15.68%</span>
+                <span className="text-neutral-500">vs. previous month</span>
+              </p>
+            </div>
+            <img
+              src={topReferralsPagesIcon}
+              alt="top referrals pages"
+              className="w-32 h-32"
+            />
+          </div>
+          <TopReferralsPagesChart />
+          <button className="bg-sky-600 hover:bg-orange-600 font-bold text-xs p-2 rounded-xs">
+            Show All
+          </button>
+        </div>
+        <div className="flex-1 flex flex-col gap-2 p-4 bg-[#212121] rounded-xs border border-neutral-700">
+          <h3 className="font-bold">Top Pages</h3>
+          <table className="text-xs mt-2 text-left bg-neutral-950 border border-neutral-700">
+            <thead className="bg-neutral-600">
+              <tr>
+                <th className="p-2">Active Page</th>
+                <th className="p-2">Active</th>
+                <th className="p-2">Users</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="hover:bg-neutral-800 border border-neutral-700">
+                <td className="p-2">/analytics</td>
+                <td className="p-2">99</td>
+                <td className="p-2">25.3%</td>
+              </tr>
+              <tr className="hover:bg-neutral-800 border border-neutral-700">
+                <td className="p-2">/ecommerce</td>
+                <td className="p-2">86</td>
+                <td className="p-2">22.7%</td>
+              </tr>
+              <tr className="hover:bg-neutral-800 border border-neutral-700">
+                <td className="p-2">/crm</td>
+                <td className="p-2">64</td>
+                <td className="p-2">18.7%</td>
+              </tr>
+              <tr className="hover:bg-neutral-800 border border-neutral-700">
+                <td className="p-2">/crypto</td>
+                <td className="p-2">53</td>
+                <td className="p-2">14.2%</td>
+              </tr>
+              <tr className="hover:bg-neutral-800 border border-neutral-700">
+                <td className="p-2">/nft</td>
+                <td className="p-2">33</td>
+                <td className="p-2">12.6%</td>
+              </tr>
+              <tr className="hover:bg-neutral-800 border border-neutral-700">
+                <td className="p-2">/blog</td>
+                <td className="p-2">20</td>
+                <td className="p-2">10.9%</td>
+              </tr>
+              <tr className="hover:bg-neutral-800 border border-neutral-700">
+                <td className="p-2">/job</td>
+                <td className="p-2">10</td>
+                <td className="p-2">7.2%</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
