@@ -6,9 +6,17 @@ import {
   FaBoxOpen,
   FaExternalLinkAlt,
   FaUser,
+  FaFacebookSquare,
 } from "react-icons/fa";
 import { IoCalendarOutline } from "react-icons/io5";
-import { FaUsers, FaArrowTrendUp, FaArrowTrendDown } from "react-icons/fa6";
+import {
+  FaUsers,
+  FaArrowTrendUp,
+  FaArrowTrendDown,
+  FaSquareInstagram,
+  FaSquareXTwitter,
+} from "react-icons/fa6";
+import { GrGoogle } from "react-icons/gr";
 
 import anayticIcon from "../assets/images/analytic-icon.webp";
 import upgradeIcon from "../assets/images/upgrade.png";
@@ -404,6 +412,89 @@ const Home: React.FC = () => {
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row justify-between gap-2">
+        <div className="flex-1 flex flex-col bg-[#212121] rounded-xs border border-neutral-700 p-4">
+          <h3 className="font-bold">Campaign Performance</h3>
+          <div className="flex flex-col justify-center gap-2 mt-2">
+            <div className="flex items-center justify-between text-xs bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+              <div className="flex items-center gap-2">
+                <FaSquareInstagram size={18} />
+                <span className="font-bold">Instagram</span>
+              </div>
+              <span className="bg-gray-600 rounded-xs px-2 py-1">Running</span>
+            </div>
+            <div className="flex items-center justify-between text-xs bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+              <div className="flex items-center gap-2">
+                <GrGoogle size={18} />
+                <span className="font-bold">Google</span>
+              </div>
+              <span className="bg-lime-600 rounded-xs px-2 py-1">Paused</span>
+            </div>
+            <div className="flex items-center justify-between text-xs bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+              <div className="flex items-center gap-2">
+                <FaFacebookSquare size={18} />
+                <span className="font-bold">Facebook</span>
+              </div>
+              <span className="bg-pink-600 rounded-xs px-2 py-1">Paused</span>
+            </div>
+            <div className="flex items-center justify-between text-xs bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+              <div className="flex items-center gap-2">
+                <FaSquareXTwitter size={18} />
+                <span className="font-bold">Twitter</span>
+              </div>
+              <span className="bg-purple-600 rounded-xs px-2 py-1">
+                Completed
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="flex-[1.5] flex flex-col justify-center gap-2 bg-[#212121] rounded-xs border border-neutral-700 p-4">
+          <h3 className="font-bold">Traffic Data</h3>
+          <table className="text-xs mt-2 text-left bg-neutral-950 border border-neutral-700">
+            <thead className="bg-neutral-600">
+              <tr>
+                <th className="p-2">Source</th>
+                <th className="p-2">Visits</th>
+                <th className="p-2">Bounce Rate</th>
+                <th className="p-2">Goal (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="hover:bg-neutral-800 border border-neutral-700">
+                <td className="p-2">Direct</td>
+                <td className="p-2">1300</td>
+                <td className="p-2">30%</td>
+                <td className="p-2 flex items-center gap-4">
+                  <progress max={100} value={80} />
+                  <span>80%</span>
+                </td>
+              </tr>
+              <tr className="hover:bg-neutral-800 border border-neutral-700">
+                <td className="p-2">Email Campaign</td>
+                <td className="p-2">5000</td>
+                <td className="p-2">45%</td>
+                <td className="p-2 flex items-center gap-4">
+                  <progress max={100} value={40} />
+                  <span>40%</span>
+                </td>
+              </tr>
+              <tr className="hover:bg-neutral-800 border border-neutral-700">
+                <td className="p-2">Organic</td>
+                <td className="p-2">3000</td>
+                <td className="p-2">10%</td>
+                <td className="p-2 flex items-center gap-4">
+                  <progress max={100} value={55} />
+                  <span>55%</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div className="flex items-center justify-end text-xs">1-3 of 5</div>
+          <button className="bg-orange-600 hover:bg-sky-600 text-xs rounded-xs p-2 font-bold">
+            Load More
+          </button>
         </div>
       </div>
     </div>
