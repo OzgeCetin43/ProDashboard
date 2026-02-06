@@ -67,7 +67,3 @@ npm run build
 ```bash
 npm run preview
 ```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
