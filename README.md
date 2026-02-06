@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# ProDashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ProDashboard is a modern, responsive admin dashboard application built to provide dynamic data visualization and a seamless user experience. It leverages the power of React, Vite, and Tailwind CSS to deliver a fast and aesthetically pleasing interface.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Fully adaptable layout that works on all device sizes.
+- **Dynamic Charts**: Interactive data visualization using `recharts` and `@nivo/geo`.
+- **Smooth Animations**: Fluid UI transitions powered by `framer-motion`.
+- **Modern UI**: Clean and customizable styling with `tailwindcss`.
+- **Navigation**: Client-side routing with `react-router-dom`.
 
-## React Compiler
+## 🛠️ Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Charts**: [Recharts](https://recharts.org/), [Nivo](https://nivo.rocks/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+- **Routing**: [React Router DOM](https://reactrouter.com/)
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The project structure is organized for scalability and maintainability under the `src` directory:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── assets/      # Static assets, images, and global styles
+├── components/  # Reusable UI components, complex charts, and navigation elements
+├── hooks/       # Custom React hooks (e.g., useIsMdUp)
+├── layouts/     # Layout components defining the structural wrapper of pages
+└── pages/       # Main application pages and route views
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1.  **Clone the repository:**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+    ```bash
+    git clone https://github.com/OzgeCetin43/ProDashboard.git
+    cd ProDashboard
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+## 🏃‍♂️ Usage
+
+**Start the development server:**
+
+```bash
+npm run dev
 ```
+
+**Build for production:**
+
+```bash
+npm run build
+```
+
+**Preview production build:**
+
+```bash
+npm run preview
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
