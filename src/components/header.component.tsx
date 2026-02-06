@@ -8,11 +8,13 @@ import Notification from "./notification.component";
 import Inbox from "./inbox.component";
 
 import avatar from "../assets/images/avatar.jpg";
+import Profile from "./profile.component";
 
 const Header: React.FC = () => {
   const [isCartDrawerOpen, setIsCartDrawerOpen] = useState<boolean>(false);
   const [isNotificationOpen, setIsNotificationOpen] = useState<boolean>(false);
   const [isInboxOpen, setIsInboxOpen] = useState<boolean>(false);
+  const [isProfileOpen, setIsProfileOpen] = useState<boolean>(false);
 
   return (
     <>
@@ -57,7 +59,13 @@ const Header: React.FC = () => {
               src={avatar}
               alt="avatar"
               className="w-10 h-10 rounded-full cursor-pointer"
+              onClick={() => setIsProfileOpen((prev) => !prev)}
             />
+            {isProfileOpen && (
+              <div className="absolute z-5 top-[130%] right-0">
+                <Profile setIsProfileOpen={setIsProfileOpen} />
+              </div>
+            )}
           </div>
         </div>
       </header>
