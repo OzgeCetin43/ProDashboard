@@ -27,7 +27,7 @@ type SidebarProps = {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
   const [selectedNavigation, setSelectedNavigation] = useState<string | null>(
-    null
+    null,
   );
 
   const isMdUp = useIsMdUp();
@@ -68,7 +68,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
       variants={containerVariants}
       initial="close"
       animate={containerControls}
-      className="h-full bg-[#1a1a1a] flex flex-col z-10 gap-8 p-4 absolute top-0 left-0"
+      className="sticky top-0 h-screen bg-[#1a1a1a] flex flex-col z-10 gap-8 p-4 overflow-y-auto"
     >
       <div className="w-full flex items-center justify-between">
         <div
