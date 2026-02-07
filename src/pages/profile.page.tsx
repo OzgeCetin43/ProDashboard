@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { TbCircleDashedCheck } from "react-icons/tb";
-import { FaMapLocationDot, FaPhone } from "react-icons/fa6";
+import {
+  FaMapLocationDot,
+  FaPhone,
+  FaFolderOpen,
+  FaFileZipper,
+} from "react-icons/fa6";
 import { IoMdMailUnread, IoIosMan } from "react-icons/io";
 import {
   MdOutlineAdminPanelSettings,
@@ -213,6 +218,35 @@ const Profile: React.FC = () => {
                         <p className="text-xs">+2 more</p>
                       </div>
                       <p className="text-neutral-700 text-xs">1 day ago</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-2">
+                    <FaFolderOpen
+                      size={18}
+                      className="w-10 h-10 p-2 rounded-xs bg-purple-600"
+                    />
+                    <div className="flex flex-col gap-2 p-2 bg-neutral-950 border border-neutral-700 rounded-xs">
+                      <h3 className="font-bold">Marketing Assets Shared</h3>
+                      <p>
+                        The user shared a compressed folder containing brand
+                        guidelines, logos, and campaign creatives with the
+                        entire marketing team. Members with access can now
+                        download or reference these assets in their respective
+                        modules.
+                      </p>
+                      <p className="flex items-center gap-2">
+                        Shared with team
+                        <span className="font-bold">
+                          "marketing-assets.zip"
+                        </span>
+                      </p>
+                      <div className="flex items-center gap-2 bg-neutral-600 border border-neutral-700 rounded-xs p-2">
+                        <FaFileZipper size={18} />
+                        <span className="font-bold">
+                          marketing-assets.zip (6.9 MB)
+                        </span>
+                      </div>
+                      <p className="text-neutral-700 text-xs">23 Jan 2026</p>
                     </div>
                   </div>
                 </div>
