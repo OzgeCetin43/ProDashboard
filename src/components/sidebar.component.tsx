@@ -68,7 +68,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
       variants={containerVariants}
       initial="close"
       animate={containerControls}
-      className="sticky top-0 h-screen bg-[#1a1a1a] flex flex-col z-10 gap-8 p-4 overflow-y-auto"
+      className="min-h-screen bg-[#1a1a1a] flex flex-col z-10 gap-8 p-4 sticky top-0 left-0"
     >
       <div className="w-full flex items-center justify-between">
         <div
