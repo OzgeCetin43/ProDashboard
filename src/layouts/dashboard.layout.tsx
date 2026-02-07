@@ -10,7 +10,7 @@ const DashboardLayout: React.FC = () => {
   return (
     <div className="flex gap-10">
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className="-ml-10 w-full">
+      <div className="ml-20 w-full">
         <Header />
         <Outlet />
       </div>
