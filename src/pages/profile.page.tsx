@@ -17,7 +17,7 @@ import {
   IoChatbubbleEllipsesOutline,
 } from "react-icons/io5";
 import { SiImgur } from "react-icons/si";
-import { FaFilePdf } from "react-icons/fa";
+import { FaFilePdf, FaUsers } from "react-icons/fa";
 
 import profileBackground from "../assets/images/profile-bg.jpg";
 import avatar from "../assets/images/avatar.jpg";
@@ -25,6 +25,7 @@ import recentActivity from "../assets/images/recent-activity.jpg";
 import avatar1 from "../assets/images/avatar-1.webp";
 import avatar2 from "../assets/images/avatar-2.webp";
 import avatar3 from "../assets/images/avatar-3.webp";
+import newTeamMember from "../assets/images/recent-activity-new-team-member.jpg";
 
 const Profile: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("profile");
@@ -136,7 +137,7 @@ const Profile: React.FC = () => {
                   <div className="flex gap-2">
                     <SiImgur
                       size={18}
-                      className="w-10 h-10 p-2 rounded-xs bg-purple-600"
+                      className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600"
                     />
                     <div className="flex flex-col gap-2 p-2 bg-neutral-950 border border-neutral-700 rounded-xs">
                       <h3 className="font-bold">Profile Image Updated</h3>
@@ -161,7 +162,7 @@ const Profile: React.FC = () => {
                   <div className="flex gap-2">
                     <IoDocuments
                       size={18}
-                      className="w-10 h-10 p-2 rounded-xs bg-purple-600"
+                      className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600"
                     />
                     <div className="flex flex-col gap-2 p-2 bg-neutral-950 border border-neutral-700 rounded-xs">
                       <h3 className="font-bold">Document Added to Project</h3>
@@ -188,7 +189,7 @@ const Profile: React.FC = () => {
                   <div className="flex gap-2">
                     <IoChatbubbleEllipsesOutline
                       size={18}
-                      className="w-10 h-10 p-2 rounded-xs bg-purple-600"
+                      className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600"
                     />
                     <div className="flex flex-col gap-2 p-2 bg-neutral-950 border border-neutral-700 rounded-xs">
                       <h3 className="font-bold">Commented on team update</h3>
@@ -223,7 +224,7 @@ const Profile: React.FC = () => {
                   <div className="flex gap-2">
                     <FaFolderOpen
                       size={18}
-                      className="w-10 h-10 p-2 rounded-xs bg-purple-600"
+                      className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600"
                     />
                     <div className="flex flex-col gap-2 p-2 bg-neutral-950 border border-neutral-700 rounded-xs">
                       <h3 className="font-bold">Marketing Assets Shared</h3>
@@ -246,7 +247,36 @@ const Profile: React.FC = () => {
                           marketing-assets.zip (6.9 MB)
                         </span>
                       </div>
-                      <p className="text-neutral-700 text-xs">23 Jan 2026</p>
+                      <p className="text-neutral-700 text-xs">27 Jan 2026</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-2">
+                    <FaUsers
+                      size={18}
+                      className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600"
+                    />
+                    <div className="flex flex-col gap-2 p-2 bg-neutral-950 border border-neutral-700 rounded-xs">
+                      <h3 className="font-bold">Joined new team</h3>
+                      <p>
+                        The user John Carter was successfully added to the
+                        “Marketing Strategy Group” to collaborate on campaign
+                        planning, content development, and cross-platform
+                        initiatives.
+                      </p>
+                      <div className="flex items-center gap-2">
+                        <img
+                          src={newTeamMember}
+                          alt="new team member"
+                          className="w-10 h-10 rounded-full"
+                        />
+                        <div className="flex flex-col justify-center gap-2">
+                          <span className="font-bold">John Carter</span>
+                          <span className="text-neutral-700 text-xs">
+                            Marketing Specialist
+                          </span>
+                        </div>
+                      </div>
+                      <p className="text-neutral-700 text-xs">25 Jan 2026</p>
                     </div>
                   </div>
                 </div>
