@@ -49,7 +49,7 @@ const Profile: React.FC = () => {
               <h3 className="font-bold">950</h3>
               <p className="text-xs">Following</p>
             </div>
-            <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+            <div className="flex items-center gap-2 bg-neutral-950 p-2">
               <button className="text-xs p-2 cursor-pointer rounded-xs bg-orange-600">
                 Hire me
               </button>
