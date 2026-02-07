@@ -20,7 +20,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
         Welcome Cameron!
       </h6>
       <Link
-        to="/profile"
+        to="/profile-simple-page"
         className="flex items-center gap-2 hover:bg-neutral-600 px-2 py-1 rounded-xs"
         onClick={() => setIsProfileOpen(false)}
       >
