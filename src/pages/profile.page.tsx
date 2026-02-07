@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { TbCircleDashedCheck } from "react-icons/tb";
+import { FaMapLocationDot, FaPhone } from "react-icons/fa6";
+import { IoMdMailUnread, IoIosMan } from "react-icons/io";
+import {
+  MdOutlineAdminPanelSettings,
+  MdOutlineAccessTimeFilled,
+} from "react-icons/md";
+import { IoCalendarOutline, IoDocuments } from "react-icons/io5";
+import { SiImgur } from "react-icons/si";
+import { FaFilePdf } from "react-icons/fa";
 
 import profileBackground from "../assets/images/profile-bg.jpg";
 import avatar from "../assets/images/avatar.jpg";
+import recentActivity from "../assets/images/recent-activity.jpg";
 
 const Profile: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<string>("profile");
+
   return (
     <div className="flex flex-col justify-center gap-2 p-2 rounded-xs">
       <div className="relative">
@@ -37,7 +49,7 @@ const Profile: React.FC = () => {
               <h3 className="font-bold">950</h3>
               <p className="text-xs">Following</p>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
               <button className="text-xs p-2 cursor-pointer rounded-xs bg-orange-600">
                 Hire me
               </button>
@@ -49,6 +61,154 @@ const Profile: React.FC = () => {
               </button>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="flex flex-col-reverse md:flex-row gap-2 justify-between mt-50 md:mt-15">
+        <div className="bg-[#1a1a1a] border border-neutral-700 rounded-xs p-2 w-full flex-1 text-xs flex flex-col gap-2">
+          <h3 className="font-bold">Personal Information</h3>
+          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+            <FaMapLocationDot size={18} />
+            Turkey, Izmir
+          </div>
+          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+            <IoMdMailUnread size={18} />
+            cameron.doe@gmail.com
+          </div>
+          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+            <FaPhone size={18} />
+            +123 456 7890
+          </div>
+          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+            <MdOutlineAdminPanelSettings size={18} />
+            Admin
+          </div>
+          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+            <IoIosMan size={18} />
+            Male
+          </div>
+          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+            <IoCalendarOutline size={18} />
+            35 years old
+          </div>
+          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+            <MdOutlineAccessTimeFilled size={18} />
+            Joined on Jan 22, 2026
+          </div>
+        </div>
+        <div className="bg-[#1a1a1a] border border-neutral-700 rounded-xs p-2 w-full flex-3 text-xs">
+          {activeTab === "profile" && (
+            <div className="flex flex-col justify-center gap-2">
+              <div className="flex flex-col justify-center gap-2">
+                <h3 className="font-bold">About Us</h3>
+                <p className="text-xs">
+                  Welcome to our profile section. This space provides a
+                  consolidated overview of your role, ongoing projects, and
+                  recent contributions within the platform. As a valued member
+                  of the administrative team, your work plays a crucial role in
+                  maintaining the integrity and progress of ongoing operations.
+                </p>
+                <p className="text-xs">
+                  Whether you're reviewing reports, coordinating with team
+                  members, or managing workflow across multiple modules, this
+                  dashboard is tailored to keep everything at your fingertips.
+                  It also ensures that updates, alerts, and deadlines are always
+                  in view, empowering you to take timely action when needed.
+                  Through this panel, track the status of collaborative
+                  projects, and manage essential content tied to your
+                  department.
+                </p>
+              </div>
+              <div className="flex flex-col justify-center gap-2">
+                <h3 className="font-bold">Recent Activity</h3>
+                <div className="flex flex-col justify-center gap-2">
+                  <div className="flex gap-2">
+                    <SiImgur
+                      size={18}
+                      className="w-10 h-10 p-2 rounded-xs bg-purple-600"
+                    />
+                    <div className="flex flex-col gap-2 p-2 bg-neutral-950 border border-neutral-700 rounded-xs">
+                      <h3 className="font-bold">Profile Image Updated</h3>
+                      <p>
+                        The user updated their profile picture to reflect the
+                        latest changes. This image will now appear across all
+                        modules including dashboard, reports, and communication
+                        logs.
+                      </p>
+                      <p className="flex items-center gap-2">
+                        Uploaded
+                        <span className="font-bold">"profile-new.jpg"</span>
+                      </p>
+                      <img
+                        src={recentActivity}
+                        alt="recent activity"
+                        className="w-40 h-20 rounded-xs object-cover cursor-pointer"
+                      />
+                      <p className="text-xs">2 hours ago</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-2">
+                    <IoDocuments
+                      size={18}
+                      className="w-10 h-10 p-2 rounded-xs bg-purple-600"
+                    />
+                    <div className="flex flex-col gap-2 p-2 bg-neutral-950 border border-neutral-700 rounded-xs">
+                      <h3 className="font-bold">Document Added to Project</h3>
+                      <p>
+                        A new document has been successfully added to the
+                        assigned project folder. This file is now available for
+                        all collaborators with appropriate access rights and can
+                        be viewed or downloaded from the project resources
+                        section.
+                      </p>
+                      <p className="flex items-center gap-2">
+                        Uploaded
+                        <span className="font-bold">
+                          "UX_Research_Notes.pdf"
+                        </span>
+                      </p>
+                      <div className="flex items-center gap-2 bg-neutral-600 border border-neutral-700 rounded-xs p-2">
+                        <FaFilePdf size={18} />
+                        <span className="font-bold">UX_Research_Notes.pdf</span>
+                      </div>
+                      <p className="text-xs">5 hours ago</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="flex flex-col gap-2 bg-[#1a1a1a] border border-neutral-700 rounded-xs p-2 w-full flex-1 text-xs">
+          <button
+            className={`p-2 hover:bg-neutral-600 rounded-xs text-left ${activeTab === "profile" ? "bg-sky-600" : ""}`}
+            onClick={() => setActiveTab("profile")}
+          >
+            Profile
+          </button>
+          <button
+            className={`p-2 hover:bg-neutral-600 rounded-xs text-left ${activeTab === "projects" ? "bg-sky-600" : ""}`}
+            onClick={() => setActiveTab("projects")}
+          >
+            Projects
+          </button>
+          <button
+            className={`p-2 hover:bg-neutral-600 rounded-xs text-left ${activeTab === "posts" ? "bg-sky-600" : ""}`}
+            onClick={() => setActiveTab("posts")}
+          >
+            Posts
+          </button>
+          <button
+            className={`p-2 hover:bg-neutral-600 rounded-xs text-left ${activeTab === "team" ? "bg-sky-600" : ""}`}
+            onClick={() => setActiveTab("team")}
+          >
+            Team
+          </button>
+          <button
+            className={`p-2 hover:bg-neutral-600 rounded-xs text-left ${activeTab === "settings" ? "bg-sky-600" : ""}`}
+            onClick={() => setActiveTab("settings")}
+          >
+            Settings
+          </button>
         </div>
       </div>
     </div>
