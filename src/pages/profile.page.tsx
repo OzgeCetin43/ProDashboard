@@ -6,13 +6,20 @@ import {
   MdOutlineAdminPanelSettings,
   MdOutlineAccessTimeFilled,
 } from "react-icons/md";
-import { IoCalendarOutline, IoDocuments } from "react-icons/io5";
+import {
+  IoCalendarOutline,
+  IoDocuments,
+  IoChatbubbleEllipsesOutline,
+} from "react-icons/io5";
 import { SiImgur } from "react-icons/si";
 import { FaFilePdf } from "react-icons/fa";
 
 import profileBackground from "../assets/images/profile-bg.jpg";
 import avatar from "../assets/images/avatar.jpg";
 import recentActivity from "../assets/images/recent-activity.jpg";
+import avatar1 from "../assets/images/avatar-1.webp";
+import avatar2 from "../assets/images/avatar-2.webp";
+import avatar3 from "../assets/images/avatar-3.webp";
 
 const Profile: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("profile");
@@ -143,7 +150,7 @@ const Profile: React.FC = () => {
                         alt="recent activity"
                         className="w-40 h-20 rounded-xs object-cover cursor-pointer"
                       />
-                      <p className="text-xs">2 hours ago</p>
+                      <p className="text-neutral-700 text-xs">2 hours ago</p>
                     </div>
                   </div>
                   <div className="flex gap-2">
@@ -170,7 +177,42 @@ const Profile: React.FC = () => {
                         <FaFilePdf size={18} />
                         <span className="font-bold">UX_Research_Notes.pdf</span>
                       </div>
-                      <p className="text-xs">5 hours ago</p>
+                      <p className="text-neutral-700 text-xs">5 hours ago</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-2">
+                    <IoChatbubbleEllipsesOutline
+                      size={18}
+                      className="w-10 h-10 p-2 rounded-xs bg-purple-600"
+                    />
+                    <div className="flex flex-col gap-2 p-2 bg-neutral-950 border border-neutral-700 rounded-xs">
+                      <h3 className="font-bold">Commented on team update</h3>
+                      <p>
+                        The user provided feedback on the latest team progress
+                        post regarding project milestones. The comment reflects
+                        engagement and readiness for the upcoming review
+                        session.
+                      </p>
+                      <p>"Looks great! Let’s review this tomorrow."</p>
+                      <div className="flex items-center gap-2">
+                        <img
+                          src={avatar1}
+                          alt="avatar"
+                          className="w-10 h-10 bg-neutral-600 p-2 rounded-full"
+                        />
+                        <img
+                          src={avatar2}
+                          alt="avatar"
+                          className="w-10 h-10 bg-neutral-600 p-2 rounded-full"
+                        />
+                        <img
+                          src={avatar3}
+                          alt="avatar"
+                          className="w-10 h-10 bg-neutral-600 p-2 rounded-full"
+                        />
+                        <p className="text-xs">+2 more</p>
+                      </div>
+                      <p className="text-neutral-700 text-xs">1 day ago</p>
                     </div>
                   </div>
                 </div>
