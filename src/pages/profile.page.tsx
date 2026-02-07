@@ -76,7 +76,7 @@ const Profile: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col-reverse md:flex-row gap-2 justify-between mt-50 md:mt-15">
+      <div className="flex flex-col-reverse md:flex-row gap-2 justify-between mt-48 md:mt-15">
         <div className="bg-[#1a1a1a] border border-neutral-700 rounded-xs p-2 w-full flex-1 text-xs flex flex-col gap-2">
           <h3 className="font-bold">Personal Information</h3>
           <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
@@ -134,7 +134,7 @@ const Profile: React.FC = () => {
               <div className="flex flex-col justify-center gap-2">
                 <h3 className="font-bold">Recent Activity</h3>
                 <div className="flex flex-col justify-center gap-2">
-                  <div className="flex gap-2">
+                  <div className="flex flex-col gap-2">
                     <SiImgur
                       size={18}
                       className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600"
@@ -159,7 +159,7 @@ const Profile: React.FC = () => {
                       <p className="text-neutral-700 text-xs">2 hours ago</p>
                     </div>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex flex-col gap-2">
                     <IoDocuments
                       size={18}
                       className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600"
@@ -186,7 +186,7 @@ const Profile: React.FC = () => {
                       <p className="text-neutral-700 text-xs">5 hours ago</p>
                     </div>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex flex-col gap-2">
                     <IoChatbubbleEllipsesOutline
                       size={18}
                       className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600"
@@ -221,7 +221,7 @@ const Profile: React.FC = () => {
                       <p className="text-neutral-700 text-xs">1 day ago</p>
                     </div>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex flex-col gap-2">
                     <FaFolderOpen
                       size={18}
                       className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600"
@@ -250,7 +250,7 @@ const Profile: React.FC = () => {
                       <p className="text-neutral-700 text-xs">27 Jan 2026</p>
                     </div>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex flex-col gap-2">
                     <FaUsers
                       size={18}
                       className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600"
