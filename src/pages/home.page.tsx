@@ -466,28 +466,19 @@ const Home: React.FC = () => {
                 <td className="p-2">Direct</td>
                 <td className="p-2">1300</td>
                 <td className="p-2">30%</td>
-                <td className="p-2 flex items-center gap-4">
-                  <progress max={100} value={80} />
-                  <span>80%</span>
-                </td>
+                <td className="p-2">80%</td>
               </tr>
               <tr className="hover:bg-neutral-800 border border-neutral-700">
                 <td className="p-2">Email Campaign</td>
                 <td className="p-2">5000</td>
                 <td className="p-2">45%</td>
-                <td className="p-2 flex items-center gap-4">
-                  <progress max={100} value={40} />
-                  <span>40%</span>
-                </td>
+                <td className="p-2">40%</td>
               </tr>
               <tr className="hover:bg-neutral-800 border border-neutral-700">
                 <td className="p-2">Organic</td>
                 <td className="p-2">3000</td>
                 <td className="p-2">10%</td>
-                <td className="p-2 flex items-center gap-4">
-                  <progress max={100} value={55} />
-                  <span>55%</span>
-                </td>
+                <td className="p-2">55%</td>
               </tr>
             </tbody>
           </table>
