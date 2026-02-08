@@ -5,6 +5,7 @@ import {
   FaPhone,
   FaFolderOpen,
   FaFileZipper,
+  FaSquareGithub,
 } from "react-icons/fa6";
 import { IoMdMailUnread, IoIosMan } from "react-icons/io";
 import {
@@ -17,8 +18,9 @@ import {
   IoChatbubbleEllipsesOutline,
 } from "react-icons/io5";
 import { SiImgur, SiAdobephotoshop } from "react-icons/si";
-import { FaFilePdf, FaUsers, FaCode } from "react-icons/fa";
+import { FaFilePdf, FaUsers, FaCode, FaLinkedin } from "react-icons/fa";
 import { CiBookmark } from "react-icons/ci";
+import { HiUserAdd } from "react-icons/hi";
 
 import profileBackground from "../assets/images/profile-bg.jpg";
 import avatar from "../assets/images/avatar.jpg";
@@ -30,6 +32,9 @@ import newTeamMember from "../assets/images/recent-activity-new-team-member.jpg"
 import popularPost1 from "../assets/images/popular-post-1.jpg";
 import popularPost2 from "../assets/images/popular-post-2.jpg";
 import popularPost3 from "../assets/images/popular-post-3.jpg";
+import suggestion1 from "../assets/images/suggestion-1.jpg";
+import suggestion2 from "../assets/images/suggestion-2.jpg";
+import suggestion3 from "../assets/images/suggestion-3.jpg";
 
 const Profile: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("profile");
@@ -218,6 +223,17 @@ const Profile: React.FC = () => {
                 <h3 className="font-bold">How to get creative in your work</h3>
                 <span className="text-xs text-neutral-700">26 Jan 2026</span>
               </div>
+            </div>
+          </div>
+          <div className="flex flex-col justify-center gap-2 bg-neutral-950 p-2 rounded-xs">
+            <h3 className="font-bold">Portfolio</h3>
+            <div className="flex items-center gap-2">
+              <FaSquareGithub size={18} />
+              <span className="text-xs">github.com/cameron-doe</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaLinkedin size={18} />
+              <span className="text-xs">linkedin.com/cameron-doe</span>
             </div>
           </div>
         </div>
@@ -428,6 +444,60 @@ const Profile: React.FC = () => {
           >
             Settings
           </button>
+          <div className="flex flex-col gap-2 bg-neutral-700 p-2 rounded-xs">
+            <h3 className="font-bold">Suggested for you</h3>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <img
+                  src={suggestion1}
+                  alt="suggestion"
+                  className="w-12 h-12 rounded-xs"
+                />
+                <div className="flex flex-col justify-center gap-2">
+                  <h3>Esther James</h3>
+                  <p>Frontend Developer</p>
+                </div>
+              </div>
+              <HiUserAdd
+                size={18}
+                className="w-10 h-10 p-2 bg-neutral-950 cursor-pointer"
+              />
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <img
+                  src={suggestion2}
+                  alt="suggestion"
+                  className="w-12 h-12 rounded-xs"
+                />
+                <div className="flex flex-col justify-center gap-2">
+                  <h3>Jacqueline Steve</h3>
+                  <p>UI/UX Designer</p>
+                </div>
+              </div>
+              <HiUserAdd
+                size={18}
+                className="w-10 h-10 p-2 bg-neutral-950 cursor-pointer"
+              />
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <img
+                  src={suggestion3}
+                  alt="suggestion"
+                  className="w-12 h-12 rounded-xs"
+                />
+                <div className="flex flex-col justify-center gap-2">
+                  <h3>George Whalen</h3>
+                  <p>Backend Developer</p>
+                </div>
+              </div>
+              <HiUserAdd
+                size={18}
+                className="w-10 h-10 p-2 bg-neutral-950 cursor-pointer"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
