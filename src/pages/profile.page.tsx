@@ -26,6 +26,7 @@ import ProjectsTab from "../components/projectsTab.component";
 import PostsTab from "../components/postsTab.component";
 import TeamTab from "../components/teamTab.component";
 import DocumentsTab from "../components/documentsTab.component";
+import SettingsTab from "../components/settingsTab.component";
 
 const Profile: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("profile");
@@ -234,6 +235,7 @@ const Profile: React.FC = () => {
           {activeTab === "posts" && <PostsTab />}
           {activeTab === "team" && <TeamTab />}
           {activeTab === "documents" && <DocumentsTab />}
+          {activeTab === "settings" && <SettingsTab />}
         </div>
         <div className="flex flex-col gap-2 bg-[#1a1a1a] border border-neutral-700 rounded-xs p-2 w-full flex-1 text-xs">
           <button
