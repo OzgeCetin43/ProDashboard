@@ -68,10 +68,11 @@ const SettingsTab: React.FC = () => {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between gap-2">
           <div className="w-full flex-1 flex flex-col justify-center gap-2">
-            <label htmlFor="dateOfBirth">Date of Birth</label>
+            <label htmlFor="age">Age</label>
             <input
-              type="date"
-              id="dateOfBirth"
+              type="number"
+              id="age"
+              defaultValue={35}
               className="w-full p-2 border border-neutral-700 rounded-xs outline-none bg-neutral-950"
             />
           </div>
