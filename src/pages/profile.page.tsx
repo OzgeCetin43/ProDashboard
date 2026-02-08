@@ -16,8 +16,9 @@ import {
   IoDocuments,
   IoChatbubbleEllipsesOutline,
 } from "react-icons/io5";
-import { SiImgur } from "react-icons/si";
-import { FaFilePdf, FaUsers } from "react-icons/fa";
+import { SiImgur, SiAdobephotoshop } from "react-icons/si";
+import { FaFilePdf, FaUsers, FaCode } from "react-icons/fa";
+import { CiBookmark } from "react-icons/ci";
 
 import profileBackground from "../assets/images/profile-bg.jpg";
 import avatar from "../assets/images/avatar.jpg";
@@ -26,6 +27,9 @@ import avatar1 from "../assets/images/avatar-1.webp";
 import avatar2 from "../assets/images/avatar-2.webp";
 import avatar3 from "../assets/images/avatar-3.webp";
 import newTeamMember from "../assets/images/recent-activity-new-team-member.jpg";
+import popularPost1 from "../assets/images/popular-post-1.jpg";
+import popularPost2 from "../assets/images/popular-post-2.jpg";
+import popularPost3 from "../assets/images/popular-post-3.jpg";
 
 const Profile: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("profile");
@@ -106,6 +110,115 @@ const Profile: React.FC = () => {
           <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
             <MdOutlineAccessTimeFilled size={18} />
             Joined on Jan 22, 2026
+          </div>
+          <div className="flex flex-col justify-center gap-2">
+            <h3 className="font-bold">Skills Overview</h3>
+            <div className="flex flex-col justify-center gap-2">
+              <h3 className="font-bold flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <CiBookmark size={18} />
+                  Design
+                </div>
+                <span className="text-neutral-700">90%</span>
+              </h3>
+              <div className="flex items-center gap-2">
+                <div className="w-full h-2 bg-gray-200 rounded-full">
+                  <div
+                    className="h-2 bg-red-500 rounded-full"
+                    style={{ width: "90%" }}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center gap-2">
+              <h3 className="font-bold flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <FaCode size={18} />
+                  FE/BE Development
+                </div>
+                <span className="text-neutral-700">80%</span>
+              </h3>
+              <div className="flex items-center gap-2">
+                <div className="w-full h-2 bg-gray-200 rounded-full">
+                  <div
+                    className="h-2 bg-green-500 rounded-full"
+                    style={{ width: "80%" }}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center gap-2">
+              <h3 className="font-bold flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <FaUsers size={18} />
+                  Team Management
+                </div>
+                <span className="text-neutral-700">75%</span>
+              </h3>
+              <div className="flex items-center gap-2">
+                <div className="w-full h-2 bg-gray-200 rounded-full">
+                  <div
+                    className="h-2 bg-yellow-500 rounded-full"
+                    style={{ width: "75%" }}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center gap-2">
+              <h3 className="font-bold flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <SiAdobephotoshop size={18} />
+                  Photoshop
+                </div>
+                <span>95%</span>
+              </h3>
+              <div className="flex items-center gap-2">
+                <div className="w-full h-2 bg-gray-200 rounded-full">
+                  <div
+                    className="h-2 bg-purple-500 rounded-full"
+                    style={{ width: "95%" }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col justify-center gap-2">
+            <h3 className="font-bold">Popular Posts</h3>
+            <div className="flex items-center gap-2">
+              <img
+                src={popularPost1}
+                alt="popular post"
+                className="w-12 h-12 rounded-xs"
+              />
+              <div className="flex flex-col justify-center gap-2">
+                <h3 className="font-bold">Design your apps in your own way</h3>
+                <span className="text-xs text-neutral-700">28 Jan 2026</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <img
+                src={popularPost2}
+                alt="popular post"
+                className="w-12 h-12 rounded-xs"
+              />
+              <div className="flex flex-col justify-center gap-2">
+                <h3 className="font-bold">
+                  Smartest Applications for Business
+                </h3>
+                <span className="text-xs text-neutral-700">27 Jan 2026</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <img
+                src={popularPost3}
+                alt="popular post"
+                className="w-12 h-12 rounded-xs"
+              />
+              <div className="flex flex-col justify-center gap-2">
+                <h3 className="font-bold">How to get creative in your work</h3>
+                <span className="text-xs text-neutral-700">26 Jan 2026</span>
+              </div>
+            </div>
           </div>
         </div>
         <div className="bg-[#1a1a1a] border border-neutral-700 rounded-xs p-2 w-full flex-3 text-xs">
