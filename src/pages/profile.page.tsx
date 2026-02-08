@@ -629,11 +629,13 @@ const Profile: React.FC = () => {
                   </div>
                 </div>
                 <span className="text-md">1,256 likes</span>
-                <p className="flex items-center gap-2">
+                <div className="flex flex-col md:flex-row md:items-center gap-2">
                   <span className="font-bold text-orange-600">camerondoe</span>
-                  Weekend vibes with the crew
-                  <span className="font-bold">#relax #friends</span>
-                </p>
+                  <p className="flex items-center gap-2">
+                    Weekend vibes with the crew
+                    <span className="font-bold">#relax #friends</span>
+                  </p>
+                </div>
               </div>
               <div className="flex flex-col items-end gap-2 bg-neutral-900 rounded-xs p-2 border border-neutral-700">
                 <input type="file" ref={fileInputRef} className="hidden" />
