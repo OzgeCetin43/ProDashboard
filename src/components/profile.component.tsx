@@ -28,7 +28,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
         Profile
       </Link>
       <Link
-        to="/messages"
+        to="/chat-app"
         className="flex items-center gap-2 hover:bg-neutral-600 px-2 py-1 rounded-xs"
         onClick={() => setIsProfileOpen(false)}
       >
