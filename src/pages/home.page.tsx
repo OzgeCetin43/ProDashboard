@@ -38,7 +38,7 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col gap-2 p-2">
       <div className="flex flex-col items-center border border-border-color rounded-xs">
-        <div className="w-full flex items-center justify-between p-2 bg-status-warning text-stone-950 text-xs font-bold rounded-tr-xs rounded-tl-xs">
+        <div className="w-full flex items-center justify-between p-2 bg-status-warning text-black text-xs font-bold rounded-tr-xs rounded-tl-xs">
           <div className="flex items-center gap-2">
             <IoCalendarOutline size={16} />
             <span>You free trial expired in 17 days!</span>
@@ -180,8 +180,8 @@ const Home: React.FC = () => {
               </p>
             </div>
             <div className="flex items-center gap-2 text-xs">
-              <LegendItem color="#F5440F" label="Site 1" />
-              <LegendItem color="#0084D1" label="Site 2" />
+              <LegendItem color="var(--chart-5)" label="Site 1" />
+              <LegendItem color="var(--chart-1)" label="Site 2" />
             </div>
           </div>
           <WebsiteVisitChart />
@@ -194,9 +194,9 @@ const Home: React.FC = () => {
             </div>
             <div className="flex items-center justify-between">
               <div className="flex flex-col gap-2 text-xs">
-                <LegendItem color="#F5440F" label="America" />
-                <LegendItem color="#0084D1" label="Europe" />
-                <LegendItem color="#5EA500" label="Asia" />
+                <LegendItem color="var(--chart-5)" label="America" />
+                <LegendItem color="var(--chart-1)" label="Europe" />
+                <LegendItem color="var(--chart-3)" label="Asia" />
               </div>
               <div className="flex flex-col items-end gap-2 text-xs">
                 <div className="flex items-center gap-2">
@@ -293,15 +293,15 @@ const Home: React.FC = () => {
           </div>
           <AudienceMetricsChart />
           <div className="flex items-center justify-center gap-2 text-xs">
-            <LegendItem color="#FFDF20" label="Last Year" />
-            <LegendItem color="#0084D1" label="Current Year" />
+            <LegendItem color="var(--chart-4)" label="Last Year" />
+            <LegendItem color="var(--chart-1)" label="Current Year" />
           </div>
         </div>
         <div className="flex-1 flex flex-col gap-2 p-4 bg-bg-secondary rounded-xs border border-border-color text-text-primary shadow-sm">
           <h3 className="font-bold">Audiences Sessions by Country</h3>
           <div className="flex items-center justify-center gap-2 text-xs">
-            <LegendItem color="#FFDF20" label="0 - 50" />
-            <LegendItem color="#F5440F" label="51 - 100" />
+            <LegendItem color="var(--chart-4)" label="0 - 50" />
+            <LegendItem color="var(--chart-5)" label="51 - 100" />
           </div>
           <AudienceSessionsByCountryChart />
         </div>
@@ -314,9 +314,9 @@ const Home: React.FC = () => {
           </div>
           <div className="flex items-center justify-between gap-2 text-xs mt-2 p-4 bg-bg-primary border border-border-color rounded-xs">
             <div className="flex flex-col justify-center gap-2">
-              <LegendItem color="#F5440F" label="Desktop Users" />
-              <LegendItem color="#5EA500" label="Mobile Users" />
-              <LegendItem color="#0084D1" label="Tablet Users" />
+              <LegendItem color="var(--chart-5)" label="Desktop Users" />
+              <LegendItem color="var(--chart-3)" label="Mobile Users" />
+              <LegendItem color="var(--chart-1)" label="Tablet Users" />
             </div>
             <div className="flex flex-col justify-center gap-2 font-bold">
               <div className="flex items-center gap-2">

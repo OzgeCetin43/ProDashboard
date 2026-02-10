@@ -23,7 +23,7 @@ const Chats: React.FC = () => {
         </div>
         <div className="flex flex-col">
           <span className="text-xs font-bold">Clifford Taylor</span>
-          <span className="text-xs text-gray-200">Hello Cameron!</span>
+          <span className="text-xs text-white/80">Hello Cameron!</span>
         </div>
       </div>
       <div className="flex items-center gap-2 p-2 rounded-xs hover:bg-bg-tertiary transition-colors cursor-pointer">

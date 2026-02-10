@@ -125,14 +125,14 @@ const TeamTab: React.FC = () => {
           <div className="flex items-center gap-2">
             <MdSupportAgent
               size={18}
-              className="w-20 h-10 md:w-10 p-2 rounded-xs bg-pink-500 text-white"
+              className="w-20 h-10 md:w-10 p-2 rounded-xs bg-status-info text-white"
             />
             <h3 className="font-bold">Support Team</h3>
           </div>
           <p>Handles customer issues, feedback, and service excellence.</p>
           <div className="flex items-center justify-between gap-2">
             <span className="text-text-secondary">3 members</span>
-            <span className="bg-pink-500 text-white px-2 py-1 rounded-xs">
+            <span className="bg-status-info text-white px-2 py-1 rounded-xs">
               Online
             </span>
           </div>
