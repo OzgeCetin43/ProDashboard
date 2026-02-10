@@ -32,23 +32,30 @@ const WebsiteVisitChart: React.FC = () => {
           <CartesianGrid
             strokeDasharray="3 3"
             vertical={false}
-            stroke="#e5e7eb"
+            stroke="var(--border-color)"
           />
           <XAxis
             dataKey="month"
             tickLine={false}
             axisLine={false}
-            tick={{ fill: "#9ca3af", fontSize: 12 }}
+            tick={{ fill: "var(--text-secondary)", fontSize: 12 }}
           />
           <YAxis
             tickLine={false}
             axisLine={false}
-            tick={{ fill: "#9ca3af", fontSize: 12 }}
+            tick={{ fill: "var(--text-secondary)", fontSize: 12 }}
             tickFormatter={(v) => `${v / 1000}k`}
           />
-          <Tooltip />
-          <Bar dataKey="site1" stackId="a" fill="#F5440F" />
-          <Bar dataKey="site2" stackId="a" fill="#0084D1" />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "var(--chart-tooltip-bg)",
+              borderColor: "var(--border-color)",
+              color: "var(--chart-tooltip-text)",
+            }}
+            itemStyle={{ color: "var(--chart-tooltip-text)" }}
+          />
+          <Bar dataKey="site1" stackId="a" fill="var(--chart-5)" />
+          <Bar dataKey="site2" stackId="a" fill="var(--chart-1)" />
         </BarChart>
       </ResponsiveContainer>
     </div>

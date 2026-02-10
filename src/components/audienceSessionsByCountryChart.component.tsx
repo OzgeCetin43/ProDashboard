@@ -19,7 +19,7 @@ const audienceSessionsByCountryChartData = days.flatMap((day, y) =>
     x,
     y,
     value: Math.floor(Math.random() * 100),
-  }))
+  })),
 );
 
 const AudienceSessionsByCountryChart: React.FC = () => {
@@ -35,6 +35,7 @@ const AudienceSessionsByCountryChart: React.FC = () => {
             tickLine={false}
             axisLine={false}
             tickMargin={20}
+            tick={{ fill: "var(--text-secondary)" }}
           />
           <YAxis
             type="number"
@@ -44,6 +45,7 @@ const AudienceSessionsByCountryChart: React.FC = () => {
             tickLine={false}
             axisLine={false}
             tickMargin={20}
+            tick={{ fill: "var(--text-secondary)" }}
           />
           <Scatter
             data={audienceSessionsByCountryChartData}

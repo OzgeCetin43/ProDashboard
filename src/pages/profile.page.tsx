@@ -39,38 +39,38 @@ const Profile: React.FC = () => {
           alt="profile background"
           className="w-full h-60 object-cover rounded-xs"
         />
-        <div className="flex flex-col md:flex-row justify-between absolute bottom-0 p-2 left-1/2 w-[calc(100%-40px)] h-auto md:h-1/2 p-2 bg-neutral-950 border border-neutral-700 -translate-x-1/2 translate-y-1/2 rounded-xs">
+        <div className="flex flex-col md:flex-row justify-between absolute bottom-0 p-2 left-1/2 w-[calc(100%-40px)] h-auto md:h-1/2 p-2 bg-bg-secondary border border-border-color -translate-x-1/2 translate-y-1/2 rounded-xs shadow-lg">
           <div className="flex gap-2">
             <img src={avatar} alt="avatar" className="w-12 h-12 rounded-full" />
-            <div className="flex flex-col gap-1">
-              <h1 className="text-white text-lg font-semibold">Cameron Doe</h1>
+            <div className="flex flex-col gap-1 text-text-primary">
+              <h1 className="text-lg font-semibold">Cameron Doe</h1>
               <p className="text-xs font-bold">Fashion & Graphic Designer</p>
               <p className="text-xs">Turkey</p>
-              <p className="text-neutral-400 text-xs">@camerondoe</p>
+              <p className="text-text-secondary text-xs">@camerondoe</p>
             </div>
-            <TbCircleDashedCheck size={18} className="text-green-600" />
+            <TbCircleDashedCheck size={18} className="text-status-success" />
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-end gap-2 md:mt-0 mt-2 w-full">
-            <div className="bg-neutral-800 flex flex-col items-center gap-2 w-full md:w-50 border border-neutral-700 rounded-xs p-2">
+          <div className="flex flex-col md:flex-row items-center justify-end gap-2 md:mt-0 mt-2 w-full text-text-primary">
+            <div className="bg-bg-primary flex flex-col items-center gap-2 w-full md:w-50 border border-border-color rounded-xs p-2">
               <h3 className="font-bold">102</h3>
               <p className="text-xs">Post</p>
             </div>
-            <div className="bg-neutral-800 flex flex-col items-center gap-2 w-full md:w-50 border border-neutral-700 rounded-xs p-2">
+            <div className="bg-bg-primary flex flex-col items-center gap-2 w-full md:w-50 border border-border-color rounded-xs p-2">
               <h3 className="font-bold">3.5K</h3>
               <p className="text-xs">Followers</p>
             </div>
-            <div className="bg-neutral-800 flex flex-col items-center gap-2 w-full md:w-50 border border-neutral-700 rounded-xs p-2">
+            <div className="bg-bg-primary flex flex-col items-center gap-2 w-full md:w-50 border border-border-color rounded-xs p-2">
               <h3 className="font-bold">950</h3>
               <p className="text-xs">Following</p>
             </div>
-            <div className="flex items-center gap-2 bg-neutral-950 p-2">
-              <button className="text-xs p-2 cursor-pointer rounded-xs bg-orange-600">
+            <div className="flex items-center gap-2 bg-bg-secondary p-2">
+              <button className="text-xs p-2 cursor-pointer rounded-xs bg-accent-primary text-white hover:bg-accent-hover transition-colors">
                 Hire me
               </button>
-              <button className="text-xs p-2 cursor-pointer rounded-xs bg-sky-600">
+              <button className="text-xs p-2 cursor-pointer rounded-xs bg-accent-primary text-white hover:bg-accent-hover transition-colors">
                 Follow
               </button>
-              <button className="text-xs p-2 cursor-pointer rounded-xs bg-pink-600">
+              <button className="text-xs p-2 cursor-pointer rounded-xs bg-bg-tertiary text-text-primary hover:bg-bg-secondary transition-colors">
                 Edit Profile
               </button>
             </div>
@@ -78,33 +78,33 @@ const Profile: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col-reverse md:flex-row gap-2 justify-between mt-48 md:mt-15">
-        <div className="bg-[#1a1a1a] border border-neutral-700 rounded-xs p-2 w-full flex-1 text-xs flex flex-col gap-2">
+        <div className="bg-bg-secondary border border-border-color rounded-xs p-2 w-full flex-1 text-xs flex flex-col gap-2 text-text-primary shadow-sm">
           <h3 className="font-bold">Personal Information</h3>
-          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+          <div className="flex items-center gap-2 bg-bg-primary p-2 rounded-xs border border-border-color">
             <FaMapLocationDot size={18} />
             Turkey, Izmir
           </div>
-          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+          <div className="flex items-center gap-2 bg-bg-primary p-2 rounded-xs border border-border-color">
             <IoMdMailUnread size={18} />
             cameron.doe@gmail.com
           </div>
-          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+          <div className="flex items-center gap-2 bg-bg-primary p-2 rounded-xs border border-border-color">
             <FaPhone size={18} />
             +123 456 7890
           </div>
-          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+          <div className="flex items-center gap-2 bg-bg-primary p-2 rounded-xs border border-border-color">
             <MdOutlineAdminPanelSettings size={18} />
             Admin
           </div>
-          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+          <div className="flex items-center gap-2 bg-bg-primary p-2 rounded-xs border border-border-color">
             <IoIosMan size={18} />
             Male
           </div>
-          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+          <div className="flex items-center gap-2 bg-bg-primary p-2 rounded-xs border border-border-color">
             <IoCalendarOutline size={18} />
             35 years old
           </div>
-          <div className="flex items-center gap-2 bg-neutral-950 p-2 rounded-xs border border-neutral-700">
+          <div className="flex items-center gap-2 bg-bg-primary p-2 rounded-xs border border-border-color">
             <MdOutlineAccessTimeFilled size={18} />
             Joined on Jan 22, 2026
           </div>
@@ -116,12 +116,12 @@ const Profile: React.FC = () => {
                   <CiBookmark size={18} />
                   Design
                 </div>
-                <span className="text-neutral-700">90%</span>
+                <span className="text-text-secondary">90%</span>
               </h3>
               <div className="flex items-center gap-2">
-                <div className="w-full h-2 bg-gray-200 rounded-full">
+                <div className="w-full h-2 bg-bg-tertiary rounded-full">
                   <div
-                    className="h-2 bg-red-500 rounded-full"
+                    className="h-2 bg-status-error rounded-full"
                     style={{ width: "90%" }}
                   />
                 </div>
@@ -133,12 +133,12 @@ const Profile: React.FC = () => {
                   <FaCode size={18} />
                   FE/BE Development
                 </div>
-                <span className="text-neutral-700">80%</span>
+                <span className="text-text-secondary">80%</span>
               </h3>
               <div className="flex items-center gap-2">
-                <div className="w-full h-2 bg-gray-200 rounded-full">
+                <div className="w-full h-2 bg-bg-tertiary rounded-full">
                   <div
-                    className="h-2 bg-green-500 rounded-full"
+                    className="h-2 bg-status-success rounded-full"
                     style={{ width: "80%" }}
                   />
                 </div>
@@ -150,12 +150,12 @@ const Profile: React.FC = () => {
                   <FaUsers size={18} />
                   Team Management
                 </div>
-                <span className="text-neutral-700">75%</span>
+                <span className="text-text-secondary">75%</span>
               </h3>
               <div className="flex items-center gap-2">
-                <div className="w-full h-2 bg-gray-200 rounded-full">
+                <div className="w-full h-2 bg-bg-tertiary rounded-full">
                   <div
-                    className="h-2 bg-yellow-500 rounded-full"
+                    className="h-2 bg-status-warning rounded-full"
                     style={{ width: "75%" }}
                   />
                 </div>
@@ -170,9 +170,9 @@ const Profile: React.FC = () => {
                 <span>95%</span>
               </h3>
               <div className="flex items-center gap-2">
-                <div className="w-full h-2 bg-gray-200 rounded-full">
+                <div className="w-full h-2 bg-bg-tertiary rounded-full">
                   <div
-                    className="h-2 bg-purple-500 rounded-full"
+                    className="h-2 bg-status-active rounded-full"
                     style={{ width: "95%" }}
                   />
                 </div>
@@ -189,7 +189,7 @@ const Profile: React.FC = () => {
               />
               <div className="flex flex-col justify-center gap-2">
                 <h3 className="font-bold">Design your apps in your own way</h3>
-                <span className="text-xs text-neutral-700">28 Jan 2026</span>
+                <span className="text-xs text-text-secondary">28 Jan 2026</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -202,7 +202,7 @@ const Profile: React.FC = () => {
                 <h3 className="font-bold">
                   Smartest Applications for Business
                 </h3>
-                <span className="text-xs text-neutral-700">27 Jan 2026</span>
+                <span className="text-xs text-text-secondary">27 Jan 2026</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -213,11 +213,11 @@ const Profile: React.FC = () => {
               />
               <div className="flex flex-col justify-center gap-2">
                 <h3 className="font-bold">How to get creative in your work</h3>
-                <span className="text-xs text-neutral-700">26 Jan 2026</span>
+                <span className="text-xs text-text-secondary">26 Jan 2026</span>
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-center gap-2 bg-neutral-950 p-2 rounded-xs">
+          <div className="flex flex-col justify-center gap-2 bg-bg-primary p-2 rounded-xs border border-border-color">
             <h3 className="font-bold">Portfolio</h3>
             <div className="flex items-center gap-2">
               <FaSquareGithub size={18} />
@@ -229,7 +229,7 @@ const Profile: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#1a1a1a] border border-neutral-700 rounded-xs p-2 w-full flex-3 text-xs">
+        <div className="bg-bg-secondary border border-border-color rounded-xs p-2 w-full flex-3 text-xs text-text-primary shadow-sm">
           {activeTab === "profile" && <ProfileTab />}
           {activeTab === "projects" && <ProjectsTab />}
           {activeTab === "posts" && <PostsTab />}
@@ -237,44 +237,44 @@ const Profile: React.FC = () => {
           {activeTab === "documents" && <DocumentsTab />}
           {activeTab === "settings" && <SettingsTab />}
         </div>
-        <div className="flex flex-col gap-2 bg-[#1a1a1a] border border-neutral-700 rounded-xs p-2 w-full flex-1 text-xs">
+        <div className="flex flex-col gap-2 bg-bg-secondary border border-border-color rounded-xs p-2 w-full flex-1 text-xs text-text-primary shadow-sm">
           <button
-            className={`p-2 hover:bg-neutral-600 rounded-xs text-left ${activeTab === "profile" ? "bg-sky-600" : ""} cursor-pointer`}
+            className={`p-2 hover:bg-bg-tertiary rounded-xs text-left transition-colors ${activeTab === "profile" ? "bg-accent-primary text-white" : ""} cursor-pointer`}
             onClick={() => setActiveTab("profile")}
           >
             Profile
           </button>
           <button
-            className={`p-2 hover:bg-neutral-600 rounded-xs text-left ${activeTab === "projects" ? "bg-sky-600" : ""} cursor-pointer`}
+            className={`p-2 hover:bg-bg-tertiary rounded-xs text-left transition-colors ${activeTab === "projects" ? "bg-accent-primary text-white" : ""} cursor-pointer`}
             onClick={() => setActiveTab("projects")}
           >
             Projects
           </button>
           <button
-            className={`p-2 hover:bg-neutral-600 rounded-xs text-left ${activeTab === "posts" ? "bg-sky-600" : ""} cursor-pointer`}
+            className={`p-2 hover:bg-bg-tertiary rounded-xs text-left transition-colors ${activeTab === "posts" ? "bg-accent-primary text-white" : ""} cursor-pointer`}
             onClick={() => setActiveTab("posts")}
           >
             Posts
           </button>
           <button
-            className={`p-2 hover:bg-neutral-600 rounded-xs text-left ${activeTab === "team" ? "bg-sky-600" : ""} cursor-pointer`}
+            className={`p-2 hover:bg-bg-tertiary rounded-xs text-left transition-colors ${activeTab === "team" ? "bg-accent-primary text-white" : ""} cursor-pointer`}
             onClick={() => setActiveTab("team")}
           >
             Team
           </button>
           <button
-            className={`p-2 hover:bg-neutral-600 rounded-xs text-left ${activeTab === "documents" ? "bg-sky-600" : ""} cursor-pointer`}
+            className={`p-2 hover:bg-bg-tertiary rounded-xs text-left transition-colors ${activeTab === "documents" ? "bg-accent-primary text-white" : ""} cursor-pointer`}
             onClick={() => setActiveTab("documents")}
           >
             Documents
           </button>
           <button
-            className={`p-2 hover:bg-neutral-600 rounded-xs text-left ${activeTab === "settings" ? "bg-sky-600" : ""} cursor-pointer`}
+            className={`p-2 hover:bg-bg-tertiary rounded-xs text-left transition-colors ${activeTab === "settings" ? "bg-accent-primary text-white" : ""} cursor-pointer`}
             onClick={() => setActiveTab("settings")}
           >
             Settings
           </button>
-          <div className="flex flex-col gap-2 bg-neutral-700 p-2 rounded-xs">
+          <div className="flex flex-col gap-2 bg-bg-primary p-2 rounded-xs border border-border-color">
             <h3 className="font-bold">Suggested for you</h3>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -285,12 +285,12 @@ const Profile: React.FC = () => {
                 />
                 <div className="flex flex-col justify-center gap-2">
                   <h3>Esther James</h3>
-                  <p>Frontend Developer</p>
+                  <p className="text-text-secondary">Frontend Developer</p>
                 </div>
               </div>
               <HiUserAdd
                 size={18}
-                className="w-10 h-10 p-2 bg-neutral-950 cursor-pointer"
+                className="w-10 h-10 p-2 bg-bg-secondary hover:bg-bg-tertiary cursor-pointer rounded-full transition-colors"
               />
             </div>
             <div className="flex items-center justify-between">
@@ -302,12 +302,12 @@ const Profile: React.FC = () => {
                 />
                 <div className="flex flex-col justify-center gap-2">
                   <h3>Jacqueline Steve</h3>
-                  <p>UI/UX Designer</p>
+                  <p className="text-text-secondary">UI/UX Designer</p>
                 </div>
               </div>
               <HiUserAdd
                 size={18}
-                className="w-10 h-10 p-2 bg-neutral-950 cursor-pointer"
+                className="w-10 h-10 p-2 bg-bg-secondary hover:bg-bg-tertiary cursor-pointer rounded-full transition-colors"
               />
             </div>
             <div className="flex items-center justify-between">
@@ -319,12 +319,12 @@ const Profile: React.FC = () => {
                 />
                 <div className="flex flex-col justify-center gap-2">
                   <h3>George Whalen</h3>
-                  <p>Backend Developer</p>
+                  <p className="text-text-secondary">Backend Developer</p>
                 </div>
               </div>
               <HiUserAdd
                 size={18}
-                className="w-10 h-10 p-2 bg-neutral-950 cursor-pointer"
+                className="w-10 h-10 p-2 bg-bg-secondary hover:bg-bg-tertiary cursor-pointer rounded-full transition-colors"
               />
             </div>
           </div>

@@ -8,12 +8,12 @@ type InboxProps = {
 
 const Inbox: React.FC<InboxProps> = ({ setIsInboxOpen }) => {
   return (
-    <div className="bg-neutral-800 border border-neutral-700 p-2 w-60 rounded-xs cursor-pointer">
+    <div className="bg-bg-secondary border border-border-color p-2 w-60 rounded-xs cursor-pointer shadow-lg text-text-primary">
       {inbox.map((box) => {
         return (
           <div
             key={box.id}
-            className="flex gap-2 p-2 hover:bg-neutral-600 rounded-xs mb-2"
+            className="flex gap-2 p-2 hover:bg-bg-tertiary rounded-xs mb-2 transition-colors"
           >
             <img src={box.avatar} alt={box.name} className="w-8 h-8" />
             <div className="flex justify-between gap-2 text-xs">
@@ -27,7 +27,7 @@ const Inbox: React.FC<InboxProps> = ({ setIsInboxOpen }) => {
         );
       })}
       <button
-        className="text-xs bg-orange-600 w-full p-2 font-bold rounded-xs cursor-pointer"
+        className="text-xs bg-accent-primary hover:bg-accent-hover text-white w-full p-2 font-bold rounded-xs cursor-pointer transition-colors"
         onClick={() => setIsInboxOpen(false)}
       >
         See All Messages

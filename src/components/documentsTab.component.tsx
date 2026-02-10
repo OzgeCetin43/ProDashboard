@@ -8,13 +8,13 @@ const DocumentsTab: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   return (
-    <div className="flex flex-col justify-center gap-2">
+    <div className="flex flex-col justify-center gap-2 text-text-primary">
       <div className="flex items-center justify-between gap-2">
         <h3 className="font-bold">Documents</h3>
         <div className="flex">
           <input type="file" ref={fileInputRef} className="hidden" />
           <button
-            className="bg-sky-600 hover:bg-orange-600 font-bold px-2 py-1 rounded-xs cursor-pointer flex items-center gap-2"
+            className="bg-accent-primary hover:bg-accent-hover font-bold px-2 py-1 rounded-xs cursor-pointer flex items-center gap-2 text-white transition-colors"
             onClick={() => fileInputRef.current?.click()}
           >
             <FaUpload size={18} />
@@ -22,8 +22,8 @@ const DocumentsTab: React.FC = () => {
           </button>
         </div>
       </div>
-      <table className="text-xs mt-2 text-left bg-neutral-950 border border-neutral-700">
-        <thead className="bg-neutral-600">
+      <table className="text-xs mt-2 text-left bg-bg-primary border border-border-color">
+        <thead className="bg-bg-tertiary">
           <tr>
             <th className="p-2">File Name</th>
             <th className="p-2">Type</th>
@@ -32,7 +32,7 @@ const DocumentsTab: React.FC = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className="hover:bg-neutral-800 border border-neutral-700">
+          <tr className="hover:bg-bg-secondary border border-border-color transition-colors">
             <td className="flex items-center gap-2 p-2">
               <FaFileZipper size={18} />
               <p>my-resume.zip</p>
@@ -41,7 +41,7 @@ const DocumentsTab: React.FC = () => {
             <td className="p-2">1.2 MB</td>
             <td className="p-2">22 Jan 2026</td>
           </tr>
-          <tr className="hover:bg-neutral-800 border border-neutral-700">
+          <tr className="hover:bg-bg-secondary border border-border-color transition-colors">
             <td className="flex items-center gap-2 p-2">
               <FaFilePdf size={18} />
               <p>bank-management-system.pdf</p>
@@ -50,7 +50,7 @@ const DocumentsTab: React.FC = () => {
             <td className="p-2">9.56 MB</td>
             <td className="p-2">22 Jan 2026</td>
           </tr>
-          <tr className="hover:bg-neutral-800 border border-neutral-700">
+          <tr className="hover:bg-bg-secondary border border-border-color transition-colors">
             <td className="flex items-center gap-2 p-2">
               <BsFiletypeMp4 size={18} />
               <p>tour-video.mp4</p>
@@ -59,7 +59,7 @@ const DocumentsTab: React.FC = () => {
             <td className="p-2">12.44 MB</td>
             <td className="p-2">21 Jan 2026</td>
           </tr>
-          <tr className="hover:bg-neutral-800 border border-neutral-700">
+          <tr className="hover:bg-bg-secondary border border-border-color transition-colors">
             <td className="flex items-center gap-2 p-2">
               <BsFiletypeXls size={18} />
               <p>account-statement.xls</p>
@@ -68,7 +68,7 @@ const DocumentsTab: React.FC = () => {
             <td className="p-2">2.5 KB</td>
             <td className="p-2">20 Jan 2026</td>
           </tr>
-          <tr className="hover:bg-neutral-800 border border-neutral-700">
+          <tr className="hover:bg-bg-secondary border border-border-color transition-colors">
             <td className="flex items-center gap-2 p-2">
               <FaFolder size={18} />
               <p>project-files</p>
@@ -77,7 +77,7 @@ const DocumentsTab: React.FC = () => {
             <td className="p-2">100 MB</td>
             <td className="p-2">19 Jan 2026</td>
           </tr>
-          <tr className="hover:bg-neutral-800 border border-neutral-700">
+          <tr className="hover:bg-bg-secondary border border-border-color transition-colors">
             <td className="flex items-center gap-2 p-2">
               <TbFileTypePng size={18} />
               <p>logo.png</p>
@@ -89,7 +89,7 @@ const DocumentsTab: React.FC = () => {
         </tbody>
       </table>
       <div className="flex items-center justify-end">
-        <button className="bg-orange-600 hover:bg-sky-600 p-2 font-bold rounded-xs cursor-pointer">
+        <button className="bg-accent-primary hover:bg-accent-hover p-2 font-bold rounded-xs cursor-pointer text-white transition-colors">
           Load More
         </button>
       </div>

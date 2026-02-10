@@ -19,27 +19,34 @@ const KeyInsightChart: React.FC = () => {
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={keyInsightData} layout="vertical" barSize={8}>
             <XAxis type="number" hide />
-            <Tooltip />
+            <Tooltip
+              contentStyle={{
+                backgroundColor: "var(--chart-tooltip-bg)",
+                borderColor: "var(--border-color)",
+                color: "var(--chart-tooltip-text)",
+              }}
+              itemStyle={{ color: "var(--chart-tooltip-text)" }}
+            />
             <Bar
               dataKey="asia"
               stackId="a"
-              fill="#F5440F"
+              fill="var(--chart-1)"
               radius={[4, 0, 0, 4]}
             />
-            <Bar dataKey="usa" stackId="a" fill="#5EA500" />
+            <Bar dataKey="usa" stackId="a" fill="var(--chart-3)" />
             <Bar
               dataKey="europe"
               stackId="a"
-              fill="#0084D1"
+              fill="var(--chart-2)"
               radius={[0, 4, 4, 0]}
             />
           </BarChart>
         </ResponsiveContainer>
       </div>
       <div className="mt-4 flex gap-4 text-xs">
-        <LegendItem color="#F5440F" label="Asia" />
-        <LegendItem color="#5EA500" label="USA" />
-        <LegendItem color="#0084D1" label="Europe" />
+        <LegendItem color="var(--chart-1)" label="Asia" />
+        <LegendItem color="var(--chart-3)" label="USA" />
+        <LegendItem color="var(--chart-2)" label="Europe" />
       </div>
     </>
   );

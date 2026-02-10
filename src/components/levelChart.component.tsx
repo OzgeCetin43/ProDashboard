@@ -29,14 +29,21 @@ const LevelChart: React.FC = () => {
             tickLine={false}
             tick={false}
           />
-          <Tooltip />
-          <Bar dataKey="service" stackId="a" fill="#0084D1" />
-          <Bar dataKey="volume" stackId="a" fill="#F5440F" />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "var(--chart-tooltip-bg)",
+              borderColor: "var(--border-color)",
+              color: "var(--chart-tooltip-text)",
+            }}
+            itemStyle={{ color: "var(--chart-tooltip-text)" }}
+          />
+          <Bar dataKey="service" stackId="a" fill="var(--chart-1)" />
+          <Bar dataKey="volume" stackId="a" fill="var(--chart-5)" />
         </BarChart>
       </ResponsiveContainer>
       <div className="flex items-center justify-center gap-4 text-xs">
-        <LegendItem color="#F5440F" label="Volume" />
-        <LegendItem color="#0084D1" label="Service" />
+        <LegendItem color="var(--chart-5)" label="Volume" />
+        <LegendItem color="var(--chart-1)" label="Service" />
       </div>
     </div>
   );

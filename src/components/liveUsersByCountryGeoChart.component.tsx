@@ -13,20 +13,34 @@ const LiveUsersByCountryGeoChart: React.FC = () => {
       theme={{
         legends: {
           text: {
-            fill: "#fff",
+            fill: "var(--text-primary)",
+            fontSize: 12,
+          },
+        },
+        tooltip: {
+          container: {
+            background: "var(--chart-tooltip-bg)",
+            color: "var(--chart-tooltip-text)",
             fontSize: 12,
           },
         },
       }}
+      colors={[
+        "var(--chart-5)",
+        "var(--chart-4)",
+        "var(--chart-3)",
+        "var(--chart-1)",
+        "var(--chart-2)",
+      ]}
       projectionScale={75}
       domain={[0, 1000000]}
-      unknownColor="#101b42"
+      unknownColor="var(--bg-tertiary)"
       label="properties.name"
       valueFormat=".2s"
       enableGraticule={true}
-      graticuleLineColor="rgba(0, 0, 0, .2)"
+      graticuleLineColor="var(--border-color)"
       borderWidth={0.5}
-      borderColor="#101b42"
+      borderColor="var(--bg-primary)"
       legends={[
         {
           anchor: "bottom-left",

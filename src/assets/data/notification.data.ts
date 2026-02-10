@@ -20,7 +20,7 @@ export const notifications: NotificationType[] = [
     title: "Launch Admin",
     description: "Just see the my admin!",
     time: "9:30 AM",
-    iconClass: "bg-lime-300 text-lime-950",
+    iconClass: "bg-status-success text-white",
   },
   {
     id: nanoid(),
@@ -28,7 +28,7 @@ export const notifications: NotificationType[] = [
     title: "Event Today",
     description: "Just a reminder that you have event",
     time: "9:15 AM",
-    iconClass: "bg-indigo-300 text-indigo-950",
+    iconClass: "bg-status-info text-white",
   },
   {
     id: nanoid(),
@@ -36,7 +36,7 @@ export const notifications: NotificationType[] = [
     title: "Settings",
     description: "You can customize this template",
     time: "4:33 AM",
-    iconClass: "bg-orange-300 text-orange-950",
+    iconClass: "bg-status-warning text-white",
   },
   {
     id: nanoid(),
@@ -44,7 +44,7 @@ export const notifications: NotificationType[] = [
     title: "Launch Templates",
     description: "Just see the my new admin!",
     time: "7:30 AM",
-    iconClass: "bg-green-300 text-green-950",
+    iconClass: "bg-status-success text-white",
   },
   {
     id: nanoid(),
@@ -52,6 +52,6 @@ export const notifications: NotificationType[] = [
     title: "Event Tomorrow",
     description: "Just a reminder that you have event",
     time: "6:03 AM",
-    iconClass: "bg-pink-300 text-pink-950",
+    iconClass: "bg-status-error text-white",
   },
 ];

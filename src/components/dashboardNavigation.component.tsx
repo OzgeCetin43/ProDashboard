@@ -29,11 +29,11 @@ const DashboardNavigation: React.FC<DashboardNavigationProps> = ({
           duration: 0.25,
           ease: "easeInOut",
         }}
-        className={`w-64 h-full flex flex-col gap-4 absolute bg-[#212121] ml-0 top-0 ${isOpen ? "left-48" : "left-20"} border-l border-neutral-700 p-4 text-sm`}
+        className={`w-64 h-full flex flex-col gap-4 absolute bg-bg-tertiary ml-0 top-0 ${isOpen ? "left-48" : "left-20"} border-l border-border-color p-4 text-sm shadow-xl`}
       >
         <IoClose
           size={18}
-          className="absolute top-4 right-2 cursor-pointer"
+          className="absolute top-4 right-2 cursor-pointer text-text-secondary hover:text-accent-primary transition-colors"
           onClick={() => setSelectedNavigation(null)}
         />
         <div className="w-full mt-6">
@@ -41,7 +41,7 @@ const DashboardNavigation: React.FC<DashboardNavigationProps> = ({
             <Link
               key={link.id}
               to={link.path}
-              className={`hover:bg-stone-600 block p-2 rounded-xs ${location.pathname === link.path ? "bg-sky-600 font-bold" : ""}`}
+              className={`block p-2 rounded-xs transition-colors ${location.pathname === link.path ? "bg-accent-primary text-white font-bold hover:bg-accent-hover" : "text-text-primary hover:bg-bg-primary hover:text-accent-primary"}`}
             >
               {link.name}
             </Link>

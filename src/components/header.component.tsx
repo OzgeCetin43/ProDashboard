@@ -9,6 +9,7 @@ import Inbox from "./inbox.component";
 
 import avatar from "../assets/images/avatar.jpg";
 import Profile from "./profile.component";
+import ThemeToggle from "./themeToggle.component";
 
 const Header: React.FC = () => {
   const [isCartDrawerOpen, setIsCartDrawerOpen] = useState<boolean>(false);
@@ -18,23 +19,24 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="w-full h-auto md:h-14 p-4 bg-[#232323] flex flex-col md:flex-row items-center justify-between gap-2">
-        <div className="w-full flex-1 flex items-center justify-between border border-neutral-700 rounded-xs p-2">
+      <header className="w-full h-auto md:h-14 p-4 bg-bg-secondary flex flex-col md:flex-row items-center justify-between gap-2 border-b border-border-color shadow-sm">
+        <div className="w-full flex-1 flex items-center justify-between border border-border-color rounded-xs p-2 bg-bg-primary">
           <input
             type="text"
             placeholder="Search"
-            className="w-full text-xs outline-none"
+            className="w-full text-xs outline-none bg-transparent text-text-primary placeholder:text-text-secondary"
           />
-          <FaSearch className="w-6 h-6 p-1 hover:bg-sky-600 rounded-full cursor-pointer" />
+          <FaSearch className="w-6 h-6 p-1 text-text-secondary hover:text-accent-primary rounded-full cursor-pointer transition-colors" />
         </div>
         <div className="w-full flex-2 flex items-center justify-center md:justify-end gap-4">
+          <ThemeToggle />
           <FaCartShopping
-            className="bg-neutral-700 hover:bg-orange-600 p-3 h-10 w-10 rounded-full cursor-pointer"
+            className="bg-bg-primary text-text-primary hover:bg-accent-primary hover:text-white p-3 h-10 w-10 rounded-full cursor-pointer transition-colors border border-border-color"
             onClick={() => setIsCartDrawerOpen(true)}
           />
           <div className="relative">
             <FaBell
-              className="bg-neutral-700 hover:bg-orange-600 p-3 h-10 w-10 rounded-full cursor-pointer"
+              className="bg-bg-primary text-text-primary hover:bg-accent-primary hover:text-white p-3 h-10 w-10 rounded-full cursor-pointer transition-colors border border-border-color"
               onClick={() => setIsNotificationOpen((prev) => !prev)}
             />
             {isNotificationOpen && (
@@ -45,7 +47,7 @@ const Header: React.FC = () => {
           </div>
           <div className="relative">
             <GiHexagonalNut
-              className="bg-neutral-700 hover:bg-orange-600 p-3 h-10 w-10 rounded-full cursor-pointer"
+              className="bg-bg-primary text-text-primary hover:bg-accent-primary hover:text-white p-3 h-10 w-10 rounded-full cursor-pointer transition-colors border border-border-color"
               onClick={() => setIsInboxOpen((prev) => !prev)}
             />
             {isInboxOpen && (
@@ -58,7 +60,7 @@ const Header: React.FC = () => {
             <img
               src={avatar}
               alt="avatar"
-              className="w-10 h-10 rounded-full cursor-pointer"
+              className="w-10 h-10 rounded-full cursor-pointer border border-border-color"
               onClick={() => setIsProfileOpen((prev) => !prev)}
             />
             {isProfileOpen && (

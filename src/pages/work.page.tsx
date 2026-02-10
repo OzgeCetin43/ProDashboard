@@ -11,18 +11,18 @@ const Work: React.FC = () => {
   const [isGrid, setIsGrid] = useState<boolean>(true);
 
   return (
-    <div className="flex flex-col gap-2 p-2">
+    <div className="flex flex-col gap-2 p-2 text-text-primary">
       <div className="flex items-center justify-between gap-2">
         <h3 className="font-bold text-xs">8 Works available</h3>
         <div className="flex items-center gap-2">
           <IoIosGrid
             size={18}
-            className={`w-8 h-8 p-2 bg-neutral-600 hover:bg-sky-600 cursor-pointer rounded-xs ${isGrid ? "bg-orange-600" : ""}`}
+            className={`w-8 h-8 p-2 bg-bg-tertiary hover:bg-accent-primary hover:text-white cursor-pointer rounded-xs transition-colors ${isGrid ? "bg-accent-primary text-white" : "text-text-primary"}`}
             onClick={() => setIsGrid(true)}
           />
           <FaGripLines
             size={18}
-            className={`w-8 h-8 p-2 bg-neutral-600 hover:bg-sky-600 cursor-pointer rounded-xs ${!isGrid ? "bg-orange-600" : ""}`}
+            className={`w-8 h-8 p-2 bg-bg-tertiary hover:bg-accent-primary hover:text-white cursor-pointer rounded-xs transition-colors ${!isGrid ? "bg-accent-primary text-white" : "text-text-primary"}`}
             onClick={() => setIsGrid(false)}
           />
         </div>
@@ -31,7 +31,7 @@ const Work: React.FC = () => {
         {works.map((work) => (
           <div
             key={work.id}
-            className={`flex ${isGrid ? "w-full md:w-[33%] flex-col" : "w-full flex-col md:flex-row items-center justify-between"} gap-2 p-2 bg-[#1a1a1a] rounded-xs border border-neutral-700`}
+            className={`flex ${isGrid ? "w-full md:w-[33%] flex-col" : "w-full flex-col md:flex-row items-center justify-between"} gap-2 p-2 bg-bg-secondary rounded-xs border border-border-color shadow-sm`}
           >
             <img
               src={work.image}
@@ -50,17 +50,19 @@ const Work: React.FC = () => {
                   alt="assignee"
                   className="w-10 h-10 rounded-full"
                 />
-                <span className="text-xs font-bold">{work.assignee}</span>
+                <span className="text-xs font-bold text-text-primary">
+                  {work.assignee}
+                </span>
               </div>
               <div className="flex items-center gap-2 text-xs">
                 <AiFillLike
                   size={18}
-                  className="w-8 h-8 p-2 bg-sky-600 hover:bg-orange-600 cursor-pointer rounded-xs"
+                  className="w-8 h-8 p-2 bg-accent-primary hover:bg-accent-hover cursor-pointer rounded-xs text-white transition-colors"
                 />
                 <span>{work.like}</span>
                 <FaMessage
                   size={18}
-                  className="w-8 h-8 p-2 bg-orange-600 hover:bg-sky-600 cursor-pointer rounded-xs"
+                  className="w-8 h-8 p-2 bg-text-secondary hover:bg-text-primary cursor-pointer rounded-xs text-white transition-colors"
                 />
                 <span>{work.comment}</span>
               </div>
@@ -68,12 +70,14 @@ const Work: React.FC = () => {
           </div>
         ))}
         <div
-          className={`flex flex-col items-center justify-center gap-2 ${isGrid ? "w-full md:w-[33%]" : "w-full"} p-2 bg-neutral-950 rounded-xs border border-neutral-700`}
+          className={`flex flex-col items-center justify-center gap-2 ${isGrid ? "w-full md:w-[33%]" : "w-full"} p-2 bg-bg-primary rounded-xs border border-border-color`}
         >
-          <LuRocket size={32} className="text-orange-600" />
-          <h3>Offer a Work</h3>
-          <p className="text-xs">Ignite Professional Adventures</p>
-          <button className="w-fit p-2 bg-sky-600 hover:bg-orange-600 cursor-pointer rounded-xs text-xs font-bold">
+          <LuRocket size={32} className="text-accent-primary" />
+          <h3 className="font-bold">Offer a Work</h3>
+          <p className="text-xs text-text-secondary">
+            Ignite Professional Adventures
+          </p>
+          <button className="w-fit p-2 bg-accent-primary hover:bg-accent-hover cursor-pointer rounded-xs text-xs font-bold text-white transition-colors">
             Offer a Work
           </button>
         </div>

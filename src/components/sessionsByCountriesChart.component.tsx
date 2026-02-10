@@ -35,26 +35,26 @@ const SessionsByCountriesChart: React.FC = () => {
             type="number"
             axisLine={false}
             tickLine={false}
-            tick={{ fill: "#9ca3af", fontSize: 12 }}
+            tick={{ fill: "var(--text-secondary)", fontSize: 12 }}
           />
           <YAxis
             type="category"
             dataKey="country"
             axisLine={false}
             tickLine={false}
-            tick={{ fill: "#6b7280", fontSize: 13 }}
+            tick={{ fill: "var(--text-secondary)", fontSize: 13 }}
           />
           <Bar dataKey="value" barSize={18} radius={[0, 4, 4, 0]}>
             {sessionsByCountriesChartData.map((entry: any, index: number) => (
               <Cell
                 key={index}
-                fill={entry.highlight ? "#F5440F" : "#0084D1"}
+                fill={entry.highlight ? "var(--chart-5)" : "var(--chart-1)"}
               />
             ))}
             <LabelList
               dataKey="value"
               position="right"
-              fill="#9ca3af"
+              fill="var(--text-secondary)"
               fontSize={12}
             />
           </Bar>

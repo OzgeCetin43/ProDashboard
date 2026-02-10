@@ -12,7 +12,7 @@ const LegendItem: React.FC<LegendItemProps> = ({ color, label }) => {
         className="h-2 w-2 rounded-full"
         style={{ backgroundColor: color }}
       />
-      <span className="text-white">{label}</span>
+      <span className="text-text-primary">{label}</span>
     </div>
   );
 };

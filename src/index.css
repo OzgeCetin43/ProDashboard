@@ -1,27 +1,111 @@
-@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-hover: var(--accent-hover);
+  --color-border-color: var(--border-color);
+
+  --color-status-success: var(--status-success);
+  --color-status-warning: var(--status-warning);
+  --color-status-error: var(--status-error);
+  --color-status-info: var(--status-info);
+  --color-status-active: var(--status-active);
+}
+
+:root {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+
+  --accent-primary: #3b82f6;
+  --accent-hover: #2563eb;
+
+  --border-color: #e2e8f0;
+
+  --status-success: #10b981;
+  --status-warning: #f59e0b;
+  --status-error: #f43f5e;
+  --status-info: #0ea5e9;
+  --status-active: #8b5cf6;
+
+  --chart-1: #3b82f6;
+  --chart-2: #8b5cf6;
+  --chart-3: #10b981;
+  --chart-4: #f59e0b;
+  --chart-5: #f43f5e;
+
+  --chart-tooltip-bg: #ffffff;
+  --chart-tooltip-text: #0f172a;
+}
+
+.dark {
+  /* Modern Dark Mode (Deep Slate / Midnight) */
+  --bg-primary: #020617; /* slate-950 - Deeper, richer background */
+  --bg-secondary: #0f172a; /* slate-900 - Distinctive panel color */
+  --bg-tertiary: #1e293b; /* slate-800 - Lighter interaction states */
+  --text-primary: #f8fafc; /* slate-50 - Crisp, high-contrast text */
+  --text-secondary: #94a3b8; /* slate-400 - Softer secondary text */
+
+  /* Modern Accent (Vibrant Sky Blue for pop against dark slate) */
+  --accent-primary: #38bdf8; /* sky-400 */
+  --accent-hover: #0ea5e9; /* sky-500 */
+
+  --border-color: #1e293b; /* slate-800 */
+
+  /* Semantic Colors (Refined for Dark Slate) */
+  --status-success: #34d399; /* emerald-400 */
+  --status-warning: #fbbf24; /* amber-400 */
+  --status-error: #fb7185; /* rose-400 */
+  --status-info: #7dd3fc; /* sky-300 */
+  --status-active: #a78bfa; /* violet-400 */
+
+  /* Chart Colors (Vibrant for Dark Mode) */
+  --chart-1: #38bdf8; /* Sky */
+  --chart-2: #a78bfa; /* Light Violet */
+  --chart-3: #34d399; /* Mint */
+  --chart-4: #fbbf24; /* Amber */
+  --chart-5: #fb7185; /* Rose */
+
+  --chart-tooltip-bg: #0f172a;
+  --chart-tooltip-text: #f8fafc;
+}
 
 * {
   box-sizing: border-box;
-  font-family: "Electrolize", sans-serif;
+  font-family: "Outfit", sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 body {
-  @apply bg-stone-950 text-white;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
-  border-radius: 10px;
+  background: var(--bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00a6f4;
-  border-radius: 10px;
-  border: 2px solid #00a6f4;
+  background: var(--accent-primary);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
 }

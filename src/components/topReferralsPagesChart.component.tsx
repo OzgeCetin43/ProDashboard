@@ -25,21 +25,28 @@ const TopReferralsPagesChart: React.FC = () => {
             barSize={8}
           >
             <XAxis type="number" hide />
-            <Tooltip />
-            <Bar dataKey="google" stackId="a" fill="#F5440F" />
-            <Bar dataKey="youtube" stackId="a" fill="#5EA500" />
-            <Bar dataKey="medium" stackId="a" fill="#0084D1" />
-            <Bar dataKey="linkedIn" stackId="a" fill="#FFDF20" />
-            <Bar dataKey="github" stackId="a" fill="#000" />
+            <Tooltip
+              contentStyle={{
+                backgroundColor: "var(--chart-tooltip-bg)",
+                borderColor: "var(--border-color)",
+                color: "var(--chart-tooltip-text)",
+              }}
+              itemStyle={{ color: "var(--chart-tooltip-text)" }}
+            />
+            <Bar dataKey="google" stackId="a" fill="var(--chart-5)" />
+            <Bar dataKey="youtube" stackId="a" fill="var(--chart-3)" />
+            <Bar dataKey="medium" stackId="a" fill="var(--chart-1)" />
+            <Bar dataKey="linkedIn" stackId="a" fill="var(--chart-4)" />
+            <Bar dataKey="github" stackId="a" fill="var(--chart-2)" />
           </BarChart>
         </ResponsiveContainer>
       </div>
       <div className="mt-4 flex flex-col gap-4 text-xs">
-        <LegendItem color="#F5440F" label="www.google.com" />
-        <LegendItem color="#5EA500" label="www.youtube.com" />
-        <LegendItem color="#0084D1" label="www.medium.com" />
-        <LegendItem color="#FFDF20" label="www.linkedIn.com" />
-        <LegendItem color="#000" label="www.github.com" />
+        <LegendItem color="var(--chart-5)" label="www.google.com" />
+        <LegendItem color="var(--chart-3)" label="www.youtube.com" />
+        <LegendItem color="var(--chart-1)" label="www.medium.com" />
+        <LegendItem color="var(--chart-4)" label="www.linkedIn.com" />
+        <LegendItem color="var(--chart-2)" label="www.github.com" />
       </div>
     </>
   );

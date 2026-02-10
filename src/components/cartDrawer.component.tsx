@@ -22,9 +22,9 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ setIsCartDrawerOpen }) => {
         duration: 0.25,
         ease: "easeInOut",
       }}
-      className="h-screen w-[80%] md:w-1/4 absolute top-0 right-0 z-5 bg-[#1a1a1a]"
+      className="h-screen w-[80%] md:w-1/4 absolute top-0 right-0 z-5 bg-bg-secondary shadow-xl border-l border-border-color"
     >
-      <div className="absolute w-full flex items-center justify-between p-4 bg-sky-600">
+      <div className="absolute w-full flex items-center justify-between p-4 bg-accent-primary text-white">
         <h1 className="font-bold">Shopping Cart</h1>
         <IoClose
           size={18}
@@ -37,7 +37,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ setIsCartDrawerOpen }) => {
         <h3 className="font-bold">Cart is Empty</h3>
         <Link
           to="/"
-          className="bg-orange-600 p-2 rounded-xs font-bold"
+          className="bg-accent-primary hover:bg-accent-hover text-white p-2 rounded-xs font-bold transition-colors"
           onClick={() => setIsCartDrawerOpen(false)}
         >
           Go back to shopping

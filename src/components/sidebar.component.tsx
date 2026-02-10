@@ -68,11 +68,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
       variants={containerVariants}
       initial="close"
       animate={containerControls}
-      className="h-full bg-[#1a1a1a] flex flex-col z-10 gap-8 p-4 absolute top-0 left-0"
+      className="h-full bg-bg-secondary border-r border-border-color flex flex-col z-10 gap-8 p-4 absolute top-0 left-0"
     >
       <div className="w-full flex items-center justify-between">
         <div
-          className="w-10 h-10 flex items-center justify-center bg-stone-950  border border-neutral-700 rounded-full cursor-pointer"
+          className="w-10 h-10 flex items-center justify-center bg-bg-primary border border-border-color rounded-full cursor-pointer hover:border-accent-primary transition-colors"
           onClick={handleSidebarOpenClose}
         >
           <img src={logo} alt="logo" />
@@ -81,57 +81,82 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
       <div className="h-full flex flex-col justify-between">
         <div className="flex flex-col gap-6">
           <div
-            className="flex items-center gap-2 text-xs cursor-pointer"
+            className="flex items-center gap-2 text-xs cursor-pointer group"
             onClick={() => handleNavigationClick("dashboards")}
           >
-            <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
-              <MdOutlineStackedBarChart size={18} />
+            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary transition-colors">
+              <MdOutlineStackedBarChart
+                size={18}
+                className="text-text-primary group-hover:text-accent-primary"
+              />
             </div>
-            <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+            <span
+              className={`${isOpen ? "block" : "hidden"} font-bold text-text-primary group-hover:text-accent-primary`}
+            >
               Dashboards
             </span>
           </div>
           <div
-            className="flex items-center gap-2 text-xs cursor-pointer"
+            className="flex items-center gap-2 text-xs cursor-pointer group"
             onClick={() => handleNavigationClick("apps")}
           >
-            <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
-              <FaAppStoreIos size={18} />
+            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary transition-colors">
+              <FaAppStoreIos
+                size={18}
+                className="text-text-primary group-hover:text-accent-primary"
+              />
             </div>
-            <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+            <span
+              className={`${isOpen ? "block" : "hidden"} font-bold text-text-primary group-hover:text-accent-primary`}
+            >
               Apps
             </span>
           </div>
           <div
-            className="flex items-center gap-2 text-xs cursor-pointer"
+            className="flex items-center gap-2 text-xs cursor-pointer group"
             onClick={() => handleNavigationClick("authentication")}
           >
-            <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
-              <FaLock size={18} />
+            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary transition-colors">
+              <FaLock
+                size={18}
+                className="text-text-primary group-hover:text-accent-primary"
+              />
             </div>
-            <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+            <span
+              className={`${isOpen ? "block" : "hidden"} font-bold text-text-primary group-hover:text-accent-primary`}
+            >
               Authentication
             </span>
           </div>
           <div
-            className="flex items-center gap-2 text-xs cursor-pointer"
+            className="flex items-center gap-2 text-xs cursor-pointer group"
             onClick={() => handleNavigationClick("pages")}
           >
-            <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
-              <ImPagebreak size={18} />
+            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary transition-colors">
+              <ImPagebreak
+                size={18}
+                className="text-text-primary group-hover:text-accent-primary"
+              />
             </div>
-            <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+            <span
+              className={`${isOpen ? "block" : "hidden"} font-bold text-text-primary group-hover:text-accent-primary`}
+            >
               Pages
             </span>
           </div>
           <div
-            className="flex items-center gap-2 text-xs cursor-pointer"
+            className="flex items-center gap-2 text-xs cursor-pointer group"
             onClick={() => handleNavigationClick("landing")}
           >
-            <div className="w-10 h-10 flex items-center justify-center border border-neutral-700 rounded-xs bg-stone-950">
-              <BsRocketTakeoffFill size={18} />
+            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary transition-colors">
+              <BsRocketTakeoffFill
+                size={18}
+                className="text-text-primary group-hover:text-accent-primary"
+              />
             </div>
-            <span className={`${isOpen ? "block" : "hidden"} font-bold`}>
+            <span
+              className={`${isOpen ? "block" : "hidden"} font-bold text-text-primary group-hover:text-accent-primary`}
+            >
               Landing
             </span>
           </div>
@@ -140,13 +165,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
           className={`text-xs ${isOpen ? "flex flex-col items-center gap-2" : "hidden"}`}
         >
           <img src={grabIcon} />
-          <h2 className="font-bold text-sm text-center">
+          <h2 className="font-bold text-sm text-center text-text-primary">
             Grab Nice ProDashboard
           </h2>
-          <p className="text-center">
+          <p className="text-center text-text-secondary">
             Customize your dashboard and learn about our features
           </p>
-          <Link to="/" className="p-2 bg-orange-600 rounded-xs font-bold">
+          <Link
+            to="/"
+            className="p-2 bg-accent-primary hover:bg-accent-hover text-white rounded-xs font-bold transition-colors"
+          >
             Get Started
           </Link>
         </div>
