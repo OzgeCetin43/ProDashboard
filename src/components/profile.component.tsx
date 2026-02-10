@@ -36,12 +36,12 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
         Messages
       </Link>
       <Link
-        to="/taskboard"
+        to="/works"
         className="flex items-center gap-2 hover:bg-neutral-600 px-2 py-1 rounded-xs"
         onClick={() => setIsProfileOpen(false)}
       >
         <MdOutlineTask size={18} />
-        Taskboard
+        Works
       </Link>
       <Link
         to="/help"
