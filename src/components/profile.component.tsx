@@ -29,7 +29,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
       </Link>
       <Link
         to="/chat-app"
-        className="flex items-center gap-2 hover:bg-neutral-600 px-2 py-1 rounded-xs"
+        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs transition-colors"
         onClick={() => setIsProfileOpen(false)}
       >
         <IoChatbubblesOutline size={18} />
@@ -37,7 +37,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
       </Link>
       <Link
         to="/works"
-        className="flex items-center gap-2 hover:bg-neutral-600 px-2 py-1 rounded-xs"
+        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs transition-colors"
         onClick={() => setIsProfileOpen(false)}
       >
         <MdOutlineTask size={18} />
@@ -45,7 +45,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
       </Link>
       <Link
         to="/help"
-        className="flex items-center gap-2 hover:bg-neutral-600 px-2 py-1 rounded-xs"
+        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs transition-colors"
         onClick={() => setIsProfileOpen(false)}
       >
         <IoMdHelp size={18} />
@@ -54,7 +54,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
       <div className="w-full h-[1px] bg-border-color"></div>
       <Link
         to="/balance"
-        className="flex items-center gap-2 hover:bg-neutral-600 px-2 py-1 rounded-xs"
+        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs transition-colors"
         onClick={() => setIsProfileOpen(false)}
       >
         <IoWallet size={18} />
@@ -63,7 +63,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
       </Link>
       <Link
         to="/settings"
-        className="flex items-center gap-2 hover:bg-neutral-600 px-2 py-1 rounded-xs"
+        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs transition-colors"
         onClick={() => setIsProfileOpen(false)}
       >
         <IoSettingsOutline size={18} />

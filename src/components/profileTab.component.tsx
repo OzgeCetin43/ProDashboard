@@ -38,7 +38,7 @@ const ProfileTab: React.FC = () => {
           <div className="flex flex-col gap-2">
             <SiImgur
               size={18}
-              className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600 text-white"
+              className="w-20 h-10 md:w-10 p-2 rounded-xs bg-accent-primary text-white"
             />
             <div className="flex flex-col gap-2 p-2 bg-bg-primary border border-border-color rounded-xs">
               <h3 className="font-bold">Profile Image Updated</h3>
@@ -62,7 +62,7 @@ const ProfileTab: React.FC = () => {
           <div className="flex flex-col gap-2">
             <IoDocuments
               size={18}
-              className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600 text-white"
+              className="w-20 h-10 md:w-10 p-2 rounded-xs bg-accent-primary text-white"
             />
             <div className="flex flex-col gap-2 p-2 bg-bg-primary border border-border-color rounded-xs">
               <h3 className="font-bold">Document Added to Project</h3>
@@ -86,7 +86,7 @@ const ProfileTab: React.FC = () => {
           <div className="flex flex-col gap-2">
             <IoChatbubbleEllipsesOutline
               size={18}
-              className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600 text-white"
+              className="w-20 h-10 md:w-10 p-2 rounded-xs bg-accent-primary text-white"
             />
             <div className="flex flex-col gap-2 p-2 bg-bg-primary border border-border-color rounded-xs">
               <h3 className="font-bold">Commented on team update</h3>
@@ -120,7 +120,7 @@ const ProfileTab: React.FC = () => {
           <div className="flex flex-col gap-2">
             <FaFolderOpen
               size={18}
-              className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600 text-white"
+              className="w-20 h-10 md:w-10 p-2 rounded-xs bg-accent-primary text-white"
             />
             <div className="flex flex-col gap-2 p-2 bg-bg-primary border border-border-color rounded-xs">
               <h3 className="font-bold">Marketing Assets Shared</h3>
@@ -144,7 +144,7 @@ const ProfileTab: React.FC = () => {
           <div className="flex flex-col gap-2">
             <FaUsers
               size={18}
-              className="w-20 h-10 md:w-10 p-2 rounded-xs bg-purple-600 text-white"
+              className="w-20 h-10 md:w-10 p-2 rounded-xs bg-accent-primary text-white"
             />
             <div className="flex flex-col gap-2 p-2 bg-bg-primary border border-border-color rounded-xs">
               <h3 className="font-bold">Joined new team</h3>
