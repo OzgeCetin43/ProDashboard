@@ -10,28 +10,6 @@ const LiveUsersByCountryGeoChart: React.FC = () => {
       data={liveUsersByCountryGeoChartData}
       features={liveUsersByCountryGeoChartFeatures.features}
       margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
-      theme={{
-        legends: {
-          text: {
-            fill: "var(--text-primary)",
-            fontSize: 12,
-          },
-        },
-        tooltip: {
-          container: {
-            background: "var(--chart-tooltip-bg)",
-            color: "var(--chart-tooltip-text)",
-            fontSize: 12,
-          },
-        },
-      }}
-      colors={[
-        "var(--chart-5)",
-        "var(--chart-4)",
-        "var(--chart-3)",
-        "var(--chart-1)",
-        "var(--chart-2)",
-      ]}
       projectionScale={75}
       domain={[0, 1000000]}
       unknownColor="var(--bg-tertiary)"
