@@ -17,12 +17,12 @@ const Work: React.FC = () => {
         <div className="flex items-center gap-2">
           <IoIosGrid
             size={18}
-            className={`w-8 h-8 p-2 bg-bg-tertiary hover:bg-accent-primary hover:text-white cursor-pointer rounded-xs transition-colors ${isGrid ? "bg-accent-primary text-white" : "text-text-primary"}`}
+            className={`w-8 h-8 p-2 hover:bg-accent-hover text-text-primary hover:text-white cursor-pointer rounded-xs transition-colors ${isGrid ? "bg-accent-primary text-white" : "bg-bg-tertiary"}`}
             onClick={() => setIsGrid(true)}
           />
           <FaGripLines
             size={18}
-            className={`w-8 h-8 p-2 bg-bg-tertiary hover:bg-accent-primary hover:text-white cursor-pointer rounded-xs transition-colors ${!isGrid ? "bg-accent-primary text-white" : "text-text-primary"}`}
+            className={`w-8 h-8 p-2 hover:bg-accent-hover text-text-primary hover:text-white cursor-pointer rounded-xs transition-colors ${!isGrid ? "bg-accent-primary text-white" : "bg-bg-tertiary"}`}
             onClick={() => setIsGrid(false)}
           />
         </div>

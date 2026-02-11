@@ -6,10 +6,10 @@ import { GiHexagonalNut } from "react-icons/gi";
 import CartDrawer from "./cartDrawer.component";
 import Notification from "./notification.component";
 import Inbox from "./inbox.component";
-
-import avatar from "../assets/images/avatar.jpg";
 import Profile from "./profile.component";
 import ThemeToggle from "./themeToggle.component";
+
+import avatar from "../assets/images/avatar.jpg";
 
 const Header: React.FC = () => {
   const [isCartDrawerOpen, setIsCartDrawerOpen] = useState<boolean>(false);
