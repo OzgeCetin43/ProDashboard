@@ -16,7 +16,7 @@ const Notification: React.FC<NotificationProps> = ({
         return (
           <div
             key={notification.id}
-            className="flex gap-2 p-2 hover:bg-bg-tertiary rounded-xs mb-2 cursor-pointer transition-colors"
+            className="flex gap-2 p-2 hover:bg-bg-tertiary rounded-xs mb-2 cursor-pointer"
           >
             <Icon
               className={`mt-2 h-8 w-8 p-1 ${notification.iconClass} rounded-xs`}
@@ -32,7 +32,7 @@ const Notification: React.FC<NotificationProps> = ({
         );
       })}
       <button
-        className="text-xs bg-accent-primary hover:bg-accent-hover text-white w-full p-2 font-bold rounded-xs cursor-pointer transition-colors"
+        className="text-xs bg-accent-primary hover:bg-accent-hover text-white w-full p-2 font-bold rounded-xs cursor-pointer"
         onClick={() => setIsNotificationOpen(false)}
       >
         See All Notifications

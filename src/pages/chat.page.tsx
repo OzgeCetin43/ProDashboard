@@ -21,7 +21,7 @@ const Chat: React.FC = () => {
             <h3 className="font-bold text-text-primary">Chats</h3>
             <FaPlus
               size={18}
-              className="w-7 h-7 hover:bg-accent-primary hover:text-white cursor-pointer text-accent-primary p-2 border border-accent-primary rounded-xs transition-colors"
+              className="w-7 h-7 hover:bg-accent-primary hover:text-white cursor-pointer text-accent-primary p-2 border border-accent-primary rounded-xs"
             />
           </div>
           <p className="text-xs text-text-secondary">
@@ -36,19 +36,19 @@ const Chat: React.FC = () => {
             />
             <FaSearch
               size={18}
-              className="bg-bg-tertiary text-text-primary p-1 rounded-full hover:bg-accent-primary hover:text-white cursor-pointer transition-colors"
+              className="bg-bg-tertiary text-text-primary p-1 rounded-full hover:bg-accent-primary hover:text-white cursor-pointer"
             />
           </div>
           <div className="flex items-center gap-2">
             <button
               onClick={() => setActiveTab("chats")}
-              className={`px-2 py-1 rounded-xs text-xs transition-colors ${activeTab === "chats" ? "bg-accent-primary text-white" : "bg-bg-tertiary text-text-primary hover:bg-bg-secondary"}`}
+              className={`px-2 py-1 rounded-xs text-xs ${activeTab === "chats" ? "bg-accent-primary text-white" : "bg-bg-tertiary text-text-primary hover:bg-bg-secondary"}`}
             >
               Chats
             </button>
             <button
               onClick={() => setActiveTab("contacts")}
-              className={`px-2 py-1 rounded-xs text-xs transition-colors ${activeTab === "contacts" ? "bg-accent-primary text-white" : "bg-bg-tertiary text-text-primary hover:bg-bg-secondary"}`}
+              className={`px-2 py-1 rounded-xs text-xs ${activeTab === "contacts" ? "bg-accent-primary text-white" : "bg-bg-tertiary text-text-primary hover:bg-bg-secondary"}`}
             >
               Contacts
             </button>
@@ -70,11 +70,11 @@ const Chat: React.FC = () => {
             <div className="flex items-center gap-4">
               <FaVideo
                 size={32}
-                className="p-2 rounded-xs bg-accent-primary text-white hover:bg-accent-hover cursor-pointer transition-colors"
+                className="p-2 rounded-xs bg-accent-primary text-white hover:bg-accent-hover cursor-pointer"
               />
               <FaPhone
                 size={32}
-                className="p-2 rounded-xs bg-accent-primary text-white hover:bg-accent-hover cursor-pointer transition-colors"
+                className="p-2 rounded-xs bg-accent-primary text-white hover:bg-accent-hover cursor-pointer"
               />
             </div>
           </div>
@@ -159,13 +159,13 @@ const Chat: React.FC = () => {
               placeholder="Type your message..."
               className="flex-1 border border-border-color bg-bg-secondary rounded-xs p-2 text-xs outline-none text-text-primary"
             />
-            <button className="rounded-xs p-2 bg-accent-primary hover:bg-accent-hover cursor-pointer text-xs text-white transition-colors">
+            <button className="rounded-xs p-2 bg-accent-primary hover:bg-accent-hover cursor-pointer text-xs text-white">
               Send
             </button>
             <input type="file" ref={fileInputRef} className="hidden" />
             <AiOutlinePicture
               size={30}
-              className="cursor-pointer p-2 bg-accent-primary text-white rounded-xs hover:bg-accent-hover transition-colors"
+              className="cursor-pointer p-2 bg-accent-primary text-white rounded-xs hover:bg-accent-hover"
               onClick={() => fileInputRef.current?.click()}
             />
           </div>

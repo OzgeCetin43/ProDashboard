@@ -72,7 +72,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
     >
       <div className="w-full flex items-center justify-between">
         <div
-          className="w-10 h-10 flex items-center justify-center bg-bg-primary border border-border-color rounded-full cursor-pointer hover:border-accent-primary transition-colors"
+          className="w-10 h-10 flex items-center justify-center bg-bg-primary border border-border-color rounded-full cursor-pointer hover:border-accent-primary"
           onClick={handleSidebarOpenClose}
         >
           <img src={logo} alt="logo" />
@@ -84,7 +84,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
             className="flex items-center gap-2 text-xs cursor-pointer group"
             onClick={() => handleNavigationClick("dashboards")}
           >
-            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary transition-colors">
+            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary">
               <MdOutlineStackedBarChart
                 size={18}
                 className="text-text-primary group-hover:text-accent-primary"
@@ -100,7 +100,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
             className="flex items-center gap-2 text-xs cursor-pointer group"
             onClick={() => handleNavigationClick("apps")}
           >
-            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary transition-colors">
+            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary">
               <FaAppStoreIos
                 size={18}
                 className="text-text-primary group-hover:text-accent-primary"
@@ -116,7 +116,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
             className="flex items-center gap-2 text-xs cursor-pointer group"
             onClick={() => handleNavigationClick("authentication")}
           >
-            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary transition-colors">
+            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary">
               <FaLock
                 size={18}
                 className="text-text-primary group-hover:text-accent-primary"
@@ -132,7 +132,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
             className="flex items-center gap-2 text-xs cursor-pointer group"
             onClick={() => handleNavigationClick("pages")}
           >
-            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary transition-colors">
+            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary">
               <ImPagebreak
                 size={18}
                 className="text-text-primary group-hover:text-accent-primary"
@@ -148,7 +148,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
             className="flex items-center gap-2 text-xs cursor-pointer group"
             onClick={() => handleNavigationClick("landing")}
           >
-            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary transition-colors">
+            <div className="w-10 h-10 flex items-center justify-center border border-border-color rounded-xs bg-bg-primary group-hover:border-accent-primary">
               <BsRocketTakeoffFill
                 size={18}
                 className="text-text-primary group-hover:text-accent-primary"
@@ -173,7 +173,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
           </p>
           <Link
             to="/"
-            className="p-2 bg-accent-primary hover:bg-accent-hover text-white rounded-xs font-bold transition-colors"
+            className="p-2 bg-accent-primary hover:bg-accent-hover text-white rounded-xs font-bold"
           >
             Get Started
           </Link>

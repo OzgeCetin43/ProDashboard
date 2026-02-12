@@ -64,13 +64,13 @@ const Profile: React.FC = () => {
               <p className="text-xs">Following</p>
             </div>
             <div className="flex items-center gap-2 bg-bg-secondary p-2">
-              <button className="text-xs p-2 cursor-pointer rounded-xs bg-accent-primary text-white hover:bg-accent-hover transition-colors">
+              <button className="text-xs p-2 cursor-pointer rounded-xs bg-accent-primary text-white hover:bg-accent-hover">
                 Hire me
               </button>
-              <button className="text-xs p-2 cursor-pointer rounded-xs bg-accent-primary text-white hover:bg-accent-hover transition-colors">
+              <button className="text-xs p-2 cursor-pointer rounded-xs bg-accent-primary text-white hover:bg-accent-hover">
                 Follow
               </button>
-              <button className="text-xs p-2 cursor-pointer rounded-xs bg-bg-tertiary text-text-primary hover:bg-bg-secondary transition-colors">
+              <button className="text-xs p-2 cursor-pointer rounded-xs bg-bg-tertiary text-text-primary hover:bg-bg-secondary">
                 Edit Profile
               </button>
             </div>
@@ -239,37 +239,37 @@ const Profile: React.FC = () => {
         </div>
         <div className="flex flex-col gap-2 bg-bg-secondary border border-border-color rounded-xs p-2 w-full flex-1 text-xs text-text-primary shadow-sm">
           <button
-            className={`p-2 rounded-xs text-left transition-colors cursor-pointer ${activeTab === "profile" ? "bg-accent-primary text-white hover:bg-accent-hover" : "text-text-primary hover:bg-border-color"}`}
+            className={`p-2 rounded-xs text-left cursor-pointer ${activeTab === "profile" ? "bg-accent-primary text-white hover:bg-accent-hover" : "text-text-primary hover:bg-border-color"}`}
             onClick={() => setActiveTab("profile")}
           >
             Profile
           </button>
           <button
-            className={`p-2 rounded-xs text-left transition-colors cursor-pointer ${activeTab === "projects" ? "bg-accent-primary text-white hover:bg-accent-hover" : "text-text-primary hover:bg-border-color"}`}
+            className={`p-2 rounded-xs text-left cursor-pointer ${activeTab === "projects" ? "bg-accent-primary text-white hover:bg-accent-hover" : "text-text-primary hover:bg-border-color"}`}
             onClick={() => setActiveTab("projects")}
           >
             Projects
           </button>
           <button
-            className={`p-2 rounded-xs text-left transition-colors cursor-pointer ${activeTab === "posts" ? "bg-accent-primary text-white hover:bg-accent-hover" : "text-text-primary hover:bg-border-color"}`}
+            className={`p-2 rounded-xs text-left cursor-pointer ${activeTab === "posts" ? "bg-accent-primary text-white hover:bg-accent-hover" : "text-text-primary hover:bg-border-color"}`}
             onClick={() => setActiveTab("posts")}
           >
             Posts
           </button>
           <button
-            className={`p-2 rounded-xs text-left transition-colors cursor-pointer ${activeTab === "team" ? "bg-accent-primary text-white hover:bg-accent-hover" : "text-text-primary hover:bg-border-color"}`}
+            className={`p-2 rounded-xs text-left cursor-pointer ${activeTab === "team" ? "bg-accent-primary text-white hover:bg-accent-hover" : "text-text-primary hover:bg-border-color"}`}
             onClick={() => setActiveTab("team")}
           >
             Team
           </button>
           <button
-            className={`p-2 rounded-xs text-left transition-colors cursor-pointer ${activeTab === "documents" ? "bg-accent-primary text-white hover:bg-accent-hover" : "text-text-primary hover:bg-border-color"}`}
+            className={`p-2 rounded-xs text-left cursor-pointer ${activeTab === "documents" ? "bg-accent-primary text-white hover:bg-accent-hover" : "text-text-primary hover:bg-border-color"}`}
             onClick={() => setActiveTab("documents")}
           >
             Documents
           </button>
           <button
-            className={`p-2 rounded-xs text-left transition-colors cursor-pointer ${activeTab === "settings" ? "bg-accent-primary text-white hover:bg-accent-hover" : "text-text-primary hover:bg-border-color"}`}
+            className={`p-2 rounded-xs text-left cursor-pointer ${activeTab === "settings" ? "bg-accent-primary text-white hover:bg-accent-hover" : "text-text-primary hover:bg-border-color"}`}
             onClick={() => setActiveTab("settings")}
           >
             Settings
@@ -290,7 +290,7 @@ const Profile: React.FC = () => {
               </div>
               <HiUserAdd
                 size={18}
-                className="w-10 h-10 p-2 bg-bg-secondary hover:bg-bg-tertiary cursor-pointer rounded-full transition-colors"
+                className="w-10 h-10 p-2 bg-bg-secondary hover:bg-bg-tertiary cursor-pointer rounded-full"
               />
             </div>
             <div className="flex items-center justify-between">
@@ -307,7 +307,7 @@ const Profile: React.FC = () => {
               </div>
               <HiUserAdd
                 size={18}
-                className="w-10 h-10 p-2 bg-bg-secondary hover:bg-bg-tertiary cursor-pointer rounded-full transition-colors"
+                className="w-10 h-10 p-2 bg-bg-secondary hover:bg-bg-tertiary cursor-pointer rounded-full"
               />
             </div>
             <div className="flex items-center justify-between">
@@ -324,7 +324,7 @@ const Profile: React.FC = () => {
               </div>
               <HiUserAdd
                 size={18}
-                className="w-10 h-10 p-2 bg-bg-secondary hover:bg-bg-tertiary cursor-pointer rounded-full transition-colors"
+                className="w-10 h-10 p-2 bg-bg-secondary hover:bg-bg-tertiary cursor-pointer rounded-full"
               />
             </div>
           </div>

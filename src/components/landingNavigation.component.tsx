@@ -33,7 +33,7 @@ const LandingNavigation: React.FC<LandingNavigationProps> = ({
       >
         <IoClose
           size={18}
-          className="absolute top-4 right-2 cursor-pointer text-text-secondary hover:text-accent-primary transition-colors"
+          className="absolute top-4 right-2 cursor-pointer text-text-secondary hover:text-accent-primary"
           onClick={() => setSelectedNavigation(null)}
         />
         <div className="w-full mt-6">
@@ -41,7 +41,7 @@ const LandingNavigation: React.FC<LandingNavigationProps> = ({
             <Link
               key={link.id}
               to={link.path}
-              className={`block p-2 rounded-xs transition-colors ${location.pathname === link.path ? "bg-accent-primary text-white font-bold hover:bg-accent-hover" : "text-text-primary hover:bg-bg-primary hover:text-accent-primary"}`}
+              className={`block p-2 rounded-xs ${location.pathname === link.path ? "bg-accent-primary text-white font-bold hover:bg-accent-hover" : "text-text-primary hover:bg-bg-primary hover:text-accent-primary"}`}
             >
               {link.name}
             </Link>

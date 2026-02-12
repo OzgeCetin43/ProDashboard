@@ -157,7 +157,7 @@ const ProjectsTab: React.FC = () => {
         {Array.from({ length: 5 }).map((_, index) => (
           <div
             key={index}
-            className={`w-8 h-8 rounded-full m-1 flex items-center justify-center cursor-pointer transition-colors ${index === 0 ? "bg-accent-primary text-white" : "bg-bg-tertiary text-text-primary hover:bg-bg-primary"}`}
+            className={`w-8 h-8 rounded-full m-1 flex items-center justify-center cursor-pointer ${index === 0 ? "bg-accent-primary text-white" : "bg-bg-tertiary text-text-primary hover:bg-bg-primary"}`}
           >
             {index + 1}
           </div>

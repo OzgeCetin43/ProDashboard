@@ -14,10 +14,10 @@ const Chats: React.FC = () => {
         <h3 className="text-xs font-bold">Direct Messages</h3>
         <FaPlus
           size={12}
-          className="text-accent-primary hover:text-accent-hover cursor-pointer transition-colors"
+          className="text-accent-primary hover:text-accent-hover cursor-pointer"
         />
       </div>
-      <div className="flex items-center gap-2 bg-accent-primary rounded-xs p-2 hover:bg-bg-tertiary text-white transition-colors cursor-pointer">
+      <div className="flex items-center gap-2 bg-accent-primary rounded-xs p-2 hover:bg-bg-tertiary text-white cursor-pointer">
         <div className="w-10 h-10 rounded-full bg-white p-1">
           <img src={avatar1} alt="avatar" className="w-full h-full" />
         </div>
@@ -26,7 +26,7 @@ const Chats: React.FC = () => {
           <span className="text-xs text-white/80">Hello Cameron!</span>
         </div>
       </div>
-      <div className="flex items-center gap-2 p-2 rounded-xs hover:bg-bg-tertiary transition-colors cursor-pointer">
+      <div className="flex items-center gap-2 p-2 rounded-xs hover:bg-bg-tertiary cursor-pointer">
         <div className="w-10 h-10 rounded-full bg-accent-primary p-1">
           <img src={avatar2} alt="avatar" className="w-full h-full" />
         </div>
@@ -37,7 +37,7 @@ const Chats: React.FC = () => {
           </span>
         </div>
       </div>
-      <div className="flex items-center gap-2 p-2 rounded-xs hover:bg-bg-tertiary transition-colors cursor-pointer">
+      <div className="flex items-center gap-2 p-2 rounded-xs hover:bg-bg-tertiary cursor-pointer">
         <div className="w-10 h-10 rounded-full bg-accent-primary p-1">
           <img src={avatar3} alt="avatar" className="w-full h-full" />
         </div>
@@ -48,7 +48,7 @@ const Chats: React.FC = () => {
           </span>
         </div>
       </div>
-      <div className="flex items-center gap-2 p-2 rounded-xs hover:bg-bg-tertiary transition-colors cursor-pointer">
+      <div className="flex items-center gap-2 p-2 rounded-xs hover:bg-bg-tertiary cursor-pointer">
         <div className="w-10 h-10 rounded-full bg-accent-primary p-1">
           <img src={avatar4} alt="avatar" className="w-full h-full" />
         </div>
@@ -57,7 +57,7 @@ const Chats: React.FC = () => {
           <span className="text-xs text-text-secondary">What's up?</span>
         </div>
       </div>
-      <div className="flex items-center gap-2 p-2 rounded-xs hover:bg-bg-tertiary transition-colors cursor-pointer">
+      <div className="flex items-center gap-2 p-2 rounded-xs hover:bg-bg-tertiary cursor-pointer">
         <div className="w-10 h-10 rounded-full bg-accent-primary p-1">
           <img src={avatar5} alt="avatar" className="w-full h-full" />
         </div>

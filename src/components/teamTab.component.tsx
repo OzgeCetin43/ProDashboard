@@ -158,7 +158,7 @@ const TeamTab: React.FC = () => {
         <p>8 of 100 Team Members</p>
       </div>
       <div className="flex items-center justify-center">
-        <button className="bg-accent-primary hover:bg-accent-hover cursor-pointer rounded-xs p-2 font-bold text-white transition-colors">
+        <button className="bg-accent-primary hover:bg-accent-hover cursor-pointer rounded-xs p-2 font-bold text-white">
           Load More Team Members
         </button>
       </div>

@@ -13,7 +13,7 @@ const Inbox: React.FC<InboxProps> = ({ setIsInboxOpen }) => {
         return (
           <div
             key={box.id}
-            className="flex gap-2 p-2 hover:bg-bg-tertiary rounded-xs mb-2 transition-colors"
+            className="flex gap-2 p-2 hover:bg-bg-tertiary rounded-xs mb-2"
           >
             <img src={box.avatar} alt={box.name} className="w-8 h-8" />
             <div className="flex justify-between gap-2 text-xs">
@@ -27,7 +27,7 @@ const Inbox: React.FC<InboxProps> = ({ setIsInboxOpen }) => {
         );
       })}
       <button
-        className="text-xs bg-accent-primary hover:bg-accent-hover text-white w-full p-2 font-bold rounded-xs cursor-pointer transition-colors"
+        className="text-xs bg-accent-primary hover:bg-accent-hover text-white w-full p-2 font-bold rounded-xs cursor-pointer"
         onClick={() => setIsInboxOpen(false)}
       >
         See All Messages

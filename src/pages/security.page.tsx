@@ -30,7 +30,7 @@ const Security: React.FC = () => {
             Central Hub for Personal Customization
           </p>
         </div>
-        <button className="bg-accent-primary hover:bg-accent-hover p-2 font-bold text-xs rounded-xs cursor-pointer text-white transition-colors">
+        <button className="bg-accent-primary hover:bg-accent-hover p-2 font-bold text-xs rounded-xs cursor-pointer text-white">
           Security History
         </button>
       </div>
@@ -62,7 +62,7 @@ const Security: React.FC = () => {
                 <p className="text-xs">Fresh Look</p>
               </div>
             </div>
-            <button className="w-full md:w-fit bg-accent-primary hover:bg-accent-hover p-2 font-bold text-xs rounded-xs cursor-pointer text-white transition-colors">
+            <button className="w-full md:w-fit bg-accent-primary hover:bg-accent-hover p-2 font-bold text-xs rounded-xs cursor-pointer text-white">
               View Security Tips
             </button>
           </div>
@@ -124,11 +124,11 @@ const Security: React.FC = () => {
             </div>
             <div className="flex items-center justify-end">
               <div
-                className={`w-10 h-5 rounded-full cursor-pointer relative transition-colors ${toggleInvitingOthers ? "bg-accent-primary" : "bg-bg-tertiary"}`}
+                className={`w-10 h-5 rounded-full cursor-pointer relative ${toggleInvitingOthers ? "bg-accent-primary" : "bg-bg-tertiary"}`}
                 onClick={() => setToggleInvitingOthers(!toggleInvitingOthers)}
               >
                 <div
-                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition-all ${toggleInvitingOthers ? "translate-x-5" : ""}`}
+                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full ${toggleInvitingOthers ? "translate-x-5" : ""}`}
                 ></div>
               </div>
             </div>
@@ -154,13 +154,13 @@ const Security: React.FC = () => {
             </div>
             <div className="flex items-center justify-end">
               <div
-                className={`w-10 h-5 rounded-full cursor-pointer relative transition-colors ${toggleThirdPartyIntegrations ? "bg-accent-primary" : "bg-bg-tertiary"}`}
+                className={`w-10 h-5 rounded-full cursor-pointer relative ${toggleThirdPartyIntegrations ? "bg-accent-primary" : "bg-bg-tertiary"}`}
                 onClick={() =>
                   setToggleThirdPartyIntegrations(!toggleThirdPartyIntegrations)
                 }
               >
                 <div
-                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition-all ${toggleThirdPartyIntegrations ? "translate-x-5" : ""}`}
+                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full ${toggleThirdPartyIntegrations ? "translate-x-5" : ""}`}
                 ></div>
               </div>
             </div>
@@ -180,13 +180,13 @@ const Security: React.FC = () => {
             </div>
             <div className="flex items-center justify-end">
               <div
-                className={`w-10 h-5 rounded-full cursor-pointer relative transition-colors ${toggleAllowUseLocation ? "bg-accent-primary" : "bg-bg-tertiary"}`}
+                className={`w-10 h-5 rounded-full cursor-pointer relative ${toggleAllowUseLocation ? "bg-accent-primary" : "bg-bg-tertiary"}`}
                 onClick={() =>
                   setToggleAllowUseLocation(!toggleAllowUseLocation)
                 }
               >
                 <div
-                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition-all ${toggleAllowUseLocation ? "translate-x-5" : ""}`}
+                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full ${toggleAllowUseLocation ? "translate-x-5" : ""}`}
                 ></div>
               </div>
             </div>
@@ -210,7 +210,7 @@ const Security: React.FC = () => {
               </div>
             </div>
             <div className="flex items-center justify-end">
-              <button className="w-fit text-xs p-2 cursor-pointer rounded-xs bg-bg-tertiary text-text-primary hover:bg-bg-secondary transition-colors">
+              <button className="w-fit text-xs p-2 cursor-pointer rounded-xs bg-bg-tertiary text-text-primary hover:bg-bg-secondary">
                 Setup
               </button>
             </div>
@@ -232,13 +232,13 @@ const Security: React.FC = () => {
             </div>
             <div className="flex items-center justify-end">
               <div
-                className={`w-10 h-5 rounded-full cursor-pointer relative transition-colors ${toggleAllowPublicProfile ? "bg-accent-primary" : "bg-bg-tertiary"}`}
+                className={`w-10 h-5 rounded-full cursor-pointer relative ${toggleAllowPublicProfile ? "bg-accent-primary" : "bg-bg-tertiary"}`}
                 onClick={() =>
                   setToggleAllowPublicProfile(!toggleAllowPublicProfile)
                 }
               >
                 <div
-                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition-all ${toggleAllowPublicProfile ? "translate-x-5" : ""}`}
+                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full ${toggleAllowPublicProfile ? "translate-x-5" : ""}`}
                 ></div>
               </div>
             </div>
@@ -262,10 +262,10 @@ const Security: React.FC = () => {
               </div>
             </div>
             <div className="flex items-center justify-end gap-2">
-              <button className="text-xs bg-status-error text-white p-2 rounded-xs cursor-pointer hover:opacity-80 transition-opacity">
+              <button className="text-xs bg-status-error text-white p-2 rounded-xs cursor-pointer hover:opacity-80">
                 Disable All
               </button>
-              <button className="text-xs p-2 cursor-pointer rounded-xs bg-bg-tertiary text-text-primary hover:bg-bg-secondary transition-colors">
+              <button className="text-xs p-2 cursor-pointer rounded-xs bg-bg-tertiary text-text-primary hover:bg-bg-secondary">
                 Enable All
               </button>
             </div>

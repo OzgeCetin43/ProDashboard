@@ -17,12 +17,12 @@ const Work: React.FC = () => {
         <div className="flex items-center gap-2">
           <IoIosGrid
             size={18}
-            className={`w-8 h-8 p-2 hover:bg-accent-hover text-text-primary hover:text-white cursor-pointer rounded-xs transition-colors ${isGrid ? "bg-accent-primary text-white" : "bg-bg-tertiary"}`}
+            className={`w-8 h-8 p-2 hover:bg-accent-hover text-text-primary hover:text-white cursor-pointer rounded-xs ${isGrid ? "bg-accent-primary text-white" : "bg-bg-tertiary"}`}
             onClick={() => setIsGrid(true)}
           />
           <FaGripLines
             size={18}
-            className={`w-8 h-8 p-2 hover:bg-accent-hover text-text-primary hover:text-white cursor-pointer rounded-xs transition-colors ${!isGrid ? "bg-accent-primary text-white" : "bg-bg-tertiary"}`}
+            className={`w-8 h-8 p-2 hover:bg-accent-hover text-text-primary hover:text-white cursor-pointer rounded-xs ${!isGrid ? "bg-accent-primary text-white" : "bg-bg-tertiary"}`}
             onClick={() => setIsGrid(false)}
           />
         </div>
@@ -57,12 +57,12 @@ const Work: React.FC = () => {
               <div className="flex items-center gap-2 text-xs">
                 <AiFillLike
                   size={18}
-                  className="w-8 h-8 p-2 bg-accent-primary hover:bg-accent-hover cursor-pointer rounded-xs text-white transition-colors"
+                  className="w-8 h-8 p-2 bg-accent-primary hover:bg-accent-hover cursor-pointer rounded-xs text-white"
                 />
                 <span>{work.like}</span>
                 <FaMessage
                   size={18}
-                  className="w-8 h-8 p-2 bg-text-secondary hover:bg-text-primary cursor-pointer rounded-xs text-white transition-colors"
+                  className="w-8 h-8 p-2 bg-text-secondary hover:bg-text-primary cursor-pointer rounded-xs text-white"
                 />
                 <span>{work.comment}</span>
               </div>
@@ -77,7 +77,7 @@ const Work: React.FC = () => {
           <p className="text-xs text-text-secondary">
             Ignite Professional Adventures
           </p>
-          <button className="w-fit p-2 bg-accent-primary hover:bg-accent-hover cursor-pointer rounded-xs text-xs font-bold text-white transition-colors">
+          <button className="w-fit p-2 bg-accent-primary hover:bg-accent-hover cursor-pointer rounded-xs text-xs font-bold text-white">
             Offer a Work
           </button>
         </div>

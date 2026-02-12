@@ -37,7 +37,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ setIsCartDrawerOpen }) => {
         <h3 className="font-bold">Cart is Empty</h3>
         <Link
           to="/"
-          className="bg-accent-primary hover:bg-accent-hover text-white p-2 rounded-xs font-bold transition-colors"
+          className="bg-accent-primary hover:bg-accent-hover text-white p-2 rounded-xs font-bold"
           onClick={() => setIsCartDrawerOpen(false)}
         >
           Go back to shopping

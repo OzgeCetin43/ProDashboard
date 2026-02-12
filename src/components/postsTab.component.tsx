@@ -68,7 +68,7 @@ const PostsTab: React.FC = () => {
         >
           Drop files here to upload
         </div>
-        <button className="bg-accent-primary hover:bg-accent-hover font-bold px-2 py-1 rounded-xs text-white transition-colors">
+        <button className="bg-accent-primary hover:bg-accent-hover font-bold px-2 py-1 rounded-xs text-white">
           Post
         </button>
       </div>

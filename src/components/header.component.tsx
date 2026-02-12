@@ -26,17 +26,17 @@ const Header: React.FC = () => {
             placeholder="Search"
             className="w-full text-xs outline-none bg-transparent text-text-primary placeholder:text-text-secondary"
           />
-          <FaSearch className="w-6 h-6 p-1 text-text-secondary hover:text-accent-primary rounded-full cursor-pointer transition-colors" />
+          <FaSearch className="w-6 h-6 p-1 text-text-secondary hover:text-accent-primary rounded-full cursor-pointer" />
         </div>
         <div className="w-full flex-2 flex items-center justify-center md:justify-end gap-4">
           <ThemeToggle />
           <FaCartShopping
-            className="bg-bg-primary text-text-primary hover:bg-accent-primary hover:text-white p-3 h-10 w-10 rounded-full cursor-pointer transition-colors border border-border-color"
+            className="bg-bg-primary text-text-primary hover:bg-accent-primary hover:text-white p-3 h-10 w-10 rounded-full cursor-pointer border border-border-color"
             onClick={() => setIsCartDrawerOpen(true)}
           />
           <div className="relative">
             <FaBell
-              className="bg-bg-primary text-text-primary hover:bg-accent-primary hover:text-white p-3 h-10 w-10 rounded-full cursor-pointer transition-colors border border-border-color"
+              className="bg-bg-primary text-text-primary hover:bg-accent-primary hover:text-white p-3 h-10 w-10 rounded-full cursor-pointer border border-border-color"
               onClick={() => setIsNotificationOpen((prev) => !prev)}
             />
             {isNotificationOpen && (
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
           </div>
           <div className="relative">
             <GiHexagonalNut
-              className="bg-bg-primary text-text-primary hover:bg-accent-primary hover:text-white p-3 h-10 w-10 rounded-full cursor-pointer transition-colors border border-border-color"
+              className="bg-bg-primary text-text-primary hover:bg-accent-primary hover:text-white p-3 h-10 w-10 rounded-full cursor-pointer border border-border-color"
               onClick={() => setIsInboxOpen((prev) => !prev)}
             />
             {isInboxOpen && (

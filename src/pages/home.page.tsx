@@ -54,7 +54,7 @@ const Home: React.FC = () => {
             </h3>
             <Link
               to="/"
-              className="p-2 bg-accent-primary hover:bg-accent-hover max-w-fit rounded-xs text-xs font-bold text-white transition-colors"
+              className="p-2 bg-accent-primary hover:bg-accent-hover max-w-fit rounded-xs text-xs font-bold text-white"
             >
               Upgrade Account
             </Link>
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
             </p>
             <Link
               to="/ecommerce"
-              className="flex items-center gap-2 bg-accent-primary max-w-fit p-2 rounded-xs hover:bg-accent-hover text-xs text-white transition-colors"
+              className="flex items-center gap-2 bg-accent-primary max-w-fit p-2 rounded-xs hover:bg-accent-hover text-xs text-white"
             >
               <span className="font-bold">View Full Report</span>
               <FaLongArrowAltRight />
@@ -237,17 +237,17 @@ const Home: React.FC = () => {
               </tr>
             </thead>
             <tbody>
-              <tr className="hover:bg-bg-tertiary border border-border-color transition-colors">
+              <tr className="hover:bg-bg-tertiary border border-border-color">
                 <td className="p-2">0-30</td>
                 <td className="p-2">2,250</td>
                 <td className="p-2">4,250</td>
               </tr>
-              <tr className="hover:bg-bg-tertiary border border-border-color transition-colors">
+              <tr className="hover:bg-bg-tertiary border border-border-color">
                 <td className="p-2">31-60</td>
                 <td className="p-2">1,501</td>
                 <td className="p-2">2,050</td>
               </tr>
-              <tr className="hover:bg-bg-tertiary border border-border-color transition-colors">
+              <tr className="hover:bg-bg-tertiary border border-border-color">
                 <td className="p-2">61-120</td>
                 <td className="p-2">750</td>
                 <td className="p-2">1,600</td>
@@ -372,7 +372,7 @@ const Home: React.FC = () => {
             />
           </div>
           <TopReferralsPagesChart />
-          <button className="bg-accent-primary hover:bg-accent-hover text-white font-bold text-xs p-2 rounded-xs transition-colors">
+          <button className="bg-accent-primary hover:bg-accent-hover text-white font-bold text-xs p-2 rounded-xs">
             Show All
           </button>
         </div>
@@ -387,37 +387,37 @@ const Home: React.FC = () => {
               </tr>
             </thead>
             <tbody>
-              <tr className="hover:bg-bg-tertiary border border-border-color transition-colors">
+              <tr className="hover:bg-bg-tertiary border border-border-color">
                 <td className="p-2">/analytics</td>
                 <td className="p-2">99</td>
                 <td className="p-2">25.3%</td>
               </tr>
-              <tr className="hover:bg-bg-tertiary border border-border-color transition-colors">
+              <tr className="hover:bg-bg-tertiary border border-border-color">
                 <td className="p-2">/ecommerce</td>
                 <td className="p-2">86</td>
                 <td className="p-2">22.7%</td>
               </tr>
-              <tr className="hover:bg-bg-tertiary border border-border-color transition-colors">
+              <tr className="hover:bg-bg-tertiary border border-border-color">
                 <td className="p-2">/crm</td>
                 <td className="p-2">64</td>
                 <td className="p-2">18.7%</td>
               </tr>
-              <tr className="hover:bg-bg-tertiary border border-border-color transition-colors">
+              <tr className="hover:bg-bg-tertiary border border-border-color">
                 <td className="p-2">/crypto</td>
                 <td className="p-2">53</td>
                 <td className="p-2">14.2%</td>
               </tr>
-              <tr className="hover:bg-bg-tertiary border border-border-color transition-colors">
+              <tr className="hover:bg-bg-tertiary border border-border-color">
                 <td className="p-2">/nft</td>
                 <td className="p-2">33</td>
                 <td className="p-2">12.6%</td>
               </tr>
-              <tr className="hover:bg-bg-tertiary border border-border-color transition-colors">
+              <tr className="hover:bg-bg-tertiary border border-border-color">
                 <td className="p-2">/blog</td>
                 <td className="p-2">20</td>
                 <td className="p-2">10.9%</td>
               </tr>
-              <tr className="hover:bg-bg-tertiary border border-border-color transition-colors">
+              <tr className="hover:bg-bg-tertiary border border-border-color">
                 <td className="p-2">/job</td>
                 <td className="p-2">10</td>
                 <td className="p-2">7.2%</td>
@@ -480,19 +480,19 @@ const Home: React.FC = () => {
               </tr>
             </thead>
             <tbody>
-              <tr className="hover:bg-bg-tertiary border border-border-color transition-colors">
+              <tr className="hover:bg-bg-tertiary border border-border-color">
                 <td className="p-2">Direct</td>
                 <td className="p-2">1300</td>
                 <td className="p-2">30%</td>
                 <td className="p-2">80%</td>
               </tr>
-              <tr className="hover:bg-bg-tertiary border border-border-color transition-colors">
+              <tr className="hover:bg-bg-tertiary border border-border-color">
                 <td className="p-2">Email Campaign</td>
                 <td className="p-2">5000</td>
                 <td className="p-2">45%</td>
                 <td className="p-2">40%</td>
               </tr>
-              <tr className="hover:bg-bg-tertiary border border-border-color transition-colors">
+              <tr className="hover:bg-bg-tertiary border border-border-color">
                 <td className="p-2">Organic</td>
                 <td className="p-2">3000</td>
                 <td className="p-2">10%</td>
@@ -501,7 +501,7 @@ const Home: React.FC = () => {
             </tbody>
           </table>
           <div className="flex items-center justify-end text-xs">1-3 of 5</div>
-          <button className="bg-accent-primary hover:bg-accent-hover text-xs rounded-xs p-2 font-bold text-white transition-colors">
+          <button className="bg-accent-primary hover:bg-accent-hover text-xs rounded-xs p-2 font-bold text-white">
             Load More
           </button>
         </div>

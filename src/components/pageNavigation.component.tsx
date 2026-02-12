@@ -45,7 +45,7 @@ const PageNavigation: React.FC<PageNavigationProps> = ({
       >
         <IoClose
           size={18}
-          className="absolute top-4 right-2 cursor-pointer text-text-secondary hover:text-accent-primary transition-colors"
+          className="absolute top-4 right-2 cursor-pointer text-text-secondary hover:text-accent-primary"
           onClick={() => setSelectedNavigation(null)}
         />
         <div className="w-full mt-6">
@@ -54,7 +54,7 @@ const PageNavigation: React.FC<PageNavigationProps> = ({
               <div key={link.id} className="flex flex-col justify-center gap-2">
                 <div
                   onClick={() => handleSubMenuClick(link.name)}
-                  className={`block p-2 rounded-xs transition-colors p-2 rounded-xs cursor-pointer transition-colors flex items-center justify-between ${isSubMenuOpen === link.name ? "text-accent-primary font-bold" : "text-text-primary hover:bg-bg-primary hover:text-accent-primary"}`}
+                  className={`block p-2 rounded-xs p-2 rounded-xs cursor-pointer flex items-center justify-between ${isSubMenuOpen === link.name ? "text-accent-primary font-bold" : "text-text-primary hover:bg-bg-primary hover:text-accent-primary"}`}
                 >
                   <span>{link.name}</span>
                   {isSubMenuOpen === link.name ? (
@@ -69,7 +69,7 @@ const PageNavigation: React.FC<PageNavigationProps> = ({
                       <Link
                         key={subLink.id}
                         to={subLink?.path as any}
-                        className={`block p-2 rounded-xs transition-colors ml-2 ${location.pathname === subLink.path ? "bg-accent-primary text-white font-bold hover:bg-accent-hover" : "text-text-primary hover:bg-bg-primary hover:text-accent-primary"}`}
+                        className={`block p-2 ml-2 ${location.pathname === subLink.path ? "bg-accent-primary text-white font-bold hover:bg-accent-hover" : "text-text-primary hover:bg-bg-primary hover:text-accent-primary"}`}
                       >
                         {subLink.name}
                       </Link>
@@ -80,7 +80,7 @@ const PageNavigation: React.FC<PageNavigationProps> = ({
               <Link
                 key={link.id}
                 to={link?.path as any}
-                className={`block p-2 rounded-xs transition-colors ${location.pathname === link.path ? "bg-accent-primary text-white font-bold hover:bg-accent-hover" : "text-text-primary hover:bg-bg-primary hover:text-accent-primary"}`}
+                className={`block p-2 rounded-xs ${location.pathname === link.path ? "bg-accent-primary text-white font-bold hover:bg-accent-hover" : "text-text-primary hover:bg-bg-primary hover:text-accent-primary"}`}
               >
                 {link.name}
               </Link>

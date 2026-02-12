@@ -20,7 +20,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
       </h6>
       <Link
         to="/profile-simple-page"
-        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs transition-colors"
+        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs"
         onClick={() => setIsProfileOpen(false)}
       >
         <FaRegUser size={18} />
@@ -28,7 +28,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
       </Link>
       <Link
         to="/chat-app"
-        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs transition-colors"
+        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs"
         onClick={() => setIsProfileOpen(false)}
       >
         <IoChatbubblesOutline size={18} />
@@ -36,7 +36,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
       </Link>
       <Link
         to="/works"
-        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs transition-colors"
+        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs"
         onClick={() => setIsProfileOpen(false)}
       >
         <MdOutlineTask size={18} />
@@ -44,7 +44,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
       </Link>
       <Link
         to="/security"
-        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs transition-colors"
+        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs"
         onClick={() => setIsProfileOpen(false)}
       >
         <MdOutlineSecurity size={18} />
@@ -53,7 +53,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
       <div className="w-full h-[1px] bg-border-color"></div>
       <Link
         to="/balance"
-        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs transition-colors"
+        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs"
         onClick={() => setIsProfileOpen(false)}
       >
         <IoWallet size={18} />
@@ -62,7 +62,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
       </Link>
       <Link
         to="/settings"
-        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs transition-colors"
+        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs"
         onClick={() => setIsProfileOpen(false)}
       >
         <IoSettingsOutline size={18} />
@@ -70,7 +70,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
       </Link>
       <Link
         to="/lock-screen-basic-authentication"
-        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs transition-colors"
+        className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs"
         onClick={() => setIsProfileOpen(false)}
       >
         <FaLock size={18} />

@@ -123,7 +123,7 @@ const SettingsTab: React.FC = () => {
             </div>
           </div>
           <div className="flex items-center justify-end gap-2">
-            <button className="bg-accent-primary hover:bg-accent-hover font-bold px-2 py-1 rounded-xs cursor-pointer text-white transition-colors">
+            <button className="bg-accent-primary hover:bg-accent-hover font-bold px-2 py-1 rounded-xs cursor-pointer text-white">
               Save Changes
             </button>
           </div>
@@ -134,33 +134,33 @@ const SettingsTab: React.FC = () => {
             <div className="flex items-center justify-between">
               <p className="text-xs">Email Notifications</p>
               <div
-                className={`w-10 h-5 rounded-full cursor-pointer relative transition-colors ${toggleEmail ? "bg-accent-primary" : "bg-bg-tertiary"}`}
+                className={`w-10 h-5 rounded-full cursor-pointer relative ${toggleEmail ? "bg-accent-primary" : "bg-bg-tertiary"}`}
                 onClick={() => setToggleEmail(!toggleEmail)}
               >
                 <div
-                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition-all ${toggleEmail ? "translate-x-5" : ""}`}
+                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full ${toggleEmail ? "translate-x-5" : ""}`}
                 ></div>
               </div>
             </div>
             <div className="flex items-center justify-between">
               <p className="text-xs">SMS Notifications</p>
               <div
-                className={`w-10 h-5 rounded-full cursor-pointer relative transition-colors ${toggleSMS ? "bg-accent-primary" : "bg-bg-tertiary"}`}
+                className={`w-10 h-5 rounded-full cursor-pointer relative ${toggleSMS ? "bg-accent-primary" : "bg-bg-tertiary"}`}
                 onClick={() => setToggleSMS(!toggleSMS)}
               >
                 <div
-                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition-all ${toggleSMS ? "translate-x-5" : ""}`}
+                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full ${toggleSMS ? "translate-x-5" : ""}`}
                 ></div>
               </div>
             </div>
             <div className="flex items-center justify-between">
               <p className="text-xs">Push Notifications</p>
               <div
-                className={`w-10 h-5 rounded-full cursor-pointer relative transition-colors ${togglePush ? "bg-accent-primary" : "bg-bg-tertiary"}`}
+                className={`w-10 h-5 rounded-full cursor-pointer relative ${togglePush ? "bg-accent-primary" : "bg-bg-tertiary"}`}
                 onClick={() => setTogglePush(!togglePush)}
               >
                 <div
-                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition-all ${togglePush ? "translate-x-5" : ""}`}
+                  className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full ${togglePush ? "translate-x-5" : ""}`}
                 ></div>
               </div>
             </div>
@@ -169,13 +169,13 @@ const SettingsTab: React.FC = () => {
             <h3 className="font-bold">Account Settings</h3>
             <div className="flex items-center justify-between">
               <p className="text-xs">Deactivate Account</p>
-              <button className="text-xs bg-status-error text-white px-2 py-1 rounded-xs cursor-pointer hover:opacity-80 transition-opacity">
+              <button className="text-xs bg-status-error text-white px-2 py-1 rounded-xs cursor-pointer hover:opacity-80">
                 Deactivate
               </button>
             </div>
             <div className="flex items-center justify-between">
               <p className="text-xs">Delete Account</p>
-              <button className="text-xs bg-status-error text-white px-2 py-1 rounded-xs cursor-pointer hover:opacity-80 transition-opacity">
+              <button className="text-xs bg-status-error text-white px-2 py-1 rounded-xs cursor-pointer hover:opacity-80">
                 Delete
               </button>
             </div>
