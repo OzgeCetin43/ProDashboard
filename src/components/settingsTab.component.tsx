@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 const SettingsTab: React.FC = () => {
-  const [toggleEmail, setToggleEmail] = useState(true);
-  const [toggleSMS, setToggleSMS] = useState(false);
-  const [togglePush, setTogglePush] = useState(false);
+  const [toggleEmail, setToggleEmail] = useState<boolean>(true);
+  const [toggleSMS, setToggleSMS] = useState<boolean>(false);
+  const [togglePush, setTogglePush] = useState<boolean>(false);
 
   return (
     <div className="flex flex-col gap-2 text-text-primary">
