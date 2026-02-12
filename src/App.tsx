@@ -6,6 +6,7 @@ import Home from "./pages/home.page";
 import Profile from "./pages/profile.page";
 import Chat from "./pages/chat.page";
 import Work from "./pages/work.page";
+import Security from "./pages/security.page";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <Route path="/profile-simple-page" element={<Profile />} />
         <Route path="/chat-app" element={<Chat />} />
         <Route path="/works" element={<Work />} />
+        <Route path="/security" element={<Security />} />
       </Route>
     </Routes>
   );

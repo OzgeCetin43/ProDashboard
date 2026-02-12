@@ -6,8 +6,7 @@ import {
   IoWallet,
   IoSettingsOutline,
 } from "react-icons/io5";
-import { MdOutlineTask, MdLogout } from "react-icons/md";
-import { IoMdHelp } from "react-icons/io";
+import { MdOutlineTask, MdLogout, MdOutlineSecurity } from "react-icons/md";
 
 type ProfileProps = {
   setIsProfileOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -44,12 +43,12 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
         Works
       </Link>
       <Link
-        to="/help"
+        to="/security"
         className="flex items-center gap-2 hover:bg-bg-tertiary px-2 py-1 rounded-xs transition-colors"
         onClick={() => setIsProfileOpen(false)}
       >
-        <IoMdHelp size={18} />
-        Help
+        <MdOutlineSecurity size={18} />
+        Security
       </Link>
       <div className="w-full h-[1px] bg-border-color"></div>
       <Link
@@ -67,7 +66,7 @@ const Profile: React.FC<ProfileProps> = ({ setIsProfileOpen }) => {
         onClick={() => setIsProfileOpen(false)}
       >
         <IoSettingsOutline size={18} />
-        Help
+        Settings
       </Link>
       <Link
         to="/lock-screen-basic-authentication"
