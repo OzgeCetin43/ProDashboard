@@ -262,7 +262,7 @@ const Security: React.FC = () => {
               </div>
             </div>
             <div className="flex items-center justify-end gap-2">
-              <button className="text-xs bg-status-error text-white px-2 py-1 rounded-xs cursor-pointer hover:opacity-80 transition-opacity">
+              <button className="text-xs bg-status-error text-white p-2 rounded-xs cursor-pointer hover:opacity-80 transition-opacity">
                 Disable All
               </button>
               <button className="text-xs p-2 cursor-pointer rounded-xs bg-bg-tertiary text-text-primary hover:bg-bg-secondary transition-colors">
