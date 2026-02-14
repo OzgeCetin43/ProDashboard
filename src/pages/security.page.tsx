@@ -508,6 +508,55 @@ const Security: React.FC = () => {
           </tbody>
         </table>
       </div>
+      <div className="flex flex-col justify-center gap-2 p-2 bg-bg-secondary rounded-xs border border-border-color text-text-primary shadow-sm">
+        <h3 className="font-bold text-xs">Trusted Devices</h3>
+        <table className="text-xs text-left bg-bg-primary border border-border-color">
+          <thead className="bg-bg-tertiary">
+            <tr>
+              <th className="p-2">Browser</th>
+              <th className="p-2">Device</th>
+              <th className="p-2">Address</th>
+              <th className="p-2">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="hover:bg-bg-tertiary border border-border-color">
+              <td className="p-2">Chrome</td>
+              <td className="p-2">
+                <div className="flex flex-col justify-center gap-1">
+                  <h3 className="font-bold">MacOS 12.19.6</h3>
+                  <p className="text-text-secondary">
+                    Active: Today at 9:03 AM
+                  </p>
+                </div>
+              </td>
+              <td className="p-2">Seville, Spain</td>
+              <td className="p-2">
+                <button className="text-xs bg-status-error text-white px-2 py-1 rounded-xs cursor-pointer hover:opacity-80">
+                  Remove
+                </button>
+              </td>
+            </tr>
+            <tr className="hover:bg-bg-tertiary border border-border-color">
+              <td className="p-2">Safari</td>
+              <td className="p-2">
+                <div className="flex flex-col justify-center gap-1">
+                  <h3 className="font-bold">Android 14.35</h3>
+                  <p className="text-text-secondary">
+                    Active: Mar 18 at 9:03 AM
+                  </p>
+                </div>
+              </td>
+              <td className="p-2">Lyon, France</td>
+              <td className="p-2">
+                <button className="text-xs bg-status-error text-white px-2 py-1 rounded-xs cursor-pointer hover:opacity-80">
+                  Remove
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
