@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { CiBookmarkCheck } from "react-icons/ci";
 import { FaUsers, FaImages, FaCheck, FaEdit } from "react-icons/fa";
 import { LuPuzzle } from "react-icons/lu";
@@ -13,7 +14,11 @@ import { RiSecurePaymentFill } from "react-icons/ri";
 import securityOverviewIcon from "../assets/images/security-overview-icon.svg";
 import androidIcon from "../assets/images/android-icon.svg";
 import iosIcon from "../assets/images/ios-icon.svg";
-import { Link } from "react-router-dom";
+import hero1 from "../assets/images/assignee-1.png";
+import hero2 from "../assets/images/assignee-2.png";
+import hero3 from "../assets/images/assignee-3.png";
+import hero4 from "../assets/images/assignee-4.png";
+import hero5 from "../assets/images/assignee-5.png";
 
 const Security: React.FC = () => {
   const [toggleInvitingOthers, setToggleInvitingOthers] =
@@ -41,7 +46,7 @@ const Security: React.FC = () => {
         </button>
       </div>
       <div className="flex flex-col md:flex-row justify-between gap-2">
-        <div className="w-full flex-2 flex bg-bg-secondary flex-col-reverse md:flex-row justify-between items-center gap-2 p-2 border border-border-color rounded-xs">
+        <div className="w-full flex-2 flex bg-bg-secondary flex-col-reverse md:flex-row justify-between items-center gap-2 p-2 border border-border-color rounded-xs shadow-sm">
           <div className="flex flex-col md:items-start items-center justify-center gap-2">
             <h3 className="font-bold text-center md:text-left text-xs">
               Essential Personal Security Tips for Enhanced Safety
@@ -78,7 +83,7 @@ const Security: React.FC = () => {
             className="w-32 h-32"
           />
         </div>
-        <div className="w-full flex-1 flex flex-col justify-center gap-2 p-2 bg-bg-secondary border border-border-color rounded-xs">
+        <div className="w-full flex-1 flex flex-col justify-center gap-2 p-2 bg-bg-secondary border border-border-color rounded-xs shadow-sm">
           <div className="flex flex-col justify-center gap-2">
             <div className="flex items-center bg-bg-primary text-secondary gap-2 border border-border-color rounded-xs p-2">
               <div className="flex items-center justify-center w-12 h-12 bg-bg-tertiary rounded-full">
@@ -108,7 +113,7 @@ const Security: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-between gap-2">
-        <div className="w-full flex-2 flex bg-bg-secondary flex-col justify-center gap-2 p-2 border border-border-color rounded-xs">
+        <div className="w-full flex-2 flex bg-bg-secondary flex-col justify-center gap-2 p-2 border border-border-color rounded-xs shadow-sm">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-border-color p-2">
             <div className="flex items-center gap-2">
               <FaUsers
@@ -277,7 +282,7 @@ const Security: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex-1 flex flex-col justify-center gap-2 p-2 bg-bg-secondary border border-border-color rounded-xs">
+        <div className="w-full flex-1 flex flex-col justify-center gap-2 p-2 bg-bg-secondary border border-border-color rounded-xs shadow-sm">
           <div className="flex flex-col justify-center gap-2 text-xs bg-bg-primary p-2 rounded-xs border border-border-color">
             <MdOutlineSecurity size={18} className="text-status-error" />
             <h3 className="font-bold">
@@ -320,7 +325,7 @@ const Security: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center gap-2 text-xs p-2 rounded-xs border border-border-color bg-bg-secondary">
+      <div className="flex flex-col justify-center gap-2 text-xs p-2 rounded-xs border border-border-color bg-bg-secondary shadow-sm">
         <h3 className="font-bold pb-2 border-b border-border-color">
           Authentication
         </h3>
@@ -367,7 +372,7 @@ const Security: React.FC = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col justify-center gap-2 text-xs p-2 rounded-xs border border-border-color bg-bg-secondary">
+      <div className="flex flex-col justify-center gap-2 text-xs p-2 rounded-xs border border-border-color bg-bg-secondary shadow-sm">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 p-2 border-b border-border-color rounded-xs">
           <div className="flex flex-col md:flex-row md:items-center gap-2">
             <MdOutlineSecurity size={18} />
@@ -403,6 +408,105 @@ const Security: React.FC = () => {
             Logout Everyone
           </button>
         </div>
+      </div>
+      <div className="flex flex-col justify-center gap-2 p-2 bg-bg-secondary rounded-xs border border-border-color text-text-primary shadow-sm">
+        <h3 className="font-bold text-xs">Login Sessions</h3>
+        <table className="text-xs text-left bg-bg-primary border border-border-color">
+          <thead className="bg-bg-tertiary">
+            <tr>
+              <th className="p-2">Name</th>
+              <th className="p-2">Location</th>
+              <th className="p-2">Recent Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="hover:bg-bg-tertiary border border-border-color">
+              <td className="p-2">
+                <div className="flex items-center gap-2">
+                  <img
+                    src={hero1}
+                    alt="hero"
+                    className="w-8 h-8 rounded-full"
+                  />
+                  <div className="flex flex-col gap-1">
+                    <h3 className="font-bold">Tyler Hero</h3>
+                    <p className="text-text-secondary">26 connections</p>
+                  </div>
+                </div>
+              </td>
+              <td className="p-2">New Zealand</td>
+              <td className="p-2">Current Session</td>
+            </tr>
+            <tr className="hover:bg-bg-tertiary border border-border-color">
+              <td className="p-2">
+                <div className="flex items-center gap-2">
+                  <img
+                    src={hero2}
+                    alt="hero"
+                    className="w-8 h-8 rounded-full"
+                  />
+                  <div className="flex flex-col gap-1">
+                    <h3 className="font-bold">Adam Smith</h3>
+                    <p className="text-text-secondary">639 connections</p>
+                  </div>
+                </div>
+              </td>
+              <td className="p-2">Canada</td>
+              <td className="p-2">1 week ago</td>
+            </tr>
+            <tr className="hover:bg-bg-tertiary border border-border-color">
+              <td className="p-2">
+                <div className="flex items-center gap-2">
+                  <img
+                    src={hero3}
+                    alt="hero"
+                    className="w-8 h-8 rounded-full"
+                  />
+                  <div className="flex flex-col gap-1">
+                    <h3 className="font-bold">Jacob Jones</h3>
+                    <p className="text-text-secondary">125 connections</p>
+                  </div>
+                </div>
+              </td>
+              <td className="p-2">Malaysia</td>
+              <td className="p-2">Today, 09:53 am</td>
+            </tr>
+            <tr className="hover:bg-bg-tertiary border border-border-color">
+              <td className="p-2">
+                <div className="flex items-center gap-2">
+                  <img
+                    src={hero4}
+                    alt="hero"
+                    className="w-8 h-8 rounded-full"
+                  />
+                  <div className="flex flex-col gap-1">
+                    <h3 className="font-bold">Esther Howard</h3>
+                    <p className="text-text-secondary">81 connections</p>
+                  </div>
+                </div>
+              </td>
+              <td className="p-2">Turkey</td>
+              <td className="p-2">Current Session</td>
+            </tr>
+            <tr className="hover:bg-bg-tertiary border border-border-color">
+              <td className="p-2">
+                <div className="flex items-center gap-2">
+                  <img
+                    src={hero5}
+                    alt="hero"
+                    className="w-8 h-8 rounded-full"
+                  />
+                  <div className="flex flex-col gap-1">
+                    <h3 className="font-bold">Cody Fisher</h3>
+                    <p className="text-text-secondary">1203 connections</p>
+                  </div>
+                </div>
+              </td>
+              <td className="p-2">United States</td>
+              <td className="p-2">1 month ago</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );
