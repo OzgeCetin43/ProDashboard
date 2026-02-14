@@ -521,7 +521,7 @@ const Security: React.FC = () => {
           </thead>
           <tbody>
             <tr className="hover:bg-bg-tertiary border border-border-color">
-              <td className="p-2">Chrome</td>
+              <td className="p-2">Safari</td>
               <td className="p-2">
                 <div className="flex flex-col justify-center gap-1">
                   <h3 className="font-bold">MacOS 12.19.6</h3>
@@ -538,7 +538,7 @@ const Security: React.FC = () => {
               </td>
             </tr>
             <tr className="hover:bg-bg-tertiary border border-border-color">
-              <td className="p-2">Safari</td>
+              <td className="p-2">Chrome</td>
               <td className="p-2">
                 <div className="flex flex-col justify-center gap-1">
                   <h3 className="font-bold">Android 14.35</h3>
