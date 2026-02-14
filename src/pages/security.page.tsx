@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { CiBookmarkCheck } from "react-icons/ci";
-import { FaUsers, FaImages, FaCheck } from "react-icons/fa";
+import { FaUsers, FaImages, FaCheck, FaEdit } from "react-icons/fa";
 import { LuPuzzle } from "react-icons/lu";
 import { FaLocationCrosshairs } from "react-icons/fa6";
-import { MdOutlineSecurity, MdOutlineTabletAndroid } from "react-icons/md";
+import {
+  MdOutlineSecurity,
+  MdOutlineTabletAndroid,
+  MdLogout,
+} from "react-icons/md";
 import { RiSecurePaymentFill } from "react-icons/ri";
 
 import securityOverviewIcon from "../assets/images/security-overview-icon.svg";
@@ -19,6 +23,8 @@ const Security: React.FC = () => {
   const [toggleAllowUseLocation, setToggleAllowUseLocation] =
     useState<boolean>(true);
   const [toggleAllowPublicProfile, setToggleAllowPublicProfile] =
+    useState<boolean>(true);
+  const [toggleTwoStepVerification, setToggleTwoStepVerification] =
     useState<boolean>(true);
 
   return (
@@ -312,6 +318,90 @@ const Security: React.FC = () => {
               Learn More
             </Link>
           </div>
+        </div>
+      </div>
+      <div className="flex flex-col justify-center gap-2 text-xs p-2 rounded-xs border border-border-color bg-bg-secondary">
+        <h3 className="font-bold pb-2 border-b border-border-color">
+          Authentication
+        </h3>
+        <div className="flex items-center justify-between gap-2 p-2 border border-border-color rounded-xs bg-bg-primary">
+          <div className="flex flex-col justify-between gap-1">
+            <h3 className="font-bold">Password</h3>
+            <p className="text-text-secondary">
+              Password last changed 2 months ago
+            </p>
+          </div>
+          <FaEdit
+            size={18}
+            className="text-accent-primary hover:text-accent-hover cursor-pointer"
+          />
+        </div>
+        <div className="flex items-center justify-between gap-2 p-2 border border-border-color rounded-xs bg-bg-primary">
+          <div className="flex flex-col justify-between gap-1">
+            <h3 className="font-bold">2FA</h3>
+            <p className="text-text-secondary">To be set</p>
+          </div>
+          <button className="bg-accent-primary text-white p-2 rounded-xs cursor-pointer hover:bg-accent-hover">
+            Setup
+          </button>
+        </div>
+        <div className="flex items-center justify-between gap-2 p-2 border border-border-color rounded-xs bg-bg-primary">
+          <div className="flex flex-col justify-between gap-1">
+            <h3 className="font-bold">Sign-in-with</h3>
+            <div className="flex items-center gap-2">
+              <img
+                src={iosIcon}
+                alt="ios"
+                className="w-8 h-8 bg-bg-tertiary rounded-full cursor-pointer p-2"
+              />
+              <img
+                src={androidIcon}
+                alt="ios"
+                className="w-8 h-8 bg-bg-tertiary rounded-full cursor-pointer p-2"
+              />
+            </div>
+          </div>
+          <FaEdit
+            size={18}
+            className="text-accent-primary hover:text-accent-hover cursor-pointer"
+          />
+        </div>
+      </div>
+      <div className="flex flex-col justify-center gap-2 text-xs p-2 rounded-xs border border-border-color bg-bg-secondary">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 p-2 border-b border-border-color rounded-xs">
+          <div className="flex flex-col md:flex-row md:items-center gap-2">
+            <MdOutlineSecurity size={18} />
+            <div className="flex flex-col justify-between gap-1">
+              <h3 className="font-bold">Enforce two-step verification</h3>
+              <p className="text-text-secondary">
+                Add an extra layer of security with two-step verification.
+              </p>
+            </div>
+          </div>
+          <div
+            className={`w-10 h-5 rounded-full cursor-pointer relative ${toggleTwoStepVerification ? "bg-accent-primary" : "bg-bg-tertiary"}`}
+            onClick={() =>
+              setToggleTwoStepVerification(!toggleTwoStepVerification)
+            }
+          >
+            <div
+              className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full ${toggleTwoStepVerification ? "translate-x-5" : ""}`}
+            ></div>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 p-2">
+          <div className="flex flex-col md:flex-row md:items-center gap-2">
+            <MdLogout size={18} />
+            <div className="flex flex-col justify-between gap-1">
+              <h3 className="font-bold">Logout everyone</h3>
+              <p className="text-text-secondary">
+                Instantly sign out all users from all devices.
+              </p>
+            </div>
+          </div>
+          <button className="text-xs p-2 cursor-pointer rounded-xs bg-bg-tertiary text-text-primary hover:bg-bg-secondary">
+            Logout Everyone
+          </button>
         </div>
       </div>
     </div>
